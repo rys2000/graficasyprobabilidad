@@ -14,7 +14,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
 <style>
-/* ===== 23 ENERO 2026 ===== */
+/* ===== 1 FEBRERO 2026 ===== */
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
@@ -781,6 +781,70 @@ canvas {
     left: 0;
   }
 }
+/* ===== ESTILOS PARA SELECCIÓN MÚLTIPLE ===== */
+#municipiosComparacion {
+  width: 100%;
+  min-height: 120px;
+  max-height: 180px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: white;
+  font-size: 12px;
+  overflow-y: auto;
+}
+
+#municipiosComparacion option {
+  padding: 6px 8px;
+  margin: 2px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#municipiosComparacion option:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+#municipiosComparacion option:checked {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+
+.contador-municipios {
+  font-size: 11px;
+  color: #666;
+  margin-top: 5px;
+  font-style: italic;
+  text-align: center;
+}
+/* ===== BOTÓN SECUNDARIO ===== */
+/* ===== BOTÓN SECUNDARIO MEJORADO ===== */
+.btn-secundario {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 11px;
+  width: 100%;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-secundario:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.btn-secendario:active {
+  transform: translateY(0);
+}
 </style>
 
 </head>
@@ -802,19 +866,39 @@ canvas {
     </button>
 
 <div id="section-graficas" class="section-content collapsed">
-      <!-- SECCIÓN DE ANÁLISIS -->
-      <div>
-        <label>Municipio principal</label>
-        <select id="municipio"></select>
-
-        <div class="compare-box">
-          <div class="checkbox-container">
-            <input type="checkbox" id="compararMunicipios">
-            <label for="compararMunicipios" style="margin: 0; font-size: 11px;">Comparar con otro municipio</label>
-          </div>
-          <select id="municipio2" style="display:none"></select>
-        </div>
-      </div>
+  <!-- SECCIÓN DE ANÁLISIS -->
+  <div>
+    <label>Municipios a comparar:</label>
+    <select id="municipiosComparacion" multiple size="5">
+      <!-- Opciones se llenarán dinámicamente -->
+    </select>
+    <div class="ayuda" style="font-size: 11px; color: #666; margin-top: 3px;">
+      (Ctrl+Click para seleccionar múltiples)
+    </div>
+    
+    <button type="button" id="seleccionarTodos" class="btn-secundario" style="
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 8px;
+      font-size: 11px;
+      width: 100%;
+    ">
+      Seleccionar Todos
+    </button>
+    
+    <div id="contadorMunicipios" class="contador-municipios" style="
+      font-size: 11px;
+      color: #666;
+      margin-top: 5px;
+      font-style: italic;
+    ">
+      Seleccionados: 0 municipios
+    </div>
+  </div>
 
       <div>
         <label>Año</label>
@@ -991,7 +1075,7 @@ canvas {
     </p>
 
     <p><strong>📊 Fuente de datos</strong></p>
-    <p>El conjunto de datos original incluye 36,926 registros correspondientes a
+    <p>El conjunto de datos original incluye 36,927 registros correspondientes a
       personas reportadas como desaparecidas en el estado de Jalisco,
       con fechas que abarcan desde el año 1942 hasta diciembre de 2025.
     </p>
@@ -1752,32 +1836,32 @@ class SimplePredictor {
     // Predicción base con variabilidad realista
     const rangoEdad = this.convertirEdadARango(edad);
 
-    let baseConVida = 25;  
-    let baseDesaparecida = 50;  
-    let baseSinVida = 25;  
+    let baseConVida = 25;
+    let baseDesaparecida = 50;
+    let baseSinVida = 25;
 
     if (sexo === "MUJER") {
-      baseConVida += 5;  
+      baseConVida += 5;
       baseDesaparecida -= 3;
     } else {
-      baseConVida -= 3;  
+      baseConVida -= 3;
       baseSinVida += 3;
     }
 
     if (edad < 18) {
-      baseConVida += 15;  
+      baseConVida += 15;
       baseSinVida -= 10;
     } else if (edad > 60) {
-      baseConVida -= 8;   
+      baseConVida -= 8;
       baseSinVida += 8;
     }
 
     if (meses < 3) {
-      baseConVida += 10;  
+      baseConVida += 10;
       baseDesaparecida += 5;
       baseSinVida -= 15;
     } else if (meses > 24) {
-      baseConVida -= 15;  
+      baseConVida -= 15;
       baseDesaparecida -= 10;
       baseSinVida += 25;
     }
@@ -1927,12 +2011,26 @@ function obtenerMunicipiosOrdenadosPorCasos(datos) {
   return [...top10, ...restantes].map(([municipio]) => municipio);
 }
 
-function llenarSelectores(municipios) {
-  // Llenar selectores de gráficas
-  llenar("municipio", municipios, false);
-  llenar("municipio2", municipios, false);
-  // Llenar selector de predicción con los mismos municipios
+function llenarSelectoresMultiples(municipios) {
+  // Llenar selector múltiple de gráficas
+  llenarMultiple("municipiosComparacion", municipios);
+  // Llenar selector de predicción
   llenar("predMunicipio", municipios, false);
+}
+
+// Nueva función para llenar selects múltiples
+function llenarMultiple(id, valores) {
+  const s = document.getElementById(id);
+  if (!s) return;
+
+  s.innerHTML = '';
+  
+  // Agregar opción "TODOS" primero
+  s.innerHTML += '<option value="TODOS">TODOS LOS MUNICIPIOS</option>';
+  
+  valores.forEach(v => {
+    s.innerHTML += `<option value="${v}">${v}</option>`;
+  });
 }
 
 function llenar(id, valores, usarTotal = true) {
@@ -1951,7 +2049,7 @@ function poblarSelectoresGraficas() {
 
   try {
     const municipios = obtenerMunicipiosOrdenadosPorCasos(datos);
-    llenarSelectores(municipios);
+    llenarSelectoresMultiples(municipios);
 
     const anios = [...new Set(datos.map(d => Number(d.año)))]
       .sort((a, b) => b - a);
@@ -1961,25 +2059,100 @@ function poblarSelectoresGraficas() {
     const sexos = [...new Set(datos.map(d => d.sexo))].sort();
     llenar("sexo", sexos);
 
-    const rangosEdad = [
-      "0-14",
-      "15-24",
-      "25-39",
-      "40-59", 
-      "60+"
-    ];
+    const edades = [...new Set(datos.map(d => d.rango_edad))].sort();
+    llenar("edad", edades);
+    
+// Agregar evento para el botón "Seleccionar Todos" - VERSIÓN MEJORADA
+document.getElementById('seleccionarTodos').addEventListener('click', function() {
+  const select = document.getElementById('municipiosComparacion');
+  if (!select) return;
+  
+  const todasOpciones = Array.from(select.options);
+  
+  // Verificar si TODOS está seleccionado
+  const todosOption = select.querySelector('option[value="TODOS"]');
+  const tieneTodos = todosOption && todosOption.selected;
+  
+  if (tieneTodos || this.dataset.state === 'todos-seleccionados') {
+    // DESELECCIONAR todo
+    todasOpciones.forEach(opt => opt.selected = false);
+    this.textContent = 'Seleccionar Todos';
+    this.dataset.state = '';
+    this.style.backgroundColor = '#6c757d'; // Color normal
+  } else {
+    // SELECCIONAR todo (pero NO la opción "TODOS")
+    todasOpciones.forEach(opt => {
+      if (opt.value !== "TODOS") {
+        opt.selected = true;
+      }
+    });
+    this.textContent = 'Deseleccionar Todos';
+    this.dataset.state = 'todos-seleccionados';
+    this.style.backgroundColor = '#dc3545'; // Color rojo para indicar "deseleccionar"
+  }
+  
+  // Disparar evento change manualmente para actualizar contador
+  select.dispatchEvent(new Event('change'));
+});
 
-    llenar("edad", rangosEdad, true); // true = añade opción "TOTAL"
+    // Actualizar contador cuando cambia la selección
+    document.getElementById('municipiosComparacion').addEventListener('change', actualizarContadorMunicipios);
+    
+    // Inicializar contador
+    actualizarContadorMunicipios();
+    
   } catch (error) {
     console.error("Error poblando selectores:", error);
   }
 }
 
+// Función para actualizar contador de municipios seleccionados
+function actualizarContadorMunicipios() {
+  const select = document.getElementById('municipiosComparacion');
+  const seleccionados = Array.from(select.selectedOptions);
+  const contador = document.getElementById('contadorMunicipios');
+  
+  if (!contador) return;
+  
+  const totalOpciones = select.options.length - 1; // Restar la opción "TODOS"
+  
+  if (seleccionados.some(opt => opt.value === "TODOS")) {
+    contador.textContent = `Seleccionados: TODOS LOS MUNICIPIOS (${totalOpciones})`;
+  } else {
+    contador.textContent = `Seleccionados: ${seleccionados.length} de ${totalOpciones} municipios`;
+  }
+}
+
 function generarGrafica() {
   try {
-    const municipioA = document.getElementById('municipio').value;
-    const municipioB = document.getElementById('municipio2').value;
-    const comparar = document.getElementById('compararMunicipios').checked;
+    // Obtener municipios seleccionados del select múltiple
+    const selectMunicipios = document.getElementById('municipiosComparacion');
+    const opcionesSeleccionadas = Array.from(selectMunicipios.selectedOptions);
+    
+    if (opcionesSeleccionadas.length === 0) {
+      alert("Por favor selecciona al menos un municipio.");
+      return;
+    }
+
+    // Verificar si se seleccionó "TODOS"
+    const tieneTodos = opcionesSeleccionadas.some(opt => opt.value === "TODOS");
+    
+    let municipiosUsar = [];
+    
+    if (tieneTodos) {
+      // Obtener todos los municipios (excluyendo la opción "TODOS")
+      municipiosUsar = Array.from(selectMunicipios.options)
+        .filter(opt => opt.value !== "TODOS")
+        .map(opt => opt.value);
+    } else {
+      // Usar solo los municipios seleccionados
+      municipiosUsar = opcionesSeleccionadas.map(opt => opt.value);
+    }
+
+    // Validar cantidad de municipios (opcional)
+    if (municipiosUsar.length > 15 && !confirm(`Estás seleccionando ${municipiosUsar.length} municipios. La gráfica puede ser difícil de leer. ¿Deseas continuar?`)) {
+      return;
+    }
 
     const sexoSel = document.getElementById('sexo').value;
     const edadSel = document.getElementById('edad').value;
@@ -1987,16 +2160,6 @@ function generarGrafica() {
     const metricaSel = document.getElementById('metrica').value;
     const modoSel = document.getElementById('modo').value;
     const filtrarAnios = document.getElementById('filtrarAnios').checked;
-
-    if (!municipioA) {
-      alert("Por favor selecciona un municipio principal.");
-      return;
-    }
-
-    let municipiosUsar = [municipioA];
-    if (comparar && municipioB && municipioB !== municipioA) {
-      municipiosUsar.push(municipioB);
-    }
 
     let filtrado = datos.filter(d =>
       municipiosUsar.includes(d.municipio) &&
@@ -2021,7 +2184,10 @@ function generarGrafica() {
       chartAnalisis.destroy();
     }
 
-    const titulo = `Municipios: ${municipiosUsar.join(" vs ")}`;
+    const titulo = `Municipios: ${municipiosUsar.length > 3 ? 
+      `${municipiosUsar.slice(0, 3).join(", ")}... (${municipiosUsar.length} total)` : 
+      municipiosUsar.join(", ")}`;
+    
     let subtitulo = "";
 
     if (modoSel === "simple") {
@@ -2065,30 +2231,53 @@ function generarGrafica() {
 
     } else {
       labels = [...new Set(filtrado.map(d => d.año))].sort((a, b) => a - b);
-      const categorias = [...new Set(filtrado.map(d => d[metricaSel]))].sort();
-
-      datasets = [];
-      municipiosUsar.forEach(mun => {
-        categorias.forEach(cat => {
+      
+      // Para muchos municipios, agrupar por municipio en lugar de por categoría
+      if (municipiosUsar.length > 8) {
+        datasets = municipiosUsar.map(mun => {
           const data = labels.map(anio => {
             const items = filtrado.filter(d =>
               d.municipio === mun &&
-              d[metricaSel] === cat &&
               d.año === anio
             );
             return items.reduce((sum, d) => sum + d.total, 0);
           });
 
-          if (data.some(val => val > 0)) {
-            datasets.push({
-              label: `${mun} – ${cat}`,
-              data: data,
-              tension: 0.25,
-              borderWidth: 2
-            });
-          }
+          return {
+            label: mun,
+            data: data,
+            tension: 0.25,
+            borderWidth: 2,
+            fill: false
+          };
         });
-      });
+      } else {
+        // Método original para pocos municipios
+        const categorias = [...new Set(filtrado.map(d => d[metricaSel]))].sort();
+        datasets = [];
+        
+        municipiosUsar.forEach(mun => {
+          categorias.forEach(cat => {
+            const data = labels.map(anio => {
+              const items = filtrado.filter(d =>
+                d.municipio === mun &&
+                d[metricaSel] === cat &&
+                d.año === anio
+              );
+              return items.reduce((sum, d) => sum + d.total, 0);
+            });
+
+            if (data.some(val => val > 0)) {
+              datasets.push({
+                label: `${mun} – ${cat}`,
+                data: data,
+                tension: 0.25,
+                borderWidth: 2
+              });
+            }
+          });
+        });
+      }
 
       if (datasets.length === 0) {
         alert("No hay datos para mostrar con los filtros seleccionados.");
@@ -2196,7 +2385,7 @@ if (sexoSeleccionado && sexoSeleccionado !== 'TOTAL') {
 
     plugins: {
       legend: {
-        display: true,
+        display: false,
         position: 'top',
         labels: {
           font: { size: 11 },
@@ -2220,6 +2409,7 @@ if (sexoSeleccionado && sexoSeleccionado !== 'TOTAL') {
       },
 
       tooltip: {
+        display: true,
         backgroundColor: 'rgba(0,0,0,0.75)',
         titleColor: '#fff',
         bodyColor: '#fff',
@@ -2410,10 +2600,7 @@ window.addEventListener('DOMContentLoaded', () => {
       document.getElementById('btnPrediccion').textContent = "⚠️ Calcular (datos básicos)";
     });
 
-  // Inicializar eventos
-  document.getElementById('compararMunicipios').addEventListener('change', function() {
-    document.getElementById('municipio2').style.display = this.checked ? "block" : "none";
-  });
+
 
   document.getElementById("filtrarAnios").addEventListener("change", function() {
     document.getElementById("aniosSeleccionados").style.display = this.checked ? "block" : "none";
