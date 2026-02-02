@@ -2059,8 +2059,15 @@ function poblarSelectoresGraficas() {
     const sexos = [...new Set(datos.map(d => d.sexo))].sort();
     llenar("sexo", sexos);
 
-    const edades = [...new Set(datos.map(d => d.rango_edad))].sort();
-    llenar("edad", edades);
+        const rangosEdad = [
+      "0-14",
+      "15-24",
+      "25-39",
+      "40-59",
+      "60+"
+    ];
+
+    llenar("edad", rangosEdad, true); // true = añade opción "TOTAL"
     
 // Agregar evento para el botón "Seleccionar Todos" - VERSIÓN MEJORADA
 document.getElementById('seleccionarTodos').addEventListener('click', function() {
