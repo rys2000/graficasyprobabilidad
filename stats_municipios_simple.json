@@ -2229,7 +2229,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "AMECA",
@@ -2371,8 +2371,8 @@
     "año": 2014,
     "sexo": "HOMBRE",
     "rango_edad": "25-39",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
     "total": 1
   },
   {
@@ -3091,8 +3091,26 @@
     "año": 2025,
     "sexo": "HOMBRE",
     "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "ARANDAS",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "ARANDAS",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
     "total": 1
   },
   {
@@ -3453,7 +3471,16 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 5
+    "total": 4
+  },
+  {
+    "municipio": "ATOTONILCO EL ALTO",
+    "año": 2013,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
   },
   {
     "municipio": "ATOTONILCO EL ALTO",
@@ -3612,15 +3639,6 @@
     "municipio": "ATOTONILCO EL ALTO",
     "año": 2018,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "ATOTONILCO EL ALTO",
-    "año": 2018,
-    "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -3633,7 +3651,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 8
+    "total": 9
   },
   {
     "municipio": "ATOTONILCO EL ALTO",
@@ -4227,7 +4245,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "ATOTONILCO EL ALTO",
@@ -4656,15 +4674,6 @@
     "municipio": "AUTLAN DE NAVARRO",
     "año": 2017,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "AUTLAN DE NAVARRO",
-    "año": 2017,
-    "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -4677,7 +4686,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 4
+    "total": 5
   },
   {
     "municipio": "AUTLAN DE NAVARRO",
@@ -5163,6 +5172,24 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "AUTLAN DE NAVARRO",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "AUTLAN DE NAVARRO",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
     "total": 1
   },
   {
@@ -6090,6 +6117,15 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "CABO CORRIENTES",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
     "total": 1
   },
   {
@@ -7512,7 +7548,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 4
+    "total": 3
   },
   {
     "municipio": "CHAPALA",
@@ -7521,7 +7557,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 2
+    "total": 3
   },
   {
     "municipio": "CHAPALA",
@@ -7555,6 +7591,15 @@
     "año": 2025,
     "sexo": "MUJER",
     "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "CHAPALA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
     "total": 1
@@ -7806,15 +7851,6 @@
     "municipio": "CIHUATLAN",
     "año": 2014,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "CIHUATLAN",
-    "año": 2014,
-    "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -7827,7 +7863,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 2
+    "total": 3
   },
   {
     "municipio": "CIHUATLAN",
@@ -8394,7 +8430,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "CIHUATLAN",
@@ -8457,7 +8493,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "CIHUATLAN",
@@ -10678,8 +10714,8 @@
     "año": 2025,
     "sexo": "HOMBRE",
     "rango_edad": "15-24",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
     "total": 1
   },
   {
@@ -10726,6 +10762,15 @@
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
     "total": 2
+  },
+  {
+    "municipio": "EL ARENAL",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
   },
   {
     "municipio": "EL GRULLO",
@@ -11830,9 +11875,9 @@
     "año": 2018,
     "sexo": "MUJER",
     "rango_edad": "15-24",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 4
   },
   {
     "municipio": "EL SALTO",
@@ -11840,8 +11885,8 @@
     "sexo": "MUJER",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 4
+    "condicion_localizacion": "SIN VIDA",
+    "total": 1
   },
   {
     "municipio": "EL SALTO",
@@ -11860,15 +11905,6 @@
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 2
-  },
-  {
-    "municipio": "EL SALTO",
-    "año": 2019,
-    "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
   },
   {
     "municipio": "EL SALTO",
@@ -11913,7 +11949,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 32
+    "total": 33
   },
   {
     "municipio": "EL SALTO",
@@ -12693,15 +12729,6 @@
     "municipio": "EL SALTO",
     "año": 2023,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "EL SALTO",
-    "año": 2023,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
@@ -12750,7 +12777,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 16
+    "total": 17
   },
   {
     "municipio": "EL SALTO",
@@ -12874,15 +12901,6 @@
     "año": 2023,
     "sexo": "MUJER",
     "rango_edad": "60+",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "EL SALTO",
-    "año": 2024,
-    "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 1
@@ -12966,7 +12984,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 9
+    "total": 10
   },
   {
     "municipio": "EL SALTO",
@@ -13092,7 +13110,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 11
+    "total": 13
   },
   {
     "municipio": "EL SALTO",
@@ -13119,7 +13137,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 7
+    "total": 8
   },
   {
     "municipio": "EL SALTO",
@@ -13210,6 +13228,42 @@
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 3
+  },
+  {
+    "municipio": "EL SALTO",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "EL SALTO",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "EL SALTO",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "EL SALTO",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
   },
   {
     "municipio": "ENCARNACION DE DIAZ",
@@ -14454,6 +14508,15 @@
     "total": 1
   },
   {
+    "municipio": "ETZATLAN",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
     "municipio": "GOMEZ FARIAS",
     "año": 2011,
     "sexo": "HOMBRE",
@@ -14890,6 +14953,15 @@
     "año": 1988,
     "sexo": "HOMBRE",
     "rango_edad": "60+",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 1991,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
     "total": 1
@@ -15915,15 +15987,6 @@
     "municipio": "GUADALAJARA",
     "año": 2010,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2010,
-    "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
@@ -15936,7 +15999,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 21
+    "total": 22
   },
   {
     "municipio": "GUADALAJARA",
@@ -16437,15 +16500,6 @@
     "municipio": "GUADALAJARA",
     "año": 2014,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2014,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -16512,7 +16566,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 18
+    "total": 19
   },
   {
     "municipio": "GUADALAJARA",
@@ -17112,24 +17166,6 @@
     "municipio": "GUADALAJARA",
     "año": 2018,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2018,
-    "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2018,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -17178,7 +17214,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 118
+    "total": 119
   },
   {
     "municipio": "GUADALAJARA",
@@ -17187,7 +17223,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 34
+    "total": 35
   },
   {
     "municipio": "GUADALAJARA",
@@ -17364,24 +17400,6 @@
     "municipio": "GUADALAJARA",
     "año": 2019,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2019,
-    "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2019,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -17448,7 +17466,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 156
+    "total": 157
   },
   {
     "municipio": "GUADALAJARA",
@@ -17457,7 +17475,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 41
+    "total": 42
   },
   {
     "municipio": "GUADALAJARA",
@@ -17835,7 +17853,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 4
+    "total": 3
   },
   {
     "municipio": "GUADALAJARA",
@@ -17844,7 +17862,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 31
+    "total": 32
   },
   {
     "municipio": "GUADALAJARA",
@@ -17889,7 +17907,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 47
+    "total": 46
   },
   {
     "municipio": "GUADALAJARA",
@@ -17898,7 +17916,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 96
+    "total": 97
   },
   {
     "municipio": "GUADALAJARA",
@@ -17916,7 +17934,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 72
+    "total": 71
   },
   {
     "municipio": "GUADALAJARA",
@@ -17925,7 +17943,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 150
+    "total": 151
   },
   {
     "municipio": "GUADALAJARA",
@@ -17970,7 +17988,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 8
+    "total": 7
   },
   {
     "municipio": "GUADALAJARA",
@@ -17988,7 +18006,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 3
+    "total": 4
   },
   {
     "municipio": "GUADALAJARA",
@@ -18111,24 +18129,6 @@
     "municipio": "GUADALAJARA",
     "año": 2022,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2022,
-    "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 2
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2022,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -18177,7 +18177,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 90
+    "total": 91
   },
   {
     "municipio": "GUADALAJARA",
@@ -18186,7 +18186,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 130
+    "total": 131
   },
   {
     "municipio": "GUADALAJARA",
@@ -18204,7 +18204,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 53
+    "total": 54
   },
   {
     "municipio": "GUADALAJARA",
@@ -18213,7 +18213,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 101
+    "total": 102
   },
   {
     "municipio": "GUADALAJARA",
@@ -18384,7 +18384,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 55
+    "total": 54
   },
   {
     "municipio": "GUADALAJARA",
@@ -18402,7 +18402,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 9
+    "total": 10
   },
   {
     "municipio": "GUADALAJARA",
@@ -18411,7 +18411,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 109
+    "total": 107
   },
   {
     "municipio": "GUADALAJARA",
@@ -18420,7 +18420,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 114
+    "total": 116
   },
   {
     "municipio": "GUADALAJARA",
@@ -18438,7 +18438,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 71
+    "total": 70
   },
   {
     "municipio": "GUADALAJARA",
@@ -18447,7 +18447,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 112
+    "total": 113
   },
   {
     "municipio": "GUADALAJARA",
@@ -18465,7 +18465,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 8
+    "total": 7
   },
   {
     "municipio": "GUADALAJARA",
@@ -18474,7 +18474,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 66
+    "total": 67
   },
   {
     "municipio": "GUADALAJARA",
@@ -18537,7 +18537,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 9
+    "total": 8
   },
   {
     "municipio": "GUADALAJARA",
@@ -18546,7 +18546,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 38
+    "total": 39
   },
   {
     "municipio": "GUADALAJARA",
@@ -18663,7 +18663,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 138
+    "total": 139
   },
   {
     "municipio": "GUADALAJARA",
@@ -18840,19 +18840,10 @@
     "municipio": "GUADALAJARA",
     "año": 2025,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 2
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2025,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 6
+    "total": 4
   },
   {
     "municipio": "GUADALAJARA",
@@ -18861,7 +18852,7 @@
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 31
+    "total": 33
   },
   {
     "municipio": "GUADALAJARA",
@@ -18870,7 +18861,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 34
+    "total": 29
   },
   {
     "municipio": "GUADALAJARA",
@@ -18879,7 +18870,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 93
+    "total": 98
   },
   {
     "municipio": "GUADALAJARA",
@@ -18897,7 +18888,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 42
+    "total": 44
   },
   {
     "municipio": "GUADALAJARA",
@@ -18906,7 +18897,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 91
+    "total": 96
   },
   {
     "municipio": "GUADALAJARA",
@@ -18924,7 +18915,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 22
+    "total": 25
   },
   {
     "municipio": "GUADALAJARA",
@@ -18933,7 +18924,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 90
+    "total": 92
   },
   {
     "municipio": "GUADALAJARA",
@@ -18951,7 +18942,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 3
+    "total": 2
   },
   {
     "municipio": "GUADALAJARA",
@@ -18960,7 +18951,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 41
+    "total": 42
   },
   {
     "municipio": "GUADALAJARA",
@@ -18978,7 +18969,7 @@
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 4
+    "total": 3
   },
   {
     "municipio": "GUADALAJARA",
@@ -18987,13 +18978,31 @@
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 34
+    "total": 35
   },
   {
     "municipio": "GUADALAJARA",
     "año": 2025,
     "sexo": "MUJER",
     "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 10
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2025,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 71
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2025,
+    "sexo": "MUJER",
+    "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
     "total": 13
@@ -19002,28 +19011,10 @@
     "municipio": "GUADALAJARA",
     "año": 2025,
     "sexo": "MUJER",
-    "rango_edad": "15-24",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 66
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2025,
-    "sexo": "MUJER",
-    "rango_edad": "25-39",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 15
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2025,
-    "sexo": "MUJER",
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 24
+    "total": 26
   },
   {
     "municipio": "GUADALAJARA",
@@ -19032,15 +19023,6 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2025,
-    "sexo": "MUJER",
-    "rango_edad": "40-59",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
     "total": 2
   },
   {
@@ -19048,18 +19030,18 @@
     "año": 2025,
     "sexo": "MUJER",
     "rango_edad": "40-59",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 17
-  },
-  {
-    "municipio": "GUADALAJARA",
-    "año": 2025,
-    "sexo": "MUJER",
-    "rango_edad": "60+",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "total": 3
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2025,
+    "sexo": "MUJER",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 18
   },
   {
     "municipio": "GUADALAJARA",
@@ -19068,7 +19050,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 17
+    "total": 18
   },
   {
     "municipio": "GUADALAJARA",
@@ -19077,6 +19059,141 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 2
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 3
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 2
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 3
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 6
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 4
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "60+",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "60+",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 4
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 3
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 4
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 3
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 2
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "GUADALAJARA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "60+",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
     "total": 1
   },
   {
@@ -19428,7 +19545,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 2
+    "total": 3
   },
   {
     "municipio": "HUEJUCAR",
@@ -20814,7 +20931,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 15
+    "total": 19
   },
   {
     "municipio": "IXTLAHUACAN DE LOS MEMBRILLOS",
@@ -20823,7 +20940,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 7
+    "total": 8
   },
   {
     "municipio": "IXTLAHUACAN DE LOS MEMBRILLOS",
@@ -20868,7 +20985,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 3
+    "total": 4
   },
   {
     "municipio": "IXTLAHUACAN DE LOS MEMBRILLOS",
@@ -20914,6 +21031,33 @@
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 3
+  },
+  {
+    "municipio": "IXTLAHUACAN DE LOS MEMBRILLOS",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 3
+  },
+  {
+    "municipio": "IXTLAHUACAN DE LOS MEMBRILLOS",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 3
+  },
+  {
+    "municipio": "IXTLAHUACAN DE LOS MEMBRILLOS",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 2
   },
   {
     "municipio": "IXTLAHUACAN DEL RIO",
@@ -21674,6 +21818,15 @@
   {
     "municipio": "JALOSTOTITLAN",
     "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "JAMAY",
+    "año": 2012,
     "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
@@ -23964,7 +24117,16 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 2
+    "total": 1
+  },
+  {
+    "municipio": "LA BARCA",
+    "año": 2012,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
   },
   {
     "municipio": "LA BARCA",
@@ -23991,7 +24153,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 11
+    "total": 10
   },
   {
     "municipio": "LA BARCA",
@@ -24000,6 +24162,15 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "LA BARCA",
+    "año": 2013,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
     "total": 1
   },
   {
@@ -25854,7 +26025,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 3
+    "total": 2
   },
   {
     "municipio": "LAGOS DE MORENO",
@@ -25872,7 +26043,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 2
+    "total": 3
   },
   {
     "municipio": "LAGOS DE MORENO",
@@ -26409,15 +26580,6 @@
     "municipio": "LAGOS DE MORENO",
     "año": 2022,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "LAGOS DE MORENO",
-    "año": 2022,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -26457,7 +26619,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "LAGOS DE MORENO",
@@ -26907,7 +27069,7 @@
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "LAGOS DE MORENO",
@@ -27051,6 +27213,33 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "LAGOS DE MORENO",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 2
+  },
+  {
+    "municipio": "LAGOS DE MORENO",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "LAGOS DE MORENO",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
     "total": 1
   },
   {
@@ -27456,6 +27645,15 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "MAGDALENA",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
     "total": 1
   },
   {
@@ -28407,7 +28605,7 @@
     "municipio": "OCOTLAN",
     "año": 2012,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
+    "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
     "total": 1
@@ -28983,7 +29181,7 @@
     "municipio": "OCOTLAN",
     "año": 2022,
     "sexo": "MUJER",
-    "rango_edad": "#REF!",
+    "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 1
@@ -28992,7 +29190,7 @@
     "municipio": "OCOTLAN",
     "año": 2022,
     "sexo": "MUJER",
-    "rango_edad": "25-39",
+    "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 1
@@ -29121,7 +29319,16 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 6
+    "total": 4
+  },
+  {
+    "municipio": "OCOTLAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
   },
   {
     "municipio": "OCOTLAN",
@@ -29130,7 +29337,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 2
+    "total": 4
   },
   {
     "municipio": "OCOTLAN",
@@ -29533,8 +29740,8 @@
     "año": 2025,
     "sexo": "HOMBRE",
     "rango_edad": "60+",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
     "total": 1
   },
   {
@@ -30525,7 +30732,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 2
+    "total": 3
   },
   {
     "municipio": "PUERTO VALLARTA",
@@ -30846,15 +31053,6 @@
     "municipio": "PUERTO VALLARTA",
     "año": 2017,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "PUERTO VALLARTA",
-    "año": 2017,
-    "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -30885,7 +31083,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 5
+    "total": 6
   },
   {
     "municipio": "PUERTO VALLARTA",
@@ -31044,15 +31242,6 @@
     "municipio": "PUERTO VALLARTA",
     "año": 2019,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "PUERTO VALLARTA",
-    "año": 2019,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
@@ -31092,7 +31281,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 24
+    "total": 25
   },
   {
     "municipio": "PUERTO VALLARTA",
@@ -31855,18 +32044,9 @@
     "año": 2023,
     "sexo": "MUJER",
     "rango_edad": "0-14",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "PUERTO VALLARTA",
-    "año": 2023,
-    "sexo": "MUJER",
-    "rango_edad": "0-14",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 2
+    "total": 3
   },
   {
     "municipio": "PUERTO VALLARTA",
@@ -31893,15 +32073,6 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "PUERTO VALLARTA",
-    "año": 2024,
-    "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
     "total": 1
   },
   {
@@ -31974,7 +32145,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 9
+    "total": 10
   },
   {
     "municipio": "PUERTO VALLARTA",
@@ -32001,7 +32172,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 3
+    "total": 2
   },
   {
     "municipio": "PUERTO VALLARTA",
@@ -32010,7 +32181,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 2
+    "total": 3
   },
   {
     "municipio": "PUERTO VALLARTA",
@@ -32073,7 +32244,7 @@
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 5
+    "total": 4
   },
   {
     "municipio": "PUERTO VALLARTA",
@@ -32082,7 +32253,7 @@
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 3
+    "total": 4
   },
   {
     "municipio": "PUERTO VALLARTA",
@@ -32168,6 +32339,15 @@
   {
     "municipio": "PUERTO VALLARTA",
     "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "60+",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "PUERTO VALLARTA",
+    "año": 2025,
     "sexo": "MUJER",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
@@ -32218,6 +32398,42 @@
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 2
+  },
+  {
+    "municipio": "PUERTO VALLARTA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 2
+  },
+  {
+    "municipio": "PUERTO VALLARTA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "PUERTO VALLARTA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "PUERTO VALLARTA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
   },
   {
     "municipio": "QUITUPAN",
@@ -32511,7 +32727,7 @@
     "municipio": "SAN DIEGO DE ALEJANDRIA",
     "año": 2022,
     "sexo": "MUJER",
-    "rango_edad": "0-14",
+    "rango_edad": "60+",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
     "total": 1
@@ -32539,6 +32755,15 @@
     "año": 2024,
     "sexo": "MUJER",
     "rango_edad": "0-14",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "SAN DIEGO DE ALEJANDRIA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
     "total": 1
@@ -32850,6 +33075,15 @@
     "total": 1
   },
   {
+    "municipio": "SAN GABRIEL",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
     "municipio": "SAN IGNACIO CERRO GORDO",
     "año": 2016,
     "sexo": "HOMBRE",
@@ -33086,6 +33320,15 @@
   {
     "municipio": "SAN IGNACIO CERRO GORDO",
     "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "SAN IGNACIO CERRO GORDO",
+    "año": 2026,
     "sexo": "HOMBRE",
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
@@ -34473,19 +34716,10 @@
     "municipio": "SAN MARTIN DE BOLANOS",
     "año": 2012,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "SAN MARTIN DE BOLANOS",
-    "año": 2012,
-    "sexo": "HOMBRE",
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "SAN MARTIN DE BOLANOS",
@@ -35121,15 +35355,6 @@
     "municipio": "SAN MIGUEL EL ALTO",
     "año": 2019,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "SAN MIGUEL EL ALTO",
-    "año": 2019,
-    "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -35151,7 +35376,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 10
+    "total": 11
   },
   {
     "municipio": "SAN MIGUEL EL ALTO",
@@ -35634,19 +35859,19 @@
     "municipio": "SAN PEDRO TLAQUEPAQUE",
     "año": 2006,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 3
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
     "año": 2006,
     "sexo": "HOMBRE",
-    "rango_edad": "0-14",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 3
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -35707,8 +35932,8 @@
     "año": 2007,
     "sexo": "HOMBRE",
     "rango_edad": "60+",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
     "total": 1
   },
   {
@@ -36048,15 +36273,6 @@
     "municipio": "SAN PEDRO TLAQUEPAQUE",
     "año": 2014,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "SIN VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "SAN PEDRO TLAQUEPAQUE",
-    "año": 2014,
-    "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -36079,6 +36295,15 @@
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 2
+  },
+  {
+    "municipio": "SAN PEDRO TLAQUEPAQUE",
+    "año": 2014,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
+    "total": 1
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -36420,7 +36645,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 24
+    "total": 23
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -36438,7 +36663,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 9
+    "total": 10
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -36681,7 +36906,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 22
+    "total": 21
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -36699,7 +36924,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 20
+    "total": 21
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -36727,15 +36952,6 @@
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
     "total": 3
-  },
-  {
-    "municipio": "SAN PEDRO TLAQUEPAQUE",
-    "año": 2019,
-    "sexo": "MUJER",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 1
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -36816,7 +37032,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 6
+    "total": 7
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -36843,15 +37059,6 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "SAN PEDRO TLAQUEPAQUE",
-    "año": 2020,
-    "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
     "total": 1
   },
   {
@@ -36933,7 +37140,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 33
+    "total": 34
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37347,7 +37554,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 57
+    "total": 56
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37356,7 +37563,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 65
+    "total": 66
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37515,15 +37722,6 @@
     "municipio": "SAN PEDRO TLAQUEPAQUE",
     "año": 2023,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "SAN PEDRO TLAQUEPAQUE",
-    "año": 2023,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -37536,7 +37734,7 @@
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 8
+    "total": 7
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37572,7 +37770,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 71
+    "total": 70
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37590,7 +37788,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 14
+    "total": 15
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37599,7 +37797,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 31
+    "total": 32
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37749,19 +37947,10 @@
     "municipio": "SAN PEDRO TLAQUEPAQUE",
     "año": 2024,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 3
-  },
-  {
-    "municipio": "SAN PEDRO TLAQUEPAQUE",
-    "año": 2024,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 7
+    "total": 8
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37806,7 +37995,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 61
+    "total": 63
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37824,7 +38013,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 24
+    "total": 23
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37833,7 +38022,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 28
+    "total": 30
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37977,7 +38166,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 37
+    "total": 35
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -37986,7 +38175,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 45
+    "total": 48
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -38004,7 +38193,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 35
+    "total": 34
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -38013,7 +38202,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 44
+    "total": 48
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -38022,7 +38211,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 4
+    "total": 5
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -38094,7 +38283,7 @@
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 6
+    "total": 7
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -38130,7 +38319,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 5
+    "total": 4
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -38139,7 +38328,16 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 7
+    "total": 8
+  },
+  {
+    "municipio": "SAN PEDRO TLAQUEPAQUE",
+    "año": 2025,
+    "sexo": "MUJER",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
+    "total": 1
   },
   {
     "municipio": "SAN PEDRO TLAQUEPAQUE",
@@ -38158,6 +38356,51 @@
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 2
+  },
+  {
+    "municipio": "SAN PEDRO TLAQUEPAQUE",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 5
+  },
+  {
+    "municipio": "SAN PEDRO TLAQUEPAQUE",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "SAN PEDRO TLAQUEPAQUE",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 2
+  },
+  {
+    "municipio": "SAN PEDRO TLAQUEPAQUE",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "SAN PEDRO TLAQUEPAQUE",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
   },
   {
     "municipio": "SAN SEBASTIAN DEL OESTE",
@@ -38613,15 +38856,6 @@
     "municipio": "SAYULA",
     "año": 2014,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "SAYULA",
-    "año": 2014,
-    "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -38643,7 +38877,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 2
+    "total": 3
   },
   {
     "municipio": "SAYULA",
@@ -38676,15 +38910,6 @@
     "municipio": "SAYULA",
     "año": 2018,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "SAYULA",
-    "año": 2018,
-    "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -38697,7 +38922,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "SAYULA",
@@ -38946,19 +39171,10 @@
     "municipio": "TALA",
     "año": 2006,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "TALA",
-    "año": 2006,
-    "sexo": "HOMBRE",
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "TALA",
@@ -39732,7 +39948,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 19
+    "total": 20
   },
   {
     "municipio": "TALA",
@@ -40113,6 +40329,15 @@
     "total": 2
   },
   {
+    "municipio": "TALA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
     "municipio": "TALPA DE ALLENDE",
     "año": 2005,
     "sexo": "HOMBRE",
@@ -40153,6 +40378,15 @@
     "año": 2013,
     "sexo": "HOMBRE",
     "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TALPA DE ALLENDE",
+    "año": 2014,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
     "total": 1
@@ -40632,7 +40866,16 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 2
+    "total": 1
+  },
+  {
+    "municipio": "TAMAZULA DE GORDIANO",
+    "año": 2023,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
   },
   {
     "municipio": "TAMAZULA DE GORDIANO",
@@ -41233,8 +41476,8 @@
     "año": 2025,
     "sexo": "HOMBRE",
     "rango_edad": "40-59",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
     "total": 1
   },
   {
@@ -42168,15 +42411,6 @@
     "municipio": "TEOCALTICHE",
     "año": 2022,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "TEOCALTICHE",
-    "año": 2022,
-    "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
@@ -42198,7 +42432,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "TEOCALTICHE",
@@ -42315,7 +42549,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 12
+    "total": 11
   },
   {
     "municipio": "TEOCALTICHE",
@@ -42324,7 +42558,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 2
+    "total": 3
   },
   {
     "municipio": "TEOCALTICHE",
@@ -42843,15 +43077,6 @@
     "municipio": "TEPATITLAN DE MORELOS",
     "año": 2018,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "TEPATITLAN DE MORELOS",
-    "año": 2018,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -42891,7 +43116,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 15
+    "total": 16
   },
   {
     "municipio": "TEPATITLAN DE MORELOS",
@@ -45291,19 +45516,19 @@
     "municipio": "TLAJOMULCO DE ZUNIGA",
     "año": 2011,
     "sexo": "MUJER",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 2
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
     "año": 2011,
     "sexo": "MUJER",
-    "rango_edad": "15-24",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 2
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -46083,15 +46308,6 @@
     "municipio": "TLAJOMULCO DE ZUNIGA",
     "año": 2018,
     "sexo": "MUJER",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "TLAJOMULCO DE ZUNIGA",
-    "año": 2018,
-    "sexo": "MUJER",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -46140,7 +46356,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 9
+    "total": 10
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -46168,24 +46384,6 @@
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
     "total": 3
-  },
-  {
-    "municipio": "TLAJOMULCO DE ZUNIGA",
-    "año": 2019,
-    "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "TLAJOMULCO DE ZUNIGA",
-    "año": 2019,
-    "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "SIN VIDA",
-    "total": 1
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -46248,7 +46446,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 96
+    "total": 98
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -46905,7 +47103,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 69
+    "total": 70
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -46932,7 +47130,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 33
+    "total": 32
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -46950,7 +47148,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 9
+    "total": 10
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47103,7 +47301,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 50
+    "total": 49
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47112,7 +47310,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 41
+    "total": 42
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47157,7 +47355,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 37
+    "total": 36
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47166,7 +47364,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 26
+    "total": 27
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47328,7 +47526,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 42
+    "total": 41
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47337,7 +47535,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 39
+    "total": 40
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47355,7 +47553,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 74
+    "total": 72
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47364,7 +47562,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 47
+    "total": 49
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47553,7 +47751,7 @@
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 5
+    "total": 4
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47562,7 +47760,7 @@
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 7
+    "total": 8
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47571,7 +47769,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 41
+    "total": 43
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47598,7 +47796,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 62
+    "total": 61
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47607,7 +47805,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 35
+    "total": 36
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47616,7 +47814,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 3
+    "total": 4
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47625,7 +47823,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 29
+    "total": 31
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47679,7 +47877,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 4
+    "total": 3
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47688,7 +47886,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 28
+    "total": 30
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47697,7 +47895,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 9
+    "total": 8
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47706,7 +47904,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 5
+    "total": 6
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47724,7 +47922,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 4
+    "total": 3
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
@@ -47733,13 +47931,94 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 3
+    "total": 4
   },
   {
     "municipio": "TLAJOMULCO DE ZUNIGA",
     "año": 2025,
     "sexo": "MUJER",
     "rango_edad": "60+",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TLAJOMULCO DE ZUNIGA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TLAJOMULCO DE ZUNIGA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TLAJOMULCO DE ZUNIGA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TLAJOMULCO DE ZUNIGA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TLAJOMULCO DE ZUNIGA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TLAJOMULCO DE ZUNIGA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TLAJOMULCO DE ZUNIGA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "60+",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TLAJOMULCO DE ZUNIGA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TLAJOMULCO DE ZUNIGA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 1
@@ -47868,6 +48147,15 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TOLIMAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
     "total": 1
   },
   {
@@ -48225,18 +48513,18 @@
     "municipio": "TOMATLAN",
     "año": 2021,
     "sexo": "MUJER",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
     "total": 1
   },
   {
     "municipio": "TOMATLAN",
     "año": 2021,
     "sexo": "MUJER",
-    "rango_edad": "15-24",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
     "total": 1
   },
   {
@@ -48372,7 +48660,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 2
+    "total": 1
   },
   {
     "municipio": "TOMATLAN",
@@ -48381,7 +48669,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "TOMATLAN",
@@ -48948,7 +49236,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 11
+    "total": 10
   },
   {
     "municipio": "TONALA",
@@ -48957,7 +49245,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 3
+    "total": 4
   },
   {
     "municipio": "TONALA",
@@ -49110,7 +49398,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 17
+    "total": 16
   },
   {
     "municipio": "TONALA",
@@ -49119,7 +49407,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 18
+    "total": 19
   },
   {
     "municipio": "TONALA",
@@ -49479,7 +49767,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 13
+    "total": 14
   },
   {
     "municipio": "TONALA",
@@ -50208,7 +50496,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 23
+    "total": 22
   },
   {
     "municipio": "TONALA",
@@ -50217,7 +50505,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 21
+    "total": 22
   },
   {
     "municipio": "TONALA",
@@ -50397,7 +50685,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 16
+    "total": 15
   },
   {
     "municipio": "TONALA",
@@ -50406,7 +50694,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 14
+    "total": 15
   },
   {
     "municipio": "TONALA",
@@ -50541,7 +50829,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 17
+    "total": 15
   },
   {
     "municipio": "TONALA",
@@ -50550,7 +50838,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 23
+    "total": 27
   },
   {
     "municipio": "TONALA",
@@ -50568,7 +50856,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 14
+    "total": 16
   },
   {
     "municipio": "TONALA",
@@ -50586,7 +50874,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 4
+    "total": 5
   },
   {
     "municipio": "TONALA",
@@ -50595,7 +50883,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 14
+    "total": 15
   },
   {
     "municipio": "TONALA",
@@ -50622,7 +50910,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 6
+    "total": 7
   },
   {
     "municipio": "TONALA",
@@ -50667,7 +50955,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 17
+    "total": 18
   },
   {
     "municipio": "TONALA",
@@ -50676,7 +50964,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 3
+    "total": 2
   },
   {
     "municipio": "TONALA",
@@ -50685,7 +50973,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 10
+    "total": 11
   },
   {
     "municipio": "TONALA",
@@ -50728,6 +51016,69 @@
     "año": 2025,
     "sexo": "MUJER",
     "rango_edad": "60+",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 2
+  },
+  {
+    "municipio": "TONALA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 5
+  },
+  {
+    "municipio": "TONALA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TONALA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 3
+  },
+  {
+    "municipio": "TONALA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 2
+  },
+  {
+    "municipio": "TONALA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TONALA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TONALA",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 2
@@ -51468,6 +51819,15 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "TUXCUECA",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "60+",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
     "total": 1
   },
   {
@@ -53238,15 +53598,6 @@
     "municipio": "VILLA HIDALGO",
     "año": 2025,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "VILLA HIDALGO",
-    "año": 2025,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
@@ -53286,7 +53637,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 6
+    "total": 7
   },
   {
     "municipio": "VILLA HIDALGO",
@@ -54204,6 +54555,15 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "ZACOALCO DE TORRES",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
     "total": 1
   },
   {
@@ -54795,15 +55155,6 @@
     "municipio": "ZAPOPAN",
     "año": 2011,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2011,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -54834,7 +55185,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 21
+    "total": 22
   },
   {
     "municipio": "ZAPOPAN",
@@ -55830,15 +56181,6 @@
     "municipio": "ZAPOPAN",
     "año": 2018,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2018,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -55887,7 +56229,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 79
+    "total": 78
   },
   {
     "municipio": "ZAPOPAN",
@@ -55896,7 +56238,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 31
+    "total": 32
   },
   {
     "municipio": "ZAPOPAN",
@@ -55914,7 +56256,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 34
+    "total": 35
   },
   {
     "municipio": "ZAPOPAN",
@@ -56055,15 +56397,6 @@
     "municipio": "ZAPOPAN",
     "año": 2019,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2019,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -56121,7 +56454,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 108
+    "total": 109
   },
   {
     "municipio": "ZAPOPAN",
@@ -56307,15 +56640,6 @@
     "municipio": "ZAPOPAN",
     "año": 2020,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2020,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -56337,7 +56661,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 56
+    "total": 54
   },
   {
     "municipio": "ZAPOPAN",
@@ -56346,7 +56670,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 78
+    "total": 80
   },
   {
     "municipio": "ZAPOPAN",
@@ -56373,7 +56697,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 97
+    "total": 98
   },
   {
     "municipio": "ZAPOPAN",
@@ -56793,15 +57117,6 @@
     "municipio": "ZAPOPAN",
     "año": 2022,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 2
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2022,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -56823,7 +57138,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 64
+    "total": 63
   },
   {
     "municipio": "ZAPOPAN",
@@ -56832,7 +57147,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 97
+    "total": 98
   },
   {
     "municipio": "ZAPOPAN",
@@ -56850,7 +57165,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 132
+    "total": 131
   },
   {
     "municipio": "ZAPOPAN",
@@ -56859,7 +57174,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 108
+    "total": 110
   },
   {
     "municipio": "ZAPOPAN",
@@ -56886,7 +57201,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 58
+    "total": 59
   },
   {
     "municipio": "ZAPOPAN",
@@ -56949,7 +57264,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 12
+    "total": 13
   },
   {
     "municipio": "ZAPOPAN",
@@ -57054,15 +57369,6 @@
     "municipio": "ZAPOPAN",
     "año": 2023,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2023,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -57111,7 +57417,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 139
+    "total": 138
   },
   {
     "municipio": "ZAPOPAN",
@@ -57129,7 +57435,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 25
+    "total": 27
   },
   {
     "municipio": "ZAPOPAN",
@@ -57138,7 +57444,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 95
+    "total": 94
   },
   {
     "municipio": "ZAPOPAN",
@@ -57156,7 +57462,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 10
+    "total": 11
   },
   {
     "municipio": "ZAPOPAN",
@@ -57297,15 +57603,6 @@
     "municipio": "ZAPOPAN",
     "año": 2024,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "SIN VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2024,
-    "sexo": "HOMBRE",
     "rango_edad": "0-14",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -57336,7 +57633,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 46
+    "total": 45
   },
   {
     "municipio": "ZAPOPAN",
@@ -57354,7 +57651,7 @@
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 8
+    "total": 9
   },
   {
     "municipio": "ZAPOPAN",
@@ -57390,7 +57687,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 51
+    "total": 49
   },
   {
     "municipio": "ZAPOPAN",
@@ -57399,7 +57696,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 63
+    "total": 65
   },
   {
     "municipio": "ZAPOPAN",
@@ -57408,7 +57705,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
-    "total": 9
+    "total": 10
   },
   {
     "municipio": "ZAPOPAN",
@@ -57417,7 +57714,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 9
+    "total": 8
   },
   {
     "municipio": "ZAPOPAN",
@@ -57426,7 +57723,7 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 21
+    "total": 22
   },
   {
     "municipio": "ZAPOPAN",
@@ -57549,16 +57846,169 @@
     "municipio": "ZAPOPAN",
     "año": 2025,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 2
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 3
   },
   {
     "municipio": "ZAPOPAN",
     "año": 2025,
     "sexo": "HOMBRE",
     "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 18
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 41
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 87
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
+    "total": 4
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 58
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 68
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
+    "total": 8
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 32
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 33
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
+    "total": 3
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "60+",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 3
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "60+",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 29
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "MUJER",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 3
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "MUJER",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 20
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 15
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 55
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2025,
+    "sexo": "MUJER",
+    "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
     "total": 5
@@ -57566,182 +58016,11 @@
   {
     "municipio": "ZAPOPAN",
     "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "0-14",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 16
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "15-24",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 42
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "15-24",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 79
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "15-24",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "15-24",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "SIN VIDA",
-    "total": 3
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "25-39",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 62
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "25-39",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 63
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "25-39",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "SIN VIDA",
-    "total": 7
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "40-59",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 29
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "40-59",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 30
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "40-59",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "SIN VIDA",
-    "total": 3
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "60+",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 3
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "60+",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 29
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "MUJER",
-    "rango_edad": "0-14",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 4
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "MUJER",
-    "rango_edad": "0-14",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 19
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "MUJER",
-    "rango_edad": "15-24",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 16
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "MUJER",
-    "rango_edad": "15-24",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 51
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "MUJER",
-    "rango_edad": "15-24",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "SIN VIDA",
-    "total": 1
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
-    "sexo": "MUJER",
-    "rango_edad": "25-39",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 6
-  },
-  {
-    "municipio": "ZAPOPAN",
-    "año": 2025,
     "sexo": "MUJER",
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 22
+    "total": 24
   },
   {
     "municipio": "ZAPOPAN",
@@ -57769,6 +58048,105 @@
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
     "total": 9
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 6
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 2
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 5
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 3
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 2
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "SIN VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 2
+  },
+  {
+    "municipio": "ZAPOPAN",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
   },
   {
     "municipio": "ZAPOTILTIC",
@@ -58194,6 +58572,15 @@
     "total": 1
   },
   {
+    "municipio": "ZAPOTILTIC",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
     "municipio": "ZAPOTITLAN DE VADILLO",
     "año": 2010,
     "sexo": "HOMBRE",
@@ -58452,6 +58839,15 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "SIN VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "ZAPOTLAN DEL REY",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
     "total": 1
   },
   {
@@ -58593,15 +58989,6 @@
     "municipio": "ZAPOTLAN EL GRANDE",
     "año": 2011,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 1
-  },
-  {
-    "municipio": "ZAPOTLAN EL GRANDE",
-    "año": 2011,
-    "sexo": "HOMBRE",
     "rango_edad": "15-24",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
@@ -58623,7 +59010,7 @@
     "rango_edad": "40-59",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 2
+    "total": 3
   },
   {
     "municipio": "ZAPOTLAN EL GRANDE",
@@ -59523,7 +59910,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
-    "total": 4
+    "total": 3
   },
   {
     "municipio": "ZAPOTLAN EL GRANDE",
@@ -59532,7 +59919,7 @@
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 1
+    "total": 2
   },
   {
     "municipio": "ZAPOTLAN EL GRANDE",
@@ -59601,18 +59988,18 @@
     "municipio": "ZAPOTLANEJO",
     "año": 2012,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
+    "rango_edad": "0-14",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
     "total": 1
   },
   {
     "municipio": "ZAPOTLANEJO",
     "año": 2012,
     "sexo": "HOMBRE",
-    "rango_edad": "0-14",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
     "total": 1
   },
   {
@@ -60312,9 +60699,9 @@
     "municipio": "ZAPOTLANEJO",
     "año": 2025,
     "sexo": "HOMBRE",
-    "rango_edad": "#REF!",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
     "total": 1
   },
   {
@@ -60322,6 +60709,15 @@
     "año": 2025,
     "sexo": "HOMBRE",
     "rango_edad": "15-24",
+    "estatus_persona": "PERSONA LOCALIZADA",
+    "condicion_localizacion": "CON VIDA",
+    "total": 4
+  },
+  {
+    "municipio": "ZAPOTLANEJO",
+    "año": 2025,
+    "sexo": "HOMBRE",
+    "rango_edad": "25-39",
     "estatus_persona": "PERSONA DESAPARECIDA",
     "condicion_localizacion": "DESAPARECIDA",
     "total": 2
@@ -60330,28 +60726,10 @@
     "municipio": "ZAPOTLANEJO",
     "año": 2025,
     "sexo": "HOMBRE",
-    "rango_edad": "15-24",
-    "estatus_persona": "PERSONA LOCALIZADA",
-    "condicion_localizacion": "CON VIDA",
-    "total": 3
-  },
-  {
-    "municipio": "ZAPOTLANEJO",
-    "año": 2025,
-    "sexo": "HOMBRE",
-    "rango_edad": "25-39",
-    "estatus_persona": "PERSONA DESAPARECIDA",
-    "condicion_localizacion": "DESAPARECIDA",
-    "total": 3
-  },
-  {
-    "municipio": "ZAPOTLANEJO",
-    "año": 2025,
-    "sexo": "HOMBRE",
     "rango_edad": "25-39",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
-    "total": 6
+    "total": 8
   },
   {
     "municipio": "ZAPOTLANEJO",
@@ -60414,6 +60792,24 @@
     "rango_edad": "60+",
     "estatus_persona": "PERSONA LOCALIZADA",
     "condicion_localizacion": "CON VIDA",
+    "total": 1
+  },
+  {
+    "municipio": "ZAPOTLANEJO",
+    "año": 2026,
+    "sexo": "HOMBRE",
+    "rango_edad": "15-24",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
+    "total": 1
+  },
+  {
+    "municipio": "ZAPOTLANEJO",
+    "año": 2026,
+    "sexo": "MUJER",
+    "rango_edad": "40-59",
+    "estatus_persona": "PERSONA DESAPARECIDA",
+    "condicion_localizacion": "DESAPARECIDA",
     "total": 1
   }
 ]
