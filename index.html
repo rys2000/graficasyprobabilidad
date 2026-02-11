@@ -19,7 +19,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
 <style>
-/* ===== 1 FEBRERO 2026 ===== */
+/* ===== 11 FEBRERO 2026 ===== */
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
@@ -825,8 +825,6 @@ canvas {
   font-style: italic;
   text-align: center;
 }
-/* ===== BOTÓN SECUNDARIO ===== */
-/* ===== BOTÓN SECUNDARIO MEJORADO ===== */
 .btn-secundario {
   background-color: #6c757d;
   color: white;
@@ -1065,7 +1063,7 @@ canvas {
     <p><strong>📊 Fuente de datos</strong></p>
     <p>El conjunto de datos original incluye 36,927 registros correspondientes a
       personas reportadas como desaparecidas en el estado de Jalisco,
-      con fechas que abarcan desde el año 1942 hasta diciembre de 2025.
+      con fechas que abarcan desde el año 1942 hasta enero de 2026.
     </p>
 
     <p><strong>🧹 Proceso de depuración</strong></p>
@@ -1109,7 +1107,7 @@ canvas {
   <div class="nota-contenido">
     <h3>Nota Metodológica - Modelo de Probabilidad</h3>
 
-<p><strong>Última actualización:</strong> 21 de enero de 2026</p>
+<p><strong>Última actualización:</strong> 211 de febrero de 2026</p>
 
 <h4>🧠 Modelo Implementado</h4>
 <p>
@@ -2220,8 +2218,7 @@ function generarGrafica() {
       return;
     }
 
-    // =========================
-// AÑOS A USAR (ÚNICO LUGAR)
+// AÑOS 
 // =========================
 const selectAnios = document.getElementById('aniosComparacion');
 const opcionesAnios = Array.from(selectAnios.selectedOptions);
