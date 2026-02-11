@@ -3,6 +3,11 @@
 
 
 
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -845,6 +850,11 @@ canvas {
 .btn-secendario:active {
   transform: translateY(0);
 }
+
+.masEspacio{
+  margin-top: 15px;
+}
+
 </style>
 
 </head>
@@ -870,39 +880,28 @@ canvas {
   <div>
     <label>Municipios a comparar:</label>
     <select id="municipiosComparacion" multiple size="5">
+
+
       <!-- Opciones se llenarán dinámicamente -->
     </select>
     <div class="ayuda" style="font-size: 11px; color: #666; margin-top: 3px;">
-      (Ctrl+Click PC)(Command+Click MAC)para seleccionar múltiples
+      (Ctrl+Click PC),(Command+Click MAC) para seleccionar múltiples
     </div>
-    
-    <button type="button" id="seleccionarTodos" class="btn-secundario" style="
-      background-color: #6c757d;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 8px;
-      font-size: 11px;
-      width: 100%;
-    ">
-      Seleccionar Todos
-    </button>
-    
-    <div id="contadorMunicipios" class="contador-municipios" style="
-      font-size: 11px;
-      color: #666;
-      margin-top: 5px;
-      font-style: italic;
-    ">
-      Seleccionados: 0 municipios
-    </div>
+
+
   </div>
 
-      <div>
-        <label>Año</label>
-        <select id="anio"></select>
+      <div class="masEspacio">
+  <label>Años a comparar:</label>
+
+  <select id="aniosComparacion" multiple size="5"></select>
+
+
+
+  <div id="contadorAnios" class="contador-municipios">
+    Seleccionados: 0 años
+  </div>
+
 
         <label>Sexo</label>
         <select id="sexo"></select>
@@ -917,21 +916,10 @@ canvas {
         </select>
       </div>
 
-      <div>
-        <label>Tipo de análisis</label>
-        <select id="modo">
-          <option value="simple">Un año</option>
-          <option value="temporal">Evolución en el tiempo</option>
-        </select>
 
-        <div class="checkbox-container">
-          <input type="checkbox" id="filtrarAnios">
-          <label for="filtrarAnios" style="margin: 0; font-size: 11px;">Seleccionar años específicos</label>
-        </div>
-        <select id="aniosSeleccionados" multiple style="display:none"></select>
-      </div>
 
-      <div>
+
+      <div class="masEspacio">
         <label>Tipo de gráfica</label>
         <div id="chartTypes">
           <button data-type="bar">Barras</button>
@@ -2012,26 +2000,30 @@ function obtenerMunicipiosOrdenadosPorCasos(datos) {
 }
 
 function llenarSelectoresMultiples(municipios) {
-  // Llenar selector múltiple de gráficas
-  llenarMultiple("municipiosComparacion", municipios);
-  // Llenar selector de predicción
+  llenarMultiple(
+    "municipiosComparacion",
+    municipios,
+    "TODOS LOS MUNICIPIOS"
+  );
+
   llenar("predMunicipio", municipios, false);
 }
 
+
 // Nueva función para llenar selects múltiples
-function llenarMultiple(id, valores) {
+function llenarMultiple(id, valores, textoTodos = "TODOS") {
   const s = document.getElementById(id);
   if (!s) return;
 
   s.innerHTML = '';
-  
-  // Agregar opción "TODOS" primero
-  s.innerHTML += '<option value="TODOS">TODOS LOS MUNICIPIOS</option>';
-  
+  s.innerHTML += `<option value="TODOS">${textoTodos}</option>`;
+
   valores.forEach(v => {
     s.innerHTML += `<option value="${v}">${v}</option>`;
   });
 }
+
+
 
 function llenar(id, valores, usarTotal = true) {
   const s = document.getElementById(id);
@@ -2053,8 +2045,17 @@ function poblarSelectoresGraficas() {
 
     const anios = [...new Set(datos.map(d => Number(d.año)))]
       .sort((a, b) => b - a);
-    llenar("anio", anios, false);
-    llenar("aniosSeleccionados", anios, false);
+llenarMultiple(
+  "aniosComparacion",
+  anios,
+  "TODOS LOS AÑOS"
+);
+document
+  .getElementById('aniosComparacion')
+  .addEventListener('change', actualizarContadorAnios);
+
+actualizarContadorAnios();
+
 
     const sexos = [...new Set(datos.map(d => d.sexo))].sort();
     llenar("sexo", sexos);
@@ -2068,18 +2069,18 @@ function poblarSelectoresGraficas() {
     ];
 
     llenar("edad", rangosEdad, true); // true = añade opción "TOTAL"
-    
+
 // Agregar evento para el botón "Seleccionar Todos" - VERSIÓN MEJORADA
 document.getElementById('seleccionarTodos').addEventListener('click', function() {
   const select = document.getElementById('municipiosComparacion');
   if (!select) return;
-  
+
   const todasOpciones = Array.from(select.options);
-  
+
   // Verificar si TODOS está seleccionado
   const todosOption = select.querySelector('option[value="TODOS"]');
   const tieneTodos = todosOption && todosOption.selected;
-  
+
   if (tieneTodos || this.dataset.state === 'todos-seleccionados') {
     // DESELECCIONAR todo
     todasOpciones.forEach(opt => opt.selected = false);
@@ -2097,17 +2098,45 @@ document.getElementById('seleccionarTodos').addEventListener('click', function()
     this.dataset.state = 'todos-seleccionados';
     this.style.backgroundColor = '#dc3545'; // Color rojo para indicar "deseleccionar"
   }
-  
+
   // Disparar evento change manualmente para actualizar contador
   select.dispatchEvent(new Event('change'));
 });
 
+
+document.getElementById('seleccionarTodosAnios').addEventListener('click', function() {
+  const select = document.getElementById('aniosComparacion');
+  if (!select) return;
+
+  const opciones = Array.from(select.options);
+  const todosOption = opciones.find(o => o.value === "TODOS");
+  const tieneTodos = todosOption && todosOption.selected;
+
+  if (tieneTodos || this.dataset.state === 'todos') {
+    opciones.forEach(o => o.selected = false);
+    this.textContent = 'Seleccionar Todos';
+    this.dataset.state = '';
+    this.style.backgroundColor = '#6c757d';
+  } else {
+    opciones.forEach(o => {
+      if (o.value !== "TODOS") o.selected = true;
+    });
+    this.textContent = 'Deseleccionar Todos';
+    this.dataset.state = 'todos';
+    this.style.backgroundColor = '#dc3545';
+  }
+
+  select.dispatchEvent(new Event('change'));
+});
+
+
+
     // Actualizar contador cuando cambia la selección
     document.getElementById('municipiosComparacion').addEventListener('change', actualizarContadorMunicipios);
-    
+
     // Inicializar contador
     actualizarContadorMunicipios();
-    
+
   } catch (error) {
     console.error("Error poblando selectores:", error);
   }
@@ -2118,11 +2147,11 @@ function actualizarContadorMunicipios() {
   const select = document.getElementById('municipiosComparacion');
   const seleccionados = Array.from(select.selectedOptions);
   const contador = document.getElementById('contadorMunicipios');
-  
+
   if (!contador) return;
-  
+
   const totalOpciones = select.options.length - 1; // Restar la opción "TODOS"
-  
+
   if (seleccionados.some(opt => opt.value === "TODOS")) {
     contador.textContent = `Seleccionados: TODOS LOS MUNICIPIOS (${totalOpciones})`;
   } else {
@@ -2130,12 +2159,27 @@ function actualizarContadorMunicipios() {
   }
 }
 
+function actualizarContadorAnios() {
+  const select = document.getElementById('aniosComparacion');
+  const seleccionados = Array.from(select.selectedOptions);
+  const contador = document.getElementById('contadorAnios');
+
+  const total = select.options.length - 1;
+
+  if (seleccionados.some(o => o.value === "TODOS")) {
+    contador.textContent = `Seleccionados: TODOS LOS AÑOS (${total})`;
+  } else {
+    contador.textContent = `Seleccionados: ${seleccionados.length} de ${total} años`;
+  }
+}
+
+
 function generarGrafica() {
   try {
     // Obtener municipios seleccionados del select múltiple
     const selectMunicipios = document.getElementById('municipiosComparacion');
     const opcionesSeleccionadas = Array.from(selectMunicipios.selectedOptions);
-    
+
     if (opcionesSeleccionadas.length === 0) {
       alert("Por favor selecciona al menos un municipio.");
       return;
@@ -2143,9 +2187,9 @@ function generarGrafica() {
 
     // Verificar si se seleccionó "TODOS"
     const tieneTodos = opcionesSeleccionadas.some(opt => opt.value === "TODOS");
-    
+
     let municipiosUsar = [];
-    
+
     if (tieneTodos) {
       // Obtener todos los municipios (excluyendo la opción "TODOS")
       municipiosUsar = Array.from(selectMunicipios.options)
@@ -2163,10 +2207,7 @@ function generarGrafica() {
 
     const sexoSel = document.getElementById('sexo').value;
     const edadSel = document.getElementById('edad').value;
-    const anioSel = Number(document.getElementById('anio').value);
     const metricaSel = document.getElementById('metrica').value;
-    const modoSel = document.getElementById('modo').value;
-    const filtrarAnios = document.getElementById('filtrarAnios').checked;
 
     let filtrado = datos.filter(d =>
       municipiosUsar.includes(d.municipio) &&
@@ -2179,46 +2220,69 @@ function generarGrafica() {
       return;
     }
 
-    if (modoSel === "temporal" && filtrarAnios) {
-      const selectedOptions = Array.from(document.getElementById('aniosSeleccionados').selectedOptions);
-      if (selectedOptions.length > 0) {
-        const aniosSeleccionados = selectedOptions.map(option => Number(option.value));
-        filtrado = filtrado.filter(d => aniosSeleccionados.includes(d.año));
-      }
-    }
+    // =========================
+// AÑOS A USAR (ÚNICO LUGAR)
+// =========================
+const selectAnios = document.getElementById('aniosComparacion');
+const opcionesAnios = Array.from(selectAnios.selectedOptions);
+
+if (opcionesAnios.length === 0) {
+  alert("Selecciona al menos un año.");
+  return;
+}
+
+let aniosUsar = [];
+
+if (opcionesAnios.some(o => o.value === "TODOS")) {
+  aniosUsar = Array.from(selectAnios.options)
+    .filter(o => o.value !== "TODOS")
+    .map(o => Number(o.value));
+} else {
+  aniosUsar = opcionesAnios.map(o => Number(o.value));
+}
+
+// Aplicar filtro de años
+filtrado = filtrado.filter(d => aniosUsar.includes(Number(d.año)));
+
+if (filtrado.length === 0) {
+  alert("No hay datos para los años seleccionados.");
+  return;
+}
+
+const esTemporal = aniosUsar.length > 1;
+const anioSimple = aniosUsar[0];
+
+
 
     if (chartAnalisis) {
       chartAnalisis.destroy();
     }
 
-    const titulo = `Municipios: ${municipiosUsar.length > 3 ? 
-      `${municipiosUsar.slice(0, 3).join(", ")}... (${municipiosUsar.length} total)` : 
+    const titulo = `Municipios: ${municipiosUsar.length > 3 ?
+      `${municipiosUsar.slice(0, 3).join(", ")}... (${municipiosUsar.length} total)` :
       municipiosUsar.join(", ")}`;
-    
+
     let subtitulo = "";
 
-    if (modoSel === "simple") {
-      subtitulo = `Año: ${anioSel}`;
-    } else {
-      subtitulo = "Evolución temporal por año";
-      if (filtrarAnios) {
-        const selectedYears = Array.from(document.getElementById('aniosSeleccionados').selectedOptions)
-          .map(o => o.value)
-          .sort((a, b) => a - b);
-        if (selectedYears.length > 0) {
-          subtitulo += ` (Años seleccionados: ${selectedYears.join(", ")})`;
-        }
-      }
-    }
+if (!esTemporal) {
+  subtitulo = `Año: ${anioSimple}`;
+} else {
+  const aniosTexto = aniosUsar
+    .slice()
+    .sort((a, b) => a - b)
+    .join(", ");
+
+  subtitulo = `Evolución temporal (${aniosTexto})`;
+}
 
     let labels = [];
     let datasets = [];
 
-    if (modoSel === "simple") {
-      filtrado = filtrado.filter(d => d.año === anioSel);
+      if (!esTemporal) {
+      filtrado = filtrado.filter(d => d.año === anioSimple);
 
       if (filtrado.length === 0) {
-        alert(`No hay datos disponibles para el año ${anioSel} con los filtros seleccionados.`);
+        alert(`No hay datos disponibles para el año ${anioSimple} con los filtros seleccionados.`);
         return;
       }
 
@@ -2238,7 +2302,7 @@ function generarGrafica() {
 
     } else {
       labels = [...new Set(filtrado.map(d => d.año))].sort((a, b) => a - b);
-      
+
       // Para muchos municipios, agrupar por municipio en lugar de por categoría
       if (municipiosUsar.length > 8) {
         datasets = municipiosUsar.map(mun => {
@@ -2262,7 +2326,7 @@ function generarGrafica() {
         // Método original para pocos municipios
         const categorias = [...new Set(filtrado.map(d => d[metricaSel]))].sort();
         datasets = [];
-        
+
         municipiosUsar.forEach(mun => {
           categorias.forEach(cat => {
             const data = labels.map(anio => {
@@ -2292,7 +2356,7 @@ function generarGrafica() {
       }
     }
 
-    renderChart(labels, datasets, modoSel === "temporal", titulo, subtitulo);
+  renderChart(labels, datasets, esTemporal, titulo, subtitulo);
     document.getElementById('resumen').innerText = subtitulo;
 
   } catch (error) {
@@ -2523,6 +2587,13 @@ function mostrarResultadosPrediccion(prediccion) {
   document.getElementById('probDesaparecida').textContent = `${prediccion.desaparecida}%`;
   document.getElementById('probSinVida').textContent = `${prediccion.sinVida}%`;
 
+
+  document.getElementById('aniosComparacion')
+  .addEventListener('change', actualizarContadorAnios);
+
+actualizarContadorAnios();
+
+
   // Animar barras
   setTimeout(() => {
     document.getElementById('barConVida').style.width = `${prediccion.conVida}%`;
@@ -2608,11 +2679,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
-  document.getElementById("filtrarAnios").addEventListener("change", function() {
-    document.getElementById("aniosSeleccionados").style.display = this.checked ? "block" : "none";
-  });
-
   document.getElementById('predMeses').addEventListener('input', function() {
     document.getElementById('mesesValue').textContent = `${this.value} meses`;
   });
@@ -2696,6 +2762,10 @@ window.addEventListener('click', function (e) {
 
 </body>
 </html>
+
+
+
+
 
 
 
