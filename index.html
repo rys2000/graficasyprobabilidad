@@ -19,7 +19,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
 <style>
-/* ===== NUEVO FEBRERO 2026 ===== */
+/* ===== NUEVO DISEÑO FEBRERO 2026 ===== */
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
@@ -103,12 +103,12 @@ header#top-header {
   width: 320px;
   background: var(--card-bg);
   border-radius: var(--border-radius);
-  padding: 15px;
+  padding: 10px;
   box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   overflow-y: auto;
   max-height: 100%;
   transition: left 0.3s ease;
@@ -127,13 +127,13 @@ label {
   display: block;
   font-size: 12px;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   color: var(--text-color);
 }
 
 select, input {
   width: 100%;
-  padding: 8px;
+  padding: 5px;
   border-radius: 6px;
   border: 1px solid var(--border-color);
   background: white;
@@ -148,14 +148,14 @@ select:focus, input:focus {
 
 /* Selectores múltiples */
 select[multiple] {
-  min-height: 90px;
-  max-height: 130px;
+  min-height: 60px;
+  max-height: 90px;
   background: white;
   cursor: pointer;
 }
 
 select[multiple] option {
-  padding: 8px 10px;
+  padding: 4px 6px;
   margin: 2px 0;
   border-radius: 4px;
   cursor: pointer;
@@ -176,11 +176,11 @@ select[multiple] option:checked {
 
 /* Contadores de selección */
 .seleccion-contador {
-  font-size: 11px;
+  font-size: 10px;
   color: #666;
-  margin-top: 5px;
-  margin-bottom: 8px;
-  padding: 4px 8px;
+  margin-top: 3px;
+  margin-bottom: 4px;
+  padding: 3px 6px;
   background: var(--light-bg);
   border-radius: 4px;
   display: flex;
@@ -202,7 +202,7 @@ select[multiple] option:checked {
   background-color: #6c757d;
   color: white;
   border: none;
-  padding: 8px 12px;
+  padding: 5px 8px;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 5px;
@@ -871,7 +871,7 @@ canvas {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 </style>
 
@@ -888,17 +888,17 @@ canvas {
 <div id="layout">
   <!-- PANEL COMPACTO -->
   <div id="panel">
-    <button class="section-toggle active" onclick="toggleSection('graficas')">
+    <button class="section-toggle" onclick="toggleSection('graficas')">
       📊 Gráficas
     </button>
 
-    <div id="section-graficas" class="section-content">
+<div id="section-graficas" class="section-content collapsed">
       <!-- SECCIÓN DE ANÁLISIS -->
 
       <!-- Municipios -->
       <div>
         <div class="contador-wrapper">
-          <label>📍 Municipios <span class="indicador-requerido">requerido</span></label>
+          <label>Municipios <span class="indicador-requerido">requerido</span></label>
         </div>
         <select id="municipiosComparacion" multiple size="3"></select>
         <button id="seleccionarTodosMunicipios" class="btn-secundario">Seleccionar Todos</button>
@@ -911,7 +911,7 @@ canvas {
       <!-- Años -->
       <div>
         <div class="contador-wrapper">
-          <label>📅 Años <span class="indicador-requerido">requerido</span></label>
+          <label>Años <span class="indicador-requerido">requerido</span></label>
         </div>
         <select id="aniosComparacion" multiple size="3"></select>
         <button id="seleccionarTodosAnios" class="btn-secundario">Seleccionar Todos</button>
@@ -923,7 +923,7 @@ canvas {
 
       <!-- Sexo -->
       <div>
-        <label>⚥ Sexo</label>
+        <label>Sexo</label>
         <select id="sexoComparacion" multiple size="2"></select>
         <button id="seleccionarTodosSexos" class="btn-secundario">Seleccionar Todos</button>
         <div id="contadorSexoComparacion" class="seleccion-contador">
@@ -934,7 +934,7 @@ canvas {
 
       <!-- Rango de Edad -->
       <div>
-        <label>🎂 Rango de Edad</label>
+        <label>Rango de Edad</label>
         <select id="edadComparacion" multiple size="3"></select>
         <button id="seleccionarTodosEdades" class="btn-secundario">Seleccionar Todos</button>
         <div id="contadorEdadComparacion" class="seleccion-contador">
@@ -945,7 +945,7 @@ canvas {
 
       <!-- Estado de Persona -->
       <div>
-        <label>⚖️ Estado de Persona</label>
+        <label>Estado de Persona</label>
         <select id="estadoComparacion" multiple size="2"></select>
         <button id="seleccionarTodosEstados" class="btn-secundario">Seleccionar Todos</button>
         <div id="contadorEstadoComparacion" class="seleccion-contador">
@@ -956,7 +956,7 @@ canvas {
 
       <!-- Condición de Localización -->
       <div>
-        <label>📍 Condición de Localización</label>
+        <label>Condición de Localización</label>
         <select id="condicionComparacion" multiple size="3"></select>
         <button id="seleccionarTodosCondiciones" class="btn-secundario">Seleccionar Todos</button>
         <div id="contadorCondicionComparacion" class="seleccion-contador">
@@ -965,7 +965,35 @@ canvas {
         </div>
       </div>
 
+
+
+      <div class="masEspacio">
+        <label>📈 Tipo de gráfica</label>
+        <div id="chartTypes">
+          <button data-type="bar">Barras</button>
+          <button data-type="stackedBar">Barras Apiladas</button>
+          <button data-type="line">Línea</button>
+          <button data-type="area">Área</button>
+          <button data-type="stackedArea">Área Apiladas</button>
+          <button data-type="pie">Pastel</button>
+          <button data-type="doughnut">Donut</button>
+        </div>
+      </div>
+
+      <button id="btnGenerar">
+        🚀 Generar gráfica
+      </button>
+    </div>
+
+
+    <button class="section-toggle" onclick="toggleSection('analisis')">
+  📈 Análisis avanzado
+</button>
+
+<div id="section-analisis" class="section-content collapsed">
       <!-- ===== NUEVOS CONTROLES DE MODO AVANZADO ===== -->
+       <label>Municipio y Año <span class="indicador-requerido">requerido</span></label>
+
       <div class="modo-avanzado-container">
         <!-- SELECTOR DUAL -->
         <div class="modo-avanzado-checkbox" style="background: #fff3f3;">
@@ -1043,30 +1071,16 @@ canvas {
               Eje Y: % Localizados con vida<br>
               Cada punto = un municipio
             </p>
+            
           </div>
         </div>
-      </div>
+        <button class="btn-generar">Generar gráfica</button>
 
-      <div class="masEspacio">
-        <label>📈 Tipo de gráfica</label>
-        <div id="chartTypes">
-          <button data-type="bar">Barras</button>
-          <button data-type="stackedBar">Barras Apiladas</button>
-          <button data-type="line">Línea</button>
-          <button data-type="area">Área</button>
-          <button data-type="stackedArea">Área Apiladas</button>
-          <button data-type="pie">Pastel</button>
-          <button data-type="doughnut">Donut</button>
-        </div>
-      </div>
+      </div></div>
 
-      <button id="btnGenerar">
-        🚀 Generar gráfica
-      </button>
-    </div>
 
     <button class="section-toggle" onclick="toggleSection('prediccion')">
-      🎲 Probabilidad
+       Probabilidad
     </button>
 
     <div id="section-prediccion" class="section-content collapsed">
@@ -1078,7 +1092,7 @@ canvas {
           ⏳ Cargando datos de entrenamiento...
         </div>
 
-        <label>⚥ Sexo</label>
+        <label>Sexo</label>
         <div class="radio-group">
           <label class="radio-option">
             <input type="radio" name="predSexo" value="MUJER" checked>
@@ -1090,7 +1104,7 @@ canvas {
           </label>
         </div>
 
-        <label>🎂 Edad</label>
+        <label> Edad</label>
         <select id="predEdad">
           <option value="2">0-4 años</option>
           <option value="7">5-9 años</option>
@@ -1109,13 +1123,13 @@ canvas {
           <option value="72">70-74 años</option>
         </select>
 
-        <label>⏱️ Meses entre desaparición y reporte</label>
+        <label> Meses entre desaparición y reporte</label>
         <div class="range-container">
           <input type="range" id="predMeses" min="0" max="60" value="12" class="range-slider">
           <div class="range-value" id="mesesValue">12 meses</div>
         </div>
 
-        <label>📍 Municipio</label>
+        <label>Municipio</label>
         <select id="predMunicipio"></select>
 
         <button id="btnPrediccion" disabled>
@@ -1127,7 +1141,7 @@ canvas {
           <h5>📊 Probabilidades estimadas:</h5>
 
           <div class="result-item">
-            <span>✅ Con vida:</span>
+            <span>Con vida:</span>
             <span id="probConVida">--%</span>
           </div>
           <div class="result-bar">
@@ -1135,7 +1149,7 @@ canvas {
           </div>
 
           <div class="result-item">
-            <span>❓ Desaparecida:</span>
+            <span>Desaparecida:</span>
             <span id="probDesaparecida">--%</span>
           </div>
           <div class="result-bar">
@@ -1143,7 +1157,7 @@ canvas {
           </div>
 
           <div class="result-item">
-            <span>⚰️ Sin vida:</span>
+            <span>Sin vida:</span>
             <span id="probSinVida">--%</span>
           </div>
           <div class="result-bar">
@@ -1582,7 +1596,7 @@ function poblarSelectoresGraficas() {
       const btnLimpiar = document.createElement('button');
       btnLimpiar.id = 'btnLimpiarTodo';
       btnLimpiar.className = 'btn-secundario';
-      btnLimpiar.innerHTML = '🧹 Limpiar todos los filtros';
+      btnLimpiar.innerHTML = 'Limpiar todos los filtros';
       btnLimpiar.addEventListener('click', limpiarTodosLosFiltros);
       document.getElementById('panel').insertBefore(btnLimpiar, document.getElementById('creditos'));
     }
@@ -1597,19 +1611,26 @@ function poblarSelectoresGraficas() {
   } catch (error) {
     console.error("Error poblando selectores:", error);
   }
+
 }
+
+let modoAvanzadoInicializado = false;
 
 // =========================
 // FUNCIONES DE MODO AVANZADO
 // =========================
 
 function inicializarModoAvanzado() {
+  if (modoAvanzadoInicializado) return;
+
   if (!datos || datos.length === 0) {
     setTimeout(inicializarModoAvanzado, 500);
     return;
   }
 
+  modoAvanzadoInicializado = true;
   console.log("🔄 Inicializando modo avanzado...");
+
 
   // Selector Dual
   const dualCheck = document.getElementById('activarSelectorDual');
@@ -1707,10 +1728,23 @@ function actualizarInfoBenchmark() {
   const municipio = document.getElementById('municipioBenchmark')?.value;
   if (!municipio || !datos.length) return;
 
-  const aniosRecientes = ['2020', '2021', '2022', '2023', '2024', '2025'];
+const sexos = obtenerValoresSeleccionados('sexoComparacion');
+const rangosEdad = obtenerValoresSeleccionados('edadComparacion');
+const estados = obtenerValoresSeleccionados('estadoComparacion');
+const condiciones = obtenerValoresSeleccionados('condicionComparacion');
+
+
+const aniosRecientes = obtenerValoresSeleccionados('aniosComparacion');
+if (aniosRecientes.length === 0) return;
   
   // Promedio estatal
-  const datosEstado = datos.filter(d => aniosRecientes.includes(String(d.año)));
+const datosEstado = datos.filter(d =>
+  aniosRecientes.includes(String(d.año)) &&
+  (sexos.length === 0 || sexos.includes(d.sexo)) &&
+  (rangosEdad.length === 0 || rangosEdad.includes(d.rango_edad)) &&
+  (estados.length === 0 || estados.includes(d.estatus_persona)) &&
+  (condiciones.length === 0 || condiciones.includes(d.condicion_localizacion))
+);
   const totalCasosEstado = datosEstado.reduce((sum, d) => sum + (Number(d.total) || 0), 0);
   const conVidaEstado = datosEstado
     .filter(d => d.condicion_localizacion === "CON VIDA" || d.condicion_localizacion === "Con vida")
@@ -1718,10 +1752,15 @@ function actualizarInfoBenchmark() {
   const tasaEstado = totalCasosEstado > 0 ? ((conVidaEstado / totalCasosEstado) * 100).toFixed(1) : 0;
 
   // Datos del municipio
-  const datosMunicipio = datos.filter(d => 
-    d.municipio === municipio && 
-    aniosRecientes.includes(String(d.año))
-  );
+const datosMunicipio = datos.filter(d =>
+  d.municipio === municipio &&
+  aniosRecientes.includes(String(d.año)) &&
+  (sexos.length === 0 || sexos.includes(d.sexo)) &&
+  (rangosEdad.length === 0 || rangosEdad.includes(d.rango_edad)) &&
+  (estados.length === 0 || estados.includes(d.estatus_persona)) &&
+  (condiciones.length === 0 || condiciones.includes(d.condicion_localizacion))
+);
+
   const totalCasosMunicipio = datosMunicipio.reduce((sum, d) => sum + (Number(d.total) || 0), 0);
   const conVidaMunicipio = datosMunicipio
     .filter(d => d.condicion_localizacion === "CON VIDA" || d.condicion_localizacion === "Con vida")
@@ -1742,14 +1781,16 @@ function actualizarInfoBenchmark() {
 
   const municipioInfo = document.getElementById('municipioBenchmarkInfo');
   if (municipioInfo) {
-    const esSuperior = parseFloat(tasaMunicipio) >= parseFloat(tasaEstado);
+const diff = parseFloat(tasaMunicipio) - parseFloat(tasaEstado);
+const esSuperior = diff > 1;
+const esSimilar = Math.abs(diff) <= 1;
     municipioInfo.innerHTML = `
       <span class="benchmark-valor">${totalCasosMunicipio.toLocaleString()} casos</span><br>
       <span style="color: ${esSuperior ? '#27ae60' : '#e74c3c'}; font-size: 11px;">
         ${tasaMunicipio}% localizados con vida
       </span><br>
       <span style="font-size: 10px; color: #666;">
-        ${esSuperior ? '▲ Superior' : '▼ Inferior'} al promedio
+${esSuperior ? '▲ Superior' : esSimilar ? '■ Similar' : '▼ Inferior'} al promedio
       </span>
     `;
   }
@@ -1890,6 +1931,12 @@ function generarGraficaDispersion() {
   return { labels: [], datasets, titulo, tipo: 'scatter' };
 }
 
+const sexos = obtenerValoresSeleccionados('sexoComparacion');
+const rangosEdad = obtenerValoresSeleccionados('edadComparacion');
+const estados = obtenerValoresSeleccionados('estadoComparacion');
+const condiciones = obtenerValoresSeleccionados('condicionComparacion');
+
+
 function generarGraficaBenchmark(municipio) {
   const anios = obtenerValoresSeleccionados('aniosComparacion');
 
@@ -1902,10 +1949,15 @@ function generarGraficaBenchmark(municipio) {
 
   // Datos del municipio
   const datosMunicipio = añosOrdenados.map(año => {
-    const datosAño = datos.filter(d => 
-      d.municipio === municipio && 
-      String(d.año) === String(año)
-    );
+const datosAño = datos.filter(d =>
+  String(d.año) === String(año) &&
+  (municipio ? d.municipio === municipio : true) &&
+  (sexos.length === 0 || sexos.includes(d.sexo)) &&
+  (rangosEdad.length === 0 || rangosEdad.includes(d.rango_edad)) &&
+  (estados.length === 0 || estados.includes(d.estatus_persona)) &&
+  (condiciones.length === 0 || condiciones.includes(d.condicion_localizacion))
+);
+
     const total = datosAño.reduce((sum, d) => sum + (Number(d.total) || 0), 0);
     const conVida = datosAño
       .filter(d => d.condicion_localizacion === "CON VIDA" || d.condicion_localizacion === "Con vida")
@@ -2244,7 +2296,9 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
           font: { size: 12, weight: 'bold' },
           padding: { top: 10, bottom: 15 }
         },
-        legend: { display: false },
+          datalabels: {
+    display: false
+  },
         watermark: {
           text: 'rys2000dev',
           fontSize: 26,
@@ -2734,8 +2788,9 @@ window.addEventListener('DOMContentLoaded', () => {
     chartType = firstBtn.dataset.type;
   }
 
-  document.getElementById('btnGenerar').addEventListener('click', generarGrafica);
-
+document.querySelectorAll(".btn-generar").forEach(btn => {
+  btn.addEventListener("click", generarGrafica);
+});
   document.getElementById('btnPrediccion').addEventListener('click', function() {
     if (this.disabled) { alert("El modelo aún no está listo."); return; }
 
