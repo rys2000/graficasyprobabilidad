@@ -19,7 +19,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
 <style>
-/* ===== NUEVO DISEÑO FEBRERO 2026 ===== */
+/* ===== 12 FEBRERO 2026 ===== */
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
@@ -32,9 +32,6 @@
   --text-color: #333333;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   --border-radius: 8px;
-  --dual-color: #e74c3c;
-  --benchmark-color: #27ae60;
-  --scatter-color: #2196f3;
 }
 
 * {
@@ -66,12 +63,14 @@ header#top-header {
   padding: 0 20px;
 }
 
+/* Título centrado */
 #top-header .title {
   margin: 0 auto;
   font-weight: 600;
   text-align: center;
 }
 
+/* Botón a la derecha */
 #top-header button {
   position: absolute;
   right: 14px;
@@ -81,12 +80,6 @@ header#top-header {
   cursor: pointer;
   border-radius: 6px;
   font-size: 12px;
-  transition: all 0.2s;
-}
-
-#top-header button:hover {
-  background: #e0e0e0;
-  transform: translateY(-1px);
 }
 
 /* ===== LAYOUT ===== */
@@ -100,15 +93,15 @@ header#top-header {
 
 /* ===== PANEL IZQUIERDO ===== */
 #panel {
-  width: 320px;
+  width: 280px;
   background: var(--card-bg);
   border-radius: var(--border-radius);
-  padding: 10px;
+  padding: 15px;
   box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   overflow-y: auto;
   max-height: 100%;
   transition: left 0.3s ease;
@@ -127,13 +120,13 @@ label {
   display: block;
   font-size: 12px;
   font-weight: 600;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   color: var(--text-color);
 }
 
 select, input {
   width: 100%;
-  padding: 5px;
+  padding: 8px;
   border-radius: 6px;
   border: 1px solid var(--border-color);
   background: white;
@@ -144,201 +137,6 @@ select, input {
 select:focus, input:focus {
   outline: none;
   border-color: var(--secondary-color);
-}
-
-/* Selectores múltiples */
-select[multiple] {
-  min-height: 60px;
-  max-height: 90px;
-  background: white;
-  cursor: pointer;
-}
-
-select[multiple] option {
-  padding: 4px 6px;
-  margin: 2px 0;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.15s;
-}
-
-select[multiple] option:hover {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
-select[multiple] option:checked {
-  background-color: var(--primary-color);
-  color: white;
-  font-weight: bold;
-  background-image: none;
-}
-
-/* Contadores de selección */
-.seleccion-contador {
-  font-size: 10px;
-  color: #666;
-  margin-top: 3px;
-  margin-bottom: 4px;
-  padding: 3px 6px;
-  background: var(--light-bg);
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.seleccion-contador span:first-child {
-  font-weight: 600;
-  color: var(--primary-color);
-}
-
-.seleccion-contador span:last-child {
-  font-style: italic;
-}
-
-/* ===== BOTONES SECUNDARIOS ===== */
-.btn-secundario {
-  background-color: #6c757d;
-  color: white;
-  border: none;
-  padding: 5px 8px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 11px;
-  width: 100%;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.btn-secundario:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-}
-
-.btn-secundario.active {
-  background-color: #dc3545;
-  box-shadow: 0 3px 6px rgba(220,53,69,0.3);
-}
-
-/* ===== NUEVOS ESTILOS PARA MODO AVANZADO ===== */
-.modo-avanzado-container {
-  border-top: 1px solid var(--border-color);
-  padding-top: 15px;
-  margin-top: 10px;
-}
-
-.modo-avanzado-checkbox {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px;
-  border-radius: 6px;
-  background: #f8f9fa;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.modo-avanzado-checkbox:hover {
-  background: #e9ecef;
-}
-
-.modo-avanzado-checkbox input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
-
-.modo-avanzado-checkbox span {
-  font-weight: 600;
-  font-size: 12px;
-}
-
-.modo-avanzado-controls {
-  background: #fff3f3;
-  padding: 15px;
-  border-radius: 8px;
-  border-left: 4px solid var(--dual-color);
-  margin-bottom: 10px;
-}
-
-.benchmark-controls {
-  background: #e8f5e9;
-  padding: 15px;
-  border-radius: 8px;
-  border-left: 4px solid var(--benchmark-color);
-  margin-bottom: 10px;
-}
-
-.scatter-controls {
-  background: #e3f2fd;
-  padding: 15px;
-  border-radius: 8px;
-  border-left: 4px solid var(--scatter-color);
-  margin-bottom: 10px;
-}
-
-.dual-selector-row {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.dual-selector-item {
-  flex: 1;
-}
-
-.dual-selector-item label {
-  font-size: 11px;
-  color: #666;
-  margin-bottom: 2px;
-}
-
-.dual-ejemplo {
-  font-size: 11px;
-  color: #e74c3c;
-  font-style: italic;
-  background: #fff9f9;
-  padding: 8px;
-  border-radius: 4px;
-  margin-top: 8px;
-}
-
-.benchmark-info {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.benchmark-card {
-  flex: 1;
-  background: white;
-  padding: 10px;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.benchmark-card h6 {
-  font-size: 11px;
-  color: #666;
-  margin-bottom: 5px;
-}
-
-.benchmark-valor {
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.benchmark-superior {
-  color: #27ae60;
-}
-
-.benchmark-inferior {
-  color: #e74c3c;
 }
 
 /* ===== SECCIÓN DE PREDICCIÓN ===== */
@@ -383,17 +181,27 @@ select[multiple] option:checked {
   margin: 8px 0;
 }
 
-.range-slider {
-  width: 100%;
-  accent-color: var(--prediction-color);
-}
-
 .range-value {
   text-align: center;
   font-size: 11px;
   color: var(--prediction-color);
   margin-top: 4px;
   font-weight: 600;
+}
+
+/* ===== CHECKBOX ===== */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--secondary-color);
 }
 
 /* ===== TIPOS DE GRÁFICA ===== */
@@ -405,7 +213,7 @@ select[multiple] option:checked {
 }
 
 #chartTypes button {
-  padding: 8px 4px;
+  padding: 6px 4px;
   border-radius: 6px;
   border: 1px solid var(--border-color);
   background: white;
@@ -417,7 +225,6 @@ select[multiple] option:checked {
 #chartTypes button:hover {
   border-color: var(--secondary-color);
   transform: translateY(-1px);
-  background: #f0f7ff;
 }
 
 #chartTypes button.active {
@@ -426,10 +233,10 @@ select[multiple] option:checked {
   border-color: var(--secondary-color);
 }
 
-/* ===== BOTONES PRINCIPALES ===== */
+/* ===== BOTONES ===== */
 #btnGenerar {
-  margin-top: 15px;
-  padding: 12px;
+  margin-top: 8px;
+  padding: 10px;
   border-radius: 6px;
   border: none;
   background: var(--success-color);
@@ -438,55 +245,29 @@ select[multiple] option:checked {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
-  width: 100%;
 }
 
 #btnGenerar:hover {
   background: #219653;
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(39,174,96,0.3);
 }
 
 #btnPrediccion {
   background: var(--prediction-color);
   color: white;
   border: none;
-  padding: 12px;
+  padding: 10px;
   border-radius: 6px;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
-  margin-top: 10px;
-  width: 100%;
+  margin-top: 6px;
 }
 
 #btnPrediccion:hover {
   background: #8e44ad;
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(155,89,182,0.3);
-}
-
-#btnPrediccion:disabled {
-  background: #bdc3c7;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
-/* Botón Limpiar Todo */
-#btnLimpiarTodo {
-  background-color: #e67e22 !important;
-  margin-top: 15px !important;
-  padding: 12px !important;
-  font-size: 12px !important;
-  transition: all 0.3s ease;
-}
-
-#btnLimpiarTodo:hover {
-  background-color: #d35400 !important;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(230,126,34,0.3);
 }
 
 /* ===== RESULTADOS DE PREDICCIÓN ===== */
@@ -494,38 +275,36 @@ select[multiple] option:checked {
   display: none;
   background: white;
   border-radius: var(--border-radius);
-  padding: 15px;
-  margin-top: 15px;
+  padding: 12px;
+  margin-top: 10px;
   border: 2px solid var(--prediction-color);
   box-shadow: var(--shadow);
 }
 
 .prediction-results h5 {
   color: var(--prediction-color);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-size: 12px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 8px;
 }
 
 .result-item {
   display: flex;
   justify-content: space-between;
-  margin: 8px 0;
+  margin: 6px 0;
   font-size: 11px;
 }
 
 .result-bar {
-  height: 12px;
+  height: 10px;
   background: #ecf0f1;
-  border-radius: 6px;
+  border-radius: 5px;
   margin-top: 2px;
   overflow: hidden;
 }
 
 .result-fill {
   height: 100%;
-  border-radius: 6px;
+  border-radius: 5px;
   transition: width 1s ease-out;
 }
 
@@ -533,11 +312,20 @@ select[multiple] option:checked {
 .result-fill.desaparecida { background: #f39c12; }
 .result-fill.sin-vida { background: #e74c3c; }
 
+/* ===== COMPARAR===== */
+.compare-box {
+  background: var(--light-bg);
+  padding: 10px;
+  border-radius: 6px;
+  margin: 4px 0;
+  border-left: 3px solid var(--accent-color);
+}
+
 /* ===== CRÉDITOS ===== */
 #creditos {
   text-align: center;
-  margin-top: 20px;
-  padding-top: 15px;
+  margin-top: 10px;
+  padding-top: 10px;
   font-size: 11px;
   color: #666;
   border-top: 1px solid var(--border-color);
@@ -547,10 +335,6 @@ select[multiple] option:checked {
   color: var(--secondary-color);
   text-decoration: none;
   font-weight: 600;
-}
-
-#creditos a:hover {
-  text-decoration: underline;
 }
 
 /* ===== ÁREA DE GRÁFICA ===== */
@@ -565,7 +349,7 @@ select[multiple] option:checked {
 /* ===== RESUMEN ===== */
 #resumen {
   background: var(--card-bg);
-  padding: 12px;
+  padding: 10px;
   border-radius: var(--border-radius);
   font-weight: 600;
   text-align: center;
@@ -573,11 +357,10 @@ select[multiple] option:checked {
   border: 1px solid var(--border-color);
   font-size: 12px;
   color: var(--primary-color);
-  min-height: 45px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  word-break: break-word;
 }
 
 /* ===== CANVAS ===== */
@@ -599,9 +382,9 @@ canvas {
 }
 
 /* ===== BOTÓN DESCARGAR ===== */
-#btnDescargar {
-  align-self: flex-end;
-  padding: 10px 20px;
+#main > button:last-child {
+  align-self: flex-start;
+  padding: 8px 16px;
   border-radius: 6px;
   border: none;
   background: var(--primary-color);
@@ -610,74 +393,156 @@ canvas {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 5px;
 }
 
-#btnDescargar:hover {
+#main > button:last-child:hover {
   background: #34495e;
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* ===== MODALES ===== */
-#modalNota, #modalPrediccion {
-  display: none;
+/* Fondo oscuro */
+.nota-oculta {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.6);
+  display: none;
   z-index: 9999;
-  backdrop-filter: blur(3px);
 }
 
-#modalContenido, .nota-contenido {
+/* Caja */
+#modalPrediccion .nota-contenido {
   background: #ffffff;
-  max-width: 550px;
+  max-width: 520px;
   max-height: 80vh;
   margin: 8vh auto;
-  padding: 25px;
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 10px;
   overflow-y: auto;
   font-size: 14px;
-  line-height: 1.6;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  line-height: 1.5;
 }
 
-#modalContenido h3, .nota-contenido h3 {
+.nota-contenido h3 {
   margin-top: 0;
   text-align: center;
-  color: var(--primary-color);
-  border-bottom: 2px solid var(--secondary-color);
-  padding-bottom: 12px;
 }
 
-#modalContenido button, .nota-contenido button {
-  margin-top: 20px;
+.nota-aviso {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.nota-contenido button {
+  margin-top: 15px;
   width: 100%;
-  padding: 12px;
-  background: var(--primary-color);
+  padding: 10px;
+  background: #111;
   color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.2s;
 }
 
-#modalContenido button:hover, .nota-contenido button:hover {
-  background: #1a2530;
-  transform: translateY(-1px);
+/* ===== ANIMACIONES ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#panel, #main {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ===== SCROLLBAR===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-bg);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* ===== ESTILOS SELECCIÓN MULTIPLE ===== */
+#aniosSeleccionados {
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--light-bg);
+  border: 2px solid var(--border-color);
+  height: 100px;
+  display: none;
+}
+
+#aniosSeleccionados:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+#aniosSeleccionados option {
+  padding: 8px;
+  margin: 2px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#aniosSeleccionados option:hover {
+  background: var(--secondary-color);
+  color: white;
+}
+
+/* ===== MODALES ===== */
+#modalNota{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 9999;
+}
+
+#modalContenido{
+  background: #fff;
+  max-width: 520px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+#modalContenido h3{
+  margin-top: 0;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
 }
 
 /* ===== ESTADO DEL MODELO ===== */
 .model-status {
-  font-size: 11px;
+  font-size: 10px;
   text-align: center;
-  padding: 8px;
-  margin: 8px 0;
+  padding: 5px;
+  margin: 5px 0;
   border-radius: 4px;
-  font-weight: 500;
 }
 
 .model-status.training {
@@ -709,21 +574,35 @@ canvas {
   cursor: pointer;
   text-align: left;
   margin-bottom: 8px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.8);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05),
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
   color: #2c3e50;
   font-size: 14px;
 }
 
 .section-toggle:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.9);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
   border-color: #e0e0e0;
+}
+
+.section-toggle:active {
+  transform: translateY(0);
+  transition-duration: 0.1s;
 }
 
 .section-toggle::after {
@@ -740,19 +619,32 @@ canvas {
   background: linear-gradient(145deg, var(--primary-color), #1a2530);
   color: white;
   border-color: var(--primary-color);
-  box-shadow: 0 4px 16px rgba(44,62,80,0.15), 0 2px 8px rgba(44,62,80,0.1), inset 0 1px 0 rgba(255,255,255,0.2);
+  box-shadow:
+    0 4px 16px rgba(44, 62, 80, 0.15),
+    0 2px 8px rgba(44, 62, 80, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.section-toggle.active:hover {
+  background: linear-gradient(145deg, #1a2530, var(--primary-color));
+  box-shadow:
+    0 6px 20px rgba(44, 62, 80, 0.2),
+    0 3px 8px rgba(44, 62, 80, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
 }
 
 .section-toggle.active::after {
   transform: rotate(180deg);
   opacity: 1;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .section-content {
   margin: 8px 0 16px 0;
   padding: 0 4px;
   animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
   transform-origin: top;
 }
 
@@ -771,20 +663,79 @@ canvas {
   display: none;
 }
 
-/* ===== AYUDA TEXTOS ===== */
-.ayuda {
-  font-size: 11px;
-  color: #666;
-  margin-top: 3px;
-  font-style: italic;
-  background: #f9f9f9;
-  padding: 6px 8px;
-  border-radius: 4px;
-  border-left: 3px solid var(--secondary-color);
+.section-toggle.with-icon {
+  padding-left: 44px;
+  position: relative;
 }
 
-.masEspacio {
-  margin-top: 20px;
+.section-toggle.with-icon::before {
+  content: "📊";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.section-toggle.with-icon.active::before {
+  content: "📊";
+  opacity: 1;
+}
+
+.section-toggle[onclick*="prediccion"]::before {
+  content: "℅";
+}
+
+.section-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  padding: 2px;
+  background: linear-gradient(135deg,
+    rgba(52, 152, 219, 0) 0%,
+    rgba(52, 152, 219, 0.1) 50%,
+    rgba(52, 152, 219, 0) 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.section-toggle:hover::before {
+  opacity: 1;
+}
+
+.section-toggle.active::before {
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.2) 100%);
+  opacity: 1;
+}
+
+.section-toggle.minimal {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
+}
+
+.section-toggle.minimal:hover {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: #3498db;
+}
+
+.section-toggle.minimal.active {
+  background: rgba(44, 62, 80, 0.05);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* ===== MOBILE ===== */
@@ -815,7 +766,7 @@ canvas {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: var(--primary-color);
+    background: #2c3e50;
     color: #fff;
     font-size: 24px;
     align-items: center;
@@ -835,44 +786,75 @@ canvas {
     left: 0;
   }
 }
-
-/* ===== SCROLLBAR ===== */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+/* ===== ESTILOS PARA SELECCIÓN MÚLTIPLE ===== */
+#municipiosComparacion {
+  width: 100%;
+  min-height: 120px;
+  max-height: 180px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: white;
+  font-size: 12px;
+  overflow-y: auto;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--light-bg);
+#municipiosComparacion option {
+  padding: 6px 8px;
+  margin: 2px 0;
   border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--secondary-color);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color);
-}
-
-/* ===== INDICADORES ===== */
-.indicador-requerido {
-  display: inline-block;
-  background: var(--accent-color);
+#municipiosComparacion option:hover {
+  background-color: var(--secondary-color);
   color: white;
-  font-size: 9px;
-  padding: 2px 6px;
-  border-radius: 10px;
-  margin-left: 5px;
 }
 
-.contador-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2px;
+#municipiosComparacion option:checked {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
 }
+
+.contador-municipios {
+  font-size: 11px;
+  color: #666;
+  margin-top: 5px;
+  font-style: italic;
+  text-align: center;
+}
+/* ===== BOTÓN SECUNDARIO ===== */
+/* ===== BOTÓN SECUNDARIO MEJORADO ===== */
+.btn-secundario {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 11px;
+  width: 100%;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-secundario:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.btn-secendario:active {
+  transform: translateY(0);
+}
+
+.masEspacio{
+  margin-top: 15px;
+}
+
 </style>
 
 </head>
@@ -880,10 +862,11 @@ canvas {
 
 <header id="top-header">
   <span class="title">
-    📊 Análisis de Desapariciones - Jalisco
+    📊 Gráficas y Probabilidad por Municipio
   </span>
   <button id="btnNota" onclick="abrirNota()">ℹ️ Nota metodológica</button>
 </header>
+
 
 <div id="layout">
   <!-- PANEL COMPACTO -->
@@ -893,200 +876,74 @@ canvas {
     </button>
 
 <div id="section-graficas" class="section-content collapsed">
-      <!-- SECCIÓN DE ANÁLISIS -->
+  <!-- SECCIÓN DE ANÁLISIS -->
+  <div>
+    <label>Municipios a comparar:</label>
+    <select id="municipiosComparacion" multiple size="5">
 
-      <!-- Municipios -->
-      <div>
-        <div class="contador-wrapper">
-          <label>Municipios <span class="indicador-requerido">requerido</span></label>
-        </div>
-        <select id="municipiosComparacion" multiple size="3"></select>
-        <button id="seleccionarTodosMunicipios" class="btn-secundario">Seleccionar Todos</button>
-        <div id="contadorMunicipiosComparacion" class="seleccion-contador">
-          <span>Seleccionados:</span>
-          <span>0 municipios</span>
-        </div>
-      </div>
 
-      <!-- Años -->
-      <div>
-        <div class="contador-wrapper">
-          <label>Años <span class="indicador-requerido">requerido</span></label>
-        </div>
-        <select id="aniosComparacion" multiple size="3"></select>
-        <button id="seleccionarTodosAnios" class="btn-secundario">Seleccionar Todos</button>
-        <div id="contadorAniosComparacion" class="seleccion-contador">
-          <span>Seleccionados:</span>
-          <span>0 años</span>
-        </div>
-      </div>
+      <!-- Opciones se llenarán dinámicamente -->
+    </select>
+    <div class="ayuda" style="font-size: 11px; color: #666; margin-top: 3px;">
+      (Ctrl+Click PC),(Command+Click MAC) para seleccionar múltiples
+    </div>
 
-      <!-- Sexo -->
-      <div>
+
+  </div>
+
+      <div class="masEspacio">
+  <label>Años a comparar:</label>
+
+  <select id="aniosComparacion" multiple size="5"></select>
+
+
+
+  <div id="contadorAnios" class="contador-municipios">
+    Seleccionados: 0 años
+  </div>
+
+
         <label>Sexo</label>
-        <select id="sexoComparacion" multiple size="2"></select>
-        <button id="seleccionarTodosSexos" class="btn-secundario">Seleccionar Todos</button>
-        <div id="contadorSexoComparacion" class="seleccion-contador">
-          <span>Seleccionados:</span>
-          <span>0 sexos</span>
-        </div>
-      </div>
+        <select id="sexo"></select>
 
-      <!-- Rango de Edad -->
-      <div>
         <label>Rango de Edad</label>
-        <select id="edadComparacion" multiple size="3"></select>
-        <button id="seleccionarTodosEdades" class="btn-secundario">Seleccionar Todos</button>
-        <div id="contadorEdadComparacion" class="seleccion-contador">
-          <span>Seleccionados:</span>
-          <span>0 rangos</span>
-        </div>
+        <select id="edad"></select>
+
+        <label>¿Qué quieres analizar?</label>
+        <select id="metrica">
+          <option value="estatus_persona">Estado de la persona</option>
+          <option value="condicion_localizacion">Condición de localización</option>
+        </select>
       </div>
 
-      <!-- Estado de Persona -->
-      <div>
-        <label>Estado de Persona</label>
-        <select id="estadoComparacion" multiple size="2"></select>
-        <button id="seleccionarTodosEstados" class="btn-secundario">Seleccionar Todos</button>
-        <div id="contadorEstadoComparacion" class="seleccion-contador">
-          <span>Seleccionados:</span>
-          <span>0 estados</span>
-        </div>
-      </div>
-
-      <!-- Condición de Localización -->
-      <div>
-        <label>Condición de Localización</label>
-        <select id="condicionComparacion" multiple size="3"></select>
-        <button id="seleccionarTodosCondiciones" class="btn-secundario">Seleccionar Todos</button>
-        <div id="contadorCondicionComparacion" class="seleccion-contador">
-          <span>Seleccionados:</span>
-          <span>0 condiciones</span>
-        </div>
-      </div>
 
 
 
       <div class="masEspacio">
-        <label>📈 Tipo de gráfica</label>
+        <label>Tipo de gráfica</label>
         <div id="chartTypes">
           <button data-type="bar">Barras</button>
           <button data-type="stackedBar">Barras Apiladas</button>
-          <button data-type="line">Línea</button>
           <button data-type="area">Área</button>
           <button data-type="stackedArea">Área Apiladas</button>
+          <button data-type="line">Línea</button>
           <button data-type="pie">Pastel</button>
-          <button data-type="doughnut">Donut</button>
         </div>
       </div>
 
       <button id="btnGenerar">
-        🚀 Generar gráfica
+        Generar gráfica
       </button>
     </div>
 
-
-    <button class="section-toggle" onclick="toggleSection('analisis')">
-  📈 Análisis avanzado
-</button>
-
-<div id="section-analisis" class="section-content collapsed">
-      <!-- ===== NUEVOS CONTROLES DE MODO AVANZADO ===== -->
-       <label>Municipio y Año <span class="indicador-requerido">requerido</span></label>
-
-      <div class="modo-avanzado-container">
-        <!-- SELECTOR DUAL -->
-        <div class="modo-avanzado-checkbox" style="background: #fff3f3;">
-          <input type="checkbox" id="activarSelectorDual">
-          <span style="color: #e74c3c;">🔄 Modo comparación dual</span>
-        </div>
-        <div id="dualControls" class="modo-avanzado-controls" style="display: none;">
-          <div class="dual-selector-row">
-            <div class="dual-selector-item">
-              <label>Categoría principal (eje X)</label>
-              <select id="categoriaPrincipal" style="font-size: 11px;">
-                <option value="condicion_localizacion">Condición</option>
-                <option value="estatus_persona">Estado</option>
-                <option value="sexo">Sexo</option>
-                <option value="rango_edad">Rango de edad</option>
-                <option value="año">Año</option>
-                <option value="municipio">Municipio</option>
-              </select>
-            </div>
-            <div class="dual-selector-item">
-              <label>Categoría secundaria (colores)</label>
-              <select id="categoriaSecundaria" style="font-size: 11px;">
-                <option value="sexo">Sexo</option>
-                <option value="condicion_localizacion">Condición</option>
-                <option value="estatus_persona">Estado</option>
-                <option value="rango_edad">Rango de edad</option>
-                <option value="año">Año</option>
-                <option value="municipio">Municipio</option>
-              </select>
-            </div>
-          </div>
-          <div class="dual-ejemplo" id="dualEjemplo">
-            Comparando: Condición vs Sexo
-          </div>
-        </div>
-
-        <!-- BENCHMARK -->
-        <div class="modo-avanzado-checkbox" style="background: #e8f5e9; margin-top: 10px;">
-          <input type="checkbox" id="activarBenchmark">
-          <span style="color: #27ae60;">📊 Comparar con promedio estatal</span>
-        </div>
-        <div id="benchmarkControls" class="benchmark-controls" style="display: none;">
-          <div style="margin-bottom: 10px;">
-            <label style="font-size: 11px;">Municipio de referencia</label>
-            <select id="municipioBenchmark" style="font-size: 11px;">
-              <option value="">Selecciona un municipio</option>
-            </select>
-          </div>
-          <div class="benchmark-info">
-            <div class="benchmark-card">
-              <h6>📊 Promedio estatal</h6>
-              <div id="promedioEstatalInfo" style="font-size: 12px;">
-                <span class="benchmark-valor">Cargando...</span>
-              </div>
-            </div>
-            <div class="benchmark-card">
-              <h6 id="municipioBenchmarkLabel">📍 Municipio</h6>
-              <div id="municipioBenchmarkInfo" style="font-size: 12px;">
-                <span class="benchmark-valor">Selecciona un municipio</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- DISPERSIÓN -->
-        <div class="modo-avanzado-checkbox" style="background: #e3f2fd; margin-top: 10px;">
-          <input type="checkbox" id="activarDispersion">
-          <span style="color: #2196f3;">⚡ Modo análisis: Casos vs Tasa de éxito</span>
-        </div>
-        <div id="scatterControls" class="scatter-controls" style="display: none;">
-          <div style="font-size: 11px; color: #0d47a1;">
-            <strong>📈 Análisis de efectividad por municipio</strong>
-            <p style="margin-top: 5px; margin-bottom: 0;">
-              Eje X: Total de casos<br>
-              Eje Y: % Localizados con vida<br>
-              Cada punto = un municipio
-            </p>
-            
-          </div>
-        </div>
-        <button class="btn-generar">Generar gráfica</button>
-
-      </div></div>
-
-
     <button class="section-toggle" onclick="toggleSection('prediccion')">
-       Probabilidad
+      Probabilidad
     </button>
 
     <div id="section-prediccion" class="section-content collapsed">
       <!-- SECCIÓN DE PREDICCIÓN -->
       <div class="prediction-section">
-        <h4>📊 Probabilidad de Resultado</h4>
+        <h4>Probabilidad de Resultado</h4>
 
         <div id="modelStatus" class="model-status training">
           ⏳ Cargando datos de entrenamiento...
@@ -1104,7 +961,7 @@ canvas {
           </label>
         </div>
 
-        <label> Edad</label>
+        <label>Edad</label>
         <select id="predEdad">
           <option value="2">0-4 años</option>
           <option value="7">5-9 años</option>
@@ -1123,7 +980,7 @@ canvas {
           <option value="72">70-74 años</option>
         </select>
 
-        <label> Meses entre desaparición y reporte</label>
+        <label>Meses entre desaparición y reporte</label>
         <div class="range-container">
           <input type="range" id="predMeses" min="0" max="60" value="12" class="range-slider">
           <div class="range-value" id="mesesValue">12 meses</div>
@@ -1138,7 +995,7 @@ canvas {
 
         <!-- RESULTADOS DE PREDICCIÓN -->
         <div id="predictionResults" class="prediction-results">
-          <h5>📊 Probabilidades estimadas:</h5>
+          <h5>Probabilidades estimadas:</h5>
 
           <div class="result-item">
             <span>Con vida:</span>
@@ -1164,31 +1021,33 @@ canvas {
             <div id="barSinVida" class="result-fill sin-vida" style="width: 0%"></div>
           </div>
 
-          <div style="margin-top: 12px; font-size: 10px; color: #666; text-align: center; background: #f9f9f9; padding: 8px; border-radius: 4px;" id="modelInfo">
+          <div style="margin-top: 10px; font-size: 10px; color: #666; text-align: center;" id="modelInfo">
             Modelo basado en datos históricos
           </div>
         </div>
       </div>
 
-      <button id="btnNotaPrediccion" onclick="abrirPrediccion()" class="btn-secundario">ℹ️ Nota sobre el modelo de probabilidad</button>
-    </div>
+      <button id="btnNotaPrediccion" onclick="abrirPrediccion()">ℹ️ Nota probabilidad</button>
 
-    <div id="creditos">
-      Elaborado por <a href="https://x.com/rys2000dev" target="_blank">rys2000dev</a>
-      <br>
-      Académico <a href="https://x.com/joraplas?lang=es" target="_blank">joraplas</a>
-    </div>
+          </div>
+      <div id="creditos">
+        Elaboró
+        <a href="https://x.com/rys2000dev" target="_blank">rys2000dev</a>
+        <br>
+        Académico
+        <a href="https://x.com/joraplas?lang=es" target="_blank">joraplas</a>
+      </div>
   </div>
 
   <!-- GRÁFICA -->
   <div id="main">
-    <div id="resumen">📊 Selecciona los filtros y haz clic en "Generar gráfica"</div>
+    <div id="resumen">Selecciona los filtros y haz clic en "Generar gráfica"</div>
 
     <div class="chart-container">
       <canvas id="grafica"></canvas>
     </div>
 
-    <button id="btnDescargar" onclick="descargarGrafica()">
+    <button onclick="descargarGrafica()">
       ⬇️ Descargar gráfica
     </button>
   </div>
@@ -1196,11 +1055,11 @@ canvas {
 
 <div id="modalNota">
   <div id="modalContenido">
-    <h3>📘 Nota metodológica</h3>
+    <h3>Nota metodológica</h3>
     <p>La información presentada en esta página se basa en datos públicos obtenidos
       del Registro Estatal de Personas Desaparecidas del Estado de Jalisco, disponible
       en su versión pública en: <br>
-      <a href="https://version-publica-repd.jalisco.gob.mx/" target="_blank">https://version-publica-repd.jalisco.gob.mx/</a>
+      https://version-publica-repd.jalisco.gob.mx/
     </p>
 
     <p><strong>📊 Fuente de datos</strong></p>
@@ -1212,90 +1071,153 @@ canvas {
     <p><strong>🧹 Proceso de depuración</strong></p>
     <p>Para el análisis y visualización de la información se realizó un proceso de depuración
       y normalización que incluyó, entre otros aspectos:<br><br>
-      • Homologación de nombres de municipios y variables<br>
-      • Agrupación temporal por año<br>
-      • Clasificación por género, rango de edad y estatus del caso<br>
-      • Se excluyeron 928 registros por falta de información mínima necesaria
+      Homologación de nombres de municipios y variables. Agrupación temporal por año.<br>
+      Clasificación por genero, rango de edad y estatus del caso cuando la información
+      estaba disponible.<br>
+      Los registros que no contaban con información mínima necesaria para ciertos
+      análisis fueron excluidos del total histórico de casos; (928 casos).
     </p>
 
     <p><strong>📈 Alcance del análisis</strong></p>
     <p>Las gráficas presentadas tienen un carácter descriptivo y exploratorio,
-      con el objetivo de identificar patrones temporales y geográficos, así como
-      facilitar la comprensión de la magnitud del fenómeno.
-    </p>
-
-    <p><strong>⚠️ Consideraciones importantes</strong><br>
-      • Los datos reflejan reportes administrativos, pueden existir rezagos o actualizaciones<br>
-      • La ausencia de un registro no implica la inexistencia del caso<br>
-      • Las cifras pueden diferir de otros informes oficiales por fechas de corte o criterios
+      con el objetivo de:<br><br>
+      Identificar patrones temporales y geográficos.<br>
+      Facilitar la comprensión de la magnitud del fenómeno.<br>
+      Apoyar la prevención, el análisis social y la difusión de información pública.<br>
+      Este análisis no pretende sustituir investigaciones oficiales, ni establecer responsabilidades,
+      causas directas o conclusiones judiciales.<br><br>
+      <strong>⚠️ Consideraciones importantes</strong><br>
+      Los datos reflejan reportes administrativos, por lo que pueden existir rezagos,
+      actualizaciones posteriores o reclasificaciones.<br>
+      La ausencia de un registro no implica la inexistencia del caso.<br>
+      Las cifras pueden diferir de otros informes oficiales debido a fechas de corte,
+      criterios de clasificación o actualizaciones del registro original.<br><br>
+      <strong>🤝 Uso responsable de la información</strong><br>
+      Esta página y sus visualizaciones tienen fines informativos, preventivos y sociales.
+      Se busca contribuir a la comprensión del problema de la desaparición de personas
+      basada en datos públicos.
     </p>
 
     <button onclick="cerrarNota()">Cerrar</button>
   </div>
 </div>
 
-<div id="modalPrediccion">
+<!-- ========================= -->
+<!-- NOTA PREDICCION -->
+<!-- ========================= -->
+<div id="modalPrediccion" class="nota-oculta">
   <div class="nota-contenido">
-    <h3>📊 Nota Metodológica - Modelo de Probabilidad</h3>
+    <h3>Nota Metodológica - Modelo de Probabilidad</h3>
 
-    <p><strong>Última actualización:</strong> 11 de febrero de 2026</p>
+<p><strong>Última actualización:</strong> 21 de enero de 2026</p>
 
-    <h4>🧠 Modelo Implementado</h4>
-    <p>
-      Sistema de <strong>estimación probabilística basada en estadísticas históricas</strong>
-      (Naive Bayes simplificado), diseñado para identificar patrones observados en
-      registros anteriores y generar estimaciones orientativas.
-    </p>
+<h4>🧠 Modelo Implementado</h4>
+<p>
+  Sistema de <strong>estimación probabilística basada en estadísticas históricas</strong>
+  (modelo Naive Bayes simplificado), diseñado para identificar
+  <strong>patrones observados en registros anteriores</strong> y generar
+  <strong>estimaciones orientativas de resultado</strong>.
+</p>
 
-    <h4>⚙️ Variables Analizadas</h4>
-    <ul>
-      <li><strong>Municipio:</strong> patrones geográficos históricos</li>
-      <li><strong>Sexo:</strong> tendencias observadas por género</li>
-      <li><strong>Edad:</strong> 15 rangos etarios (0-4 a 70-74)</li>
-      <li><strong>Tiempo:</strong> meses transcurridos desde la desaparición</li>
-    </ul>
+<h4>⚙️ Variables Analizadas</h4>
+<ul>
+  <li><strong>Municipio:</strong> patrones geográficos históricos</li>
+  <li><strong>Sexo:</strong> tendencias observadas por género (HOMBRE / MUJER)</li>
+  <li><strong>Edad:</strong> 15 rangos etarios (0–4, 5–9, …, 70–74)</li>
+  <li><strong>Tiempo:</strong> meses transcurridos desde la desaparición (0–60)</li>
+  <li><strong>Interacciones:</strong> combinaciones sexo–edad y municipio–tiempo,
+      incorporadas para capturar dependencias históricas relevantes</li>
+</ul>
 
-    <h4>📈 Fuente de Datos</h4>
-    <p>
-      Modelo construido a partir de <strong>35,998 registros históricos</strong> del
-      Registro Estatal de Personas Desaparecidas de Jalisco (1942-2025).
-    </p>
+<h4>📈 Fuente de Datos</h4>
+<p>
+  Modelo construido a partir de <strong>35,998 registros históricos</strong> del
+  Registro Estatal de Personas Desaparecidas de Jalisco (REPD),
+  correspondientes al periodo <strong>1942–2025</strong>.
+</p>
 
-    <h4>⚠️ Limitaciones</h4>
-    <ul>
-      <li>❌ No utiliza machine learning avanzado</li>
-      <li>❌ No incorpora variables socioeconómicas</li>
-      <li>❌ No analiza circunstancias específicas de cada caso</li>
-    </ul>
+<p>Distribución observada en el conjunto histórico analizado:</p>
+<ul>
+  <li><span style="color:#2ecc71;">● CON VIDA:</span> ~25–35%</li>
+  <li><span style="color:#f39c12;">● DESAPARECIDA:</span> ~40–50%</li>
+  <li><span style="color:#e74c3c;">● SIN VIDA:</span> ~25–35%</li>
+</ul>
 
-    <div style="background:#f8f9fa; padding:15px; border-radius:6px; margin-top:20px; border-left:4px solid #3498db;">
-      <p><strong>📝 Responsabilidad Ética</strong></p>
-      <p style="margin-bottom:0;">
-        Esta herramienta tiene fines informativos y sociales. No sustituye investigaciones oficiales.
-        <strong>Las estimaciones son orientación estadística, no conclusiones definitivas.</strong>
-      </p>
-    </div>
+<p style="font-size:12px; color:#666;">
+  *Estos porcentajes describen la composición del conjunto de datos histórico
+  y no representan probabilidades reales aplicables a casos individuales.*
+</p>
 
-    <button onclick="cerrarPrediccion()">Cerrar</button>
-  </div>
+<h4>🔧 Algoritmo</h4>
+<p><strong>Fórmula base:</strong><br>
+  <code>P(resultado | características) ∝ P(características | resultado) × P(resultado)</code>
+</p>
+
+<p>
+  La expresión indica una <strong>relación proporcional</strong>; los valores obtenidos
+  se <strong>normalizan</strong> para construir una distribución comparativa entre
+  escenarios posibles. El modelo asume independencia condicional aproximada,
+  mitigada parcialmente mediante el uso de interacciones empíricas.
+</p>
+
+<p>
+  Se aplican <strong>ponderaciones dinámicas</strong> y
+  <strong>suavizado de Laplace</strong> para reducir sesgos derivados de
+  escasez de datos en ciertos subgrupos.
+  <br>
+  <strong>Indicador de confianza:</strong> 40–95%, calculado de forma heurística
+  según la cantidad, estabilidad y consistencia de registros históricos comparables.
+</p>
+
+<h4>⚠️ Limitaciones Técnicas</h4>
+
+<p><strong>Lo que NO hace:</strong></p>
+<ul>
+  <li>❌ No utiliza modelos de aprendizaje automático avanzado (ej. redes neuronales)</li>
+  <li>❌ No incorpora variables socioeconómicas ni contextuales</li>
+  <li>❌ No analiza circunstancias específicas de cada desaparición</li>
+  <li>❌ No integra información sobre violencia regional o criminal</li>
+</ul>
+
+<p><strong>Lo que SÍ hace:</strong></p>
+<ul>
+  <li>✅ Analiza patrones históricos simples y documentados</li>
+  <li>✅ Produce estimaciones coherentes cuando existen datos suficientes</li>
+  <li>✅ Señala explícitamente escenarios de baja confiabilidad</li>
+  <li>✅ Prioriza transparencia, trazabilidad e interpretabilidad</li>
+</ul>
+
+<h4>🎯 Alcance y Consistencia</h4>
+<p>
+  • <strong>Consistencia histórica orientativa:</strong> ~65–75% en análisis retrospectivo exploratorio<br>
+  • <strong>Mejor desempeño:</strong> municipios con más de 100 registros históricos
+</p>
+
+<div style="background:#f8f9fa; padding:15px; border-radius:6px; margin-top:20px; border-left:4px solid #3498db;">
+  <p><strong>📝 Responsabilidad Ética</strong></p>
+  <p style="margin-bottom:0;">
+    Esta herramienta tiene fines informativos, preventivos y sociales.
+    No sustituye investigaciones oficiales ni procesos judiciales.
+    <br><br>
+    <strong>Las estimaciones generadas deben interpretarse como orientación estadística,
+    y nunca como conclusiones definitivas sobre un caso individual.</strong>
+  </p>
 </div>
+
+
+      <button onclick="cerrarPrediccion()">Cerrar</button>
+    </div>
+  </div>
 
 <script>
 // =========================
 // VARIABLES GLOBALES
 // =========================
-let datos = [];
-let datosEntrenamiento = [];
+let datos = [];  // Para gráficas (stats_municipios_simple.json)
+let datosEntrenamiento = [];  // Para modelo ML (stats_ml_training.json)
 let chartAnalisis;
 let chartType = "bar";
-let predictor;
-
-// Variables para modo avanzado
-let modoAvanzado = {
-  dual: false,
-  benchmark: false,
-  dispersion: false
-};
+let modeloEntrenado = false;
 
 // =========================
 // PLUGINS DE CHART.JS
@@ -1305,9 +1227,20 @@ const watermarkPlugin = {
   afterDraw(chart, args, options) {
     const { ctx, chartArea } = chart;
     if (!chartArea) return;
-    const { text = 'rys2000dev', fontSize = 26, opacity = 0.07, color = '#000', angle = 0 } = options;
+
+    const {
+      text = 'rys2000dev',
+      fontSize = 26,
+      opacity = 0.07,
+      color = '#000',
+      angle = 0
+    } = options;
+
     ctx.save();
-    ctx.translate(chartArea.left + chartArea.width / 2, chartArea.top + chartArea.height / 2);
+    ctx.translate(
+      chartArea.left + chartArea.width / 2,
+      chartArea.top + chartArea.height / 2
+    );
     ctx.rotate(angle * Math.PI / 180);
     ctx.globalAlpha = opacity;
     ctx.fillStyle = color;
@@ -1344,6 +1277,7 @@ function apply3DEffects(datasets, type, fillArea) {
     const newDataset = { ...ds };
     const colorIndex = index % BASE_COLORS.length;
     const baseColor = BASE_COLORS[colorIndex];
+
     const r = parseInt(baseColor.slice(1, 3), 16);
     const g = parseInt(baseColor.slice(3, 5), 16);
     const b = parseInt(baseColor.slice(5, 7), 16);
@@ -1353,21 +1287,28 @@ function apply3DEffects(datasets, type, fillArea) {
       case 'stackedBar':
         newDataset.barPercentage = 0.7;
         newDataset.categoryPercentage = 0.8;
-        newDataset.borderRadius = { topLeft: 8, topRight: 8, bottomLeft: 3, bottomRight: 3 };
+        newDataset.borderRadius = {
+          topLeft: 8,
+          topRight: 8,
+          bottomLeft: 3,
+          bottomRight: 3
+        };
         newDataset.borderSkipped = false;
         newDataset.borderWidth = 2;
-        newDataset.borderColor = `rgba(${Math.max(0, r-50)}, ${Math.max(0, g-50)}, ${Math.max(0, b-50)}, 1)`;
+        newDataset.borderColor = `rgba(${Math.max(0, r - 50)}, ${Math.max(0, g - 50)}, ${Math.max(0, b - 50)}, 1)`;
         newDataset.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.8)`;
         break;
+
       case 'pie':
-      case 'doughnut':
         newDataset.borderWidth = 3;
         newDataset.borderColor = '#ffffff';
         newDataset.borderAlign = 'inner';
         newDataset.hoverOffset = 15;
         newDataset.borderRadius = 5;
+        newDataset.rotation = -30;
         newDataset.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.8)`;
         break;
+
       case 'line':
       case 'area':
         newDataset.borderWidth = 3;
@@ -1379,1255 +1320,571 @@ function apply3DEffects(datasets, type, fillArea) {
         newDataset.pointBackgroundColor = baseColor;
         newDataset.pointBorderColor = '#ffffff';
         newDataset.borderColor = baseColor;
-        if (fillArea) newDataset.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.25)`;
+
+        if (fillArea) {
+          newDataset.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.25)`;
+        }
+        break;
+
+      default:
+        if (!newDataset.backgroundColor) {
+          newDataset.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.8)`;
+        }
+        if (!newDataset.borderColor) {
+          newDataset.borderColor = baseColor;
+        }
         break;
     }
+
+    if (!newDataset.borderWidth) {
+      newDataset.borderWidth = 2;
+    }
+
     return newDataset;
   });
 }
 
 // =========================
-// FUNCIONES DE UTILIDAD - VERSIÓN SIMPLIFICADA (SIN "TODOS")
-// =========================
-
-function llenarSelectorMultiple(id, valores) {
-  const select = document.getElementById(id);
-  if (!select) return;
-  select.innerHTML = '';
-  valores.forEach(valor => {
-    const option = document.createElement('option');
-    option.value = valor;
-    option.textContent = valor;
-    select.appendChild(option);
-  });
-}
-
-function actualizarContador(id) {
-  const select = document.getElementById(id);
-  if (!select) return;
-  const opciones = Array.from(select.options);
-  const seleccionadas = opciones.filter(o => o.selected);
-  const contador = document.getElementById(`contador${id.charAt(0).toUpperCase() + id.slice(1)}`);
-  if (!contador) return;
-
-  const total = opciones.length;
-  const seleccionadasCount = seleccionadas.length;
-  let texto = '';
-
-  if (seleccionadasCount === 0) {
-    texto = '0 seleccionados';
-  } else if (seleccionadasCount === total) {
-    texto = `Todos (${total})`;
-  } else {
-    texto = `${seleccionadasCount} de ${total}`;
-  }
-
-  contador.innerHTML = `<span>Seleccionados:</span> <span>${texto}</span>`;
-}
-
-function configurarBotonSeleccionarTodos(botonId, selectId) {
-  const boton = document.getElementById(botonId);
-  const select = document.getElementById(selectId);
-  if (!boton || !select) return;
-
-  boton.addEventListener('click', function(e) {
-    e.preventDefault();
-    const opciones = Array.from(select.options);
-    const seleccionadas = opciones.filter(o => o.selected);
-
-    if (seleccionadas.length === opciones.length) {
-      opciones.forEach(o => o.selected = false);
-      this.textContent = 'Seleccionar Todos';
-      this.classList.remove('active');
-    } else {
-      opciones.forEach(o => o.selected = true);
-      this.textContent = 'Deseleccionar Todos';
-      this.classList.add('active');
-    }
-    actualizarContador(selectId);
-    select.dispatchEvent(new Event('change'));
-  });
-}
-
-function obtenerValoresSeleccionados(id) {
-  const select = document.getElementById(id);
-  if (!select) return [];
-  return Array.from(select.selectedOptions).map(opt => opt.value);
-}
-
-function habilitarToggleClick(id) {
-  const select = document.getElementById(id);
-  if (!select) return;
-
-  select.removeEventListener('mousedown', handleOptionClick);
-  select.addEventListener('mousedown', handleOptionClick);
-}
-
-function handleOptionClick(e) {
-  const option = e.target;
-  if (option.tagName !== 'OPTION') return;
-  e.preventDefault();
-  option.selected = !option.selected;
-  option.parentElement.dispatchEvent(new Event('change'));
-}
-
-function limpiarTodosLosFiltros() {
-  const selectores = [
-    'municipiosComparacion', 'aniosComparacion', 'sexoComparacion',
-    'edadComparacion', 'estadoComparacion', 'condicionComparacion'
-  ];
-
-  selectores.forEach(id => {
-    const select = document.getElementById(id);
-    if (select) {
-      Array.from(select.options).forEach(opt => opt.selected = false);
-      const botonId = `seleccionarTodos${id.charAt(0).toUpperCase() + id.slice(1)}`;
-      const boton = document.getElementById(botonId);
-      if (boton) {
-        boton.textContent = 'Seleccionar Todos';
-        boton.classList.remove('active');
-      }
-      actualizarContador(id);
-    }
-  });
-  
-  // Desactivar modos avanzados
-  document.getElementById('activarSelectorDual') && (document.getElementById('activarSelectorDual').checked = false);
-  document.getElementById('activarBenchmark') && (document.getElementById('activarBenchmark').checked = false);
-  document.getElementById('activarDispersion') && (document.getElementById('activarDispersion').checked = false);
-  
-  modoAvanzado.dual = false;
-  modoAvanzado.benchmark = false;
-  modoAvanzado.dispersion = false;
-  
-  document.getElementById('dualControls') && (document.getElementById('dualControls').style.display = 'none');
-  document.getElementById('benchmarkControls') && (document.getElementById('benchmarkControls').style.display = 'none');
-  document.getElementById('scatterControls') && (document.getElementById('scatterControls').style.display = 'none');
-}
-
-// =========================
-// POBLAR SELECTORES
-// =========================
-
-function poblarSelectoresGraficas() {
-  if (!datos || datos.length === 0) return;
-
-  try {
-    // Municipios
-    const municipiosTotales = {};
-    datos.forEach(d => {
-      municipiosTotales[d.municipio] = (municipiosTotales[d.municipio] || 0) + (Number(d.total) || 0);
-    });
-    const municipiosArray = Object.entries(municipiosTotales)
-      .sort((a, b) => b[1] - a[1])
-      .map(([municipio]) => municipio);
-
-    llenarSelectorMultiple('municipiosComparacion', municipiosArray);
-    configurarBotonSeleccionarTodos('seleccionarTodosMunicipios', 'municipiosComparacion');
-    habilitarToggleClick('municipiosComparacion');
-    document.getElementById('municipiosComparacion').addEventListener('change', () => actualizarContador('municipiosComparacion'));
-
-    // Años
-    let anios = [];
-    if (datos[0].hasOwnProperty('año')) {
-      anios = [...new Set(datos.map(d => d.año))].filter(v => v != null).map(String).sort((a, b) => b - a);
-    } else {
-      anios = ['2024', '2025', '2026'];
-    }
-    llenarSelectorMultiple('aniosComparacion', anios);
-    configurarBotonSeleccionarTodos('seleccionarTodosAnios', 'aniosComparacion');
-    habilitarToggleClick('aniosComparacion');
-    document.getElementById('aniosComparacion').addEventListener('change', () => actualizarContador('aniosComparacion'));
-
-    // Sexo
-    const sexos = [...new Set(datos.map(d => d.sexo))].filter(v => v != null).sort();
-    llenarSelectorMultiple('sexoComparacion', sexos);
-    configurarBotonSeleccionarTodos('seleccionarTodosSexos', 'sexoComparacion');
-    habilitarToggleClick('sexoComparacion');
-    document.getElementById('sexoComparacion').addEventListener('change', () => actualizarContador('sexoComparacion'));
-
-    // Rango de edad
-    const rangosEdad = [...new Set(datos.map(d => d.rango_edad))].filter(v => v != null).sort();
-    llenarSelectorMultiple('edadComparacion', rangosEdad);
-    configurarBotonSeleccionarTodos('seleccionarTodosEdades', 'edadComparacion');
-    habilitarToggleClick('edadComparacion');
-    document.getElementById('edadComparacion').addEventListener('change', () => actualizarContador('edadComparacion'));
-
-    // Estado de persona
-    let estados = [];
-    if (datos[0].hasOwnProperty('estatus_persona')) {
-      estados = [...new Set(datos.map(d => d.estatus_persona))].filter(v => v != null).sort();
-    }
-    llenarSelectorMultiple('estadoComparacion', estados);
-    configurarBotonSeleccionarTodos('seleccionarTodosEstados', 'estadoComparacion');
-    habilitarToggleClick('estadoComparacion');
-    document.getElementById('estadoComparacion').addEventListener('change', () => actualizarContador('estadoComparacion'));
-
-    // Condición de localización
-    let condiciones = [];
-    if (datos[0].hasOwnProperty('condicion_localizacion')) {
-      condiciones = [...new Set(datos.map(d => d.condicion_localizacion))].filter(v => v != null);
-      const orden = ['CON VIDA', 'Desaparecida', 'SIN VIDA', 'Con vida', 'DESAPARECIDA', 'Sin vida'];
-      condiciones.sort((a, b) => {
-        const ia = orden.indexOf(a);
-        const ib = orden.indexOf(b);
-        if (ia === -1 && ib === -1) return a.localeCompare(b);
-        if (ia === -1) return 1;
-        if (ib === -1) return -1;
-        return ia - ib;
-      });
-    }
-    llenarSelectorMultiple('condicionComparacion', condiciones);
-    configurarBotonSeleccionarTodos('seleccionarTodosCondiciones', 'condicionComparacion');
-    habilitarToggleClick('condicionComparacion');
-    document.getElementById('condicionComparacion').addEventListener('change', () => actualizarContador('condicionComparacion'));
-
-    // Municipios para predicción
-    const selectPredMunicipio = document.getElementById('predMunicipio');
-    if (selectPredMunicipio) {
-      selectPredMunicipio.innerHTML = '<option value="">Selecciona un municipio</option>';
-      municipiosArray.forEach(mun => {
-        selectPredMunicipio.innerHTML += `<option value="${mun}">${mun}</option>`;
-      });
-    }
-
-    // Botón Limpiar Todo
-    if (!document.getElementById('btnLimpiarTodo')) {
-      const btnLimpiar = document.createElement('button');
-      btnLimpiar.id = 'btnLimpiarTodo';
-      btnLimpiar.className = 'btn-secundario';
-      btnLimpiar.innerHTML = 'Limpiar todos los filtros';
-      btnLimpiar.addEventListener('click', limpiarTodosLosFiltros);
-      document.getElementById('panel').insertBefore(btnLimpiar, document.getElementById('creditos'));
-    }
-
-    // Inicializar contadores
-    ['municipiosComparacion', 'aniosComparacion', 'sexoComparacion', 'edadComparacion', 'estadoComparacion', 'condicionComparacion']
-      .forEach(id => actualizarContador(id));
-      
-    // Inicializar controles avanzados
-    inicializarModoAvanzado();
-
-  } catch (error) {
-    console.error("Error poblando selectores:", error);
-  }
-
-}
-
-let modoAvanzadoInicializado = false;
-
-// =========================
-// FUNCIONES DE MODO AVANZADO
-// =========================
-
-function inicializarModoAvanzado() {
-  if (modoAvanzadoInicializado) return;
-
-  if (!datos || datos.length === 0) {
-    setTimeout(inicializarModoAvanzado, 500);
-    return;
-  }
-
-  modoAvanzadoInicializado = true;
-  console.log("🔄 Inicializando modo avanzado...");
-
-
-  // Selector Dual
-  const dualCheck = document.getElementById('activarSelectorDual');
-  const dualControls = document.getElementById('dualControls');
-  const catPrincipal = document.getElementById('categoriaPrincipal');
-  const catSecundaria = document.getElementById('categoriaSecundaria');
-  const dualEjemplo = document.getElementById('dualEjemplo');
-
-  if (dualCheck && dualControls) {
-    dualCheck.addEventListener('change', function() {
-      modoAvanzado.dual = this.checked;
-      if (this.checked) {
-        modoAvanzado.benchmark = false;
-        modoAvanzado.dispersion = false;
-        document.getElementById('activarBenchmark') && (document.getElementById('activarBenchmark').checked = false);
-        document.getElementById('activarDispersion') && (document.getElementById('activarDispersion').checked = false);
-        document.getElementById('benchmarkControls') && (document.getElementById('benchmarkControls').style.display = 'none');
-        document.getElementById('scatterControls') && (document.getElementById('scatterControls').style.display = 'none');
-      }
-      dualControls.style.display = this.checked ? 'block' : 'none';
-    });
-  }
-
-  if (catPrincipal && catSecundaria && dualEjemplo) {
-    function actualizarEjemplo() {
-      dualEjemplo.textContent = `Comparando: ${catPrincipal.options[catPrincipal.selectedIndex]?.text || ''} vs ${catSecundaria.options[catSecundaria.selectedIndex]?.text || ''}`;
-    }
-    catPrincipal.addEventListener('change', actualizarEjemplo);
-    catSecundaria.addEventListener('change', actualizarEjemplo);
-    actualizarEjemplo();
-  }
-
-  // Benchmark
-  const benchmarkCheck = document.getElementById('activarBenchmark');
-  const benchmarkControls = document.getElementById('benchmarkControls');
-  const municipioBenchmark = document.getElementById('municipioBenchmark');
-
-  if (benchmarkCheck && benchmarkControls) {
-    benchmarkCheck.addEventListener('change', function() {
-      modoAvanzado.benchmark = this.checked;
-      if (this.checked) {
-        modoAvanzado.dual = false;
-        modoAvanzado.dispersion = false;
-        document.getElementById('activarSelectorDual') && (document.getElementById('activarSelectorDual').checked = false);
-        document.getElementById('activarDispersion') && (document.getElementById('activarDispersion').checked = false);
-        document.getElementById('dualControls') && (document.getElementById('dualControls').style.display = 'none');
-        document.getElementById('scatterControls') && (document.getElementById('scatterControls').style.display = 'none');
-        cargarMunicipiosBenchmark();
-      }
-      benchmarkControls.style.display = this.checked ? 'block' : 'none';
-    });
-  }
-
-  if (municipioBenchmark) {
-    municipioBenchmark.addEventListener('change', actualizarInfoBenchmark);
-  }
-
-  // Dispersión
-  const scatterCheck = document.getElementById('activarDispersion');
-  const scatterControls = document.getElementById('scatterControls');
-
-  if (scatterCheck && scatterControls) {
-    scatterCheck.addEventListener('change', function() {
-      modoAvanzado.dispersion = this.checked;
-      if (this.checked) {
-        modoAvanzado.dual = false;
-        modoAvanzado.benchmark = false;
-        document.getElementById('activarSelectorDual') && (document.getElementById('activarSelectorDual').checked = false);
-        document.getElementById('activarBenchmark') && (document.getElementById('activarBenchmark').checked = false);
-        document.getElementById('dualControls') && (document.getElementById('dualControls').style.display = 'none');
-        document.getElementById('benchmarkControls') && (document.getElementById('benchmarkControls').style.display = 'none');
-      }
-      scatterControls.style.display = this.checked ? 'block' : 'none';
-    });
-  }
-}
-
-// =========================
-// FUNCIONES DE BENCHMARK
-// =========================
-
-function cargarMunicipiosBenchmark() {
-  const select = document.getElementById('municipioBenchmark');
-  if (!select || !datos.length) return;
-
-  const municipios = [...new Set(datos.map(d => d.municipio))].sort();
-  
-  select.innerHTML = '<option value="">Selecciona un municipio</option>';
-  municipios.forEach(mun => {
-    select.innerHTML += `<option value="${mun}">${mun}</option>`;
-  });
-}
-
-function actualizarInfoBenchmark() {
-  const municipio = document.getElementById('municipioBenchmark')?.value;
-  if (!municipio || !datos.length) return;
-
-const sexos = obtenerValoresSeleccionados('sexoComparacion');
-const rangosEdad = obtenerValoresSeleccionados('edadComparacion');
-const estados = obtenerValoresSeleccionados('estadoComparacion');
-const condiciones = obtenerValoresSeleccionados('condicionComparacion');
-
-
-const aniosRecientes = obtenerValoresSeleccionados('aniosComparacion');
-if (aniosRecientes.length === 0) return;
-  
-  // Promedio estatal
-const datosEstado = datos.filter(d =>
-  aniosRecientes.includes(String(d.año)) &&
-  (sexos.length === 0 || sexos.includes(d.sexo)) &&
-  (rangosEdad.length === 0 || rangosEdad.includes(d.rango_edad)) &&
-  (estados.length === 0 || estados.includes(d.estatus_persona)) &&
-  (condiciones.length === 0 || condiciones.includes(d.condicion_localizacion))
-);
-  const totalCasosEstado = datosEstado.reduce((sum, d) => sum + (Number(d.total) || 0), 0);
-  const conVidaEstado = datosEstado
-    .filter(d => d.condicion_localizacion === "CON VIDA" || d.condicion_localizacion === "Con vida")
-    .reduce((sum, d) => sum + (Number(d.total) || 0), 0);
-  const tasaEstado = totalCasosEstado > 0 ? ((conVidaEstado / totalCasosEstado) * 100).toFixed(1) : 0;
-
-  // Datos del municipio
-const datosMunicipio = datos.filter(d =>
-  d.municipio === municipio &&
-  aniosRecientes.includes(String(d.año)) &&
-  (sexos.length === 0 || sexos.includes(d.sexo)) &&
-  (rangosEdad.length === 0 || rangosEdad.includes(d.rango_edad)) &&
-  (estados.length === 0 || estados.includes(d.estatus_persona)) &&
-  (condiciones.length === 0 || condiciones.includes(d.condicion_localizacion))
-);
-
-  const totalCasosMunicipio = datosMunicipio.reduce((sum, d) => sum + (Number(d.total) || 0), 0);
-  const conVidaMunicipio = datosMunicipio
-    .filter(d => d.condicion_localizacion === "CON VIDA" || d.condicion_localizacion === "Con vida")
-    .reduce((sum, d) => sum + (Number(d.total) || 0), 0);
-  const tasaMunicipio = totalCasosMunicipio > 0 ? ((conVidaMunicipio / totalCasosMunicipio) * 100).toFixed(1) : 0;
-
-  // Actualizar UI
-  const promedioInfo = document.getElementById('promedioEstatalInfo');
-  if (promedioInfo) {
-    promedioInfo.innerHTML = `
-      <span class="benchmark-valor">${totalCasosEstado.toLocaleString()} casos</span><br>
-      <span style="color: #27ae60; font-size: 11px;">${tasaEstado}% localizados con vida</span>
-    `;
-  }
-
-  const municipioLabel = document.getElementById('municipioBenchmarkLabel');
-  if (municipioLabel) municipioLabel.innerHTML = `📍 ${municipio}`;
-
-  const municipioInfo = document.getElementById('municipioBenchmarkInfo');
-  if (municipioInfo) {
-const diff = parseFloat(tasaMunicipio) - parseFloat(tasaEstado);
-const esSuperior = diff > 1;
-const esSimilar = Math.abs(diff) <= 1;
-    municipioInfo.innerHTML = `
-      <span class="benchmark-valor">${totalCasosMunicipio.toLocaleString()} casos</span><br>
-      <span style="color: ${esSuperior ? '#27ae60' : '#e74c3c'}; font-size: 11px;">
-        ${tasaMunicipio}% localizados con vida
-      </span><br>
-      <span style="font-size: 10px; color: #666;">
-${esSuperior ? '▲ Superior' : esSimilar ? '■ Similar' : '▼ Inferior'} al promedio
-      </span>
-    `;
-  }
-}
-
-// =========================
-// FUNCIONES DE GRÁFICAS AVANZADAS
-// =========================
-
-function generarGraficaDual() {
-  const catPrincipal = document.getElementById('categoriaPrincipal')?.value;
-  const catSecundaria = document.getElementById('categoriaSecundaria')?.value;
-
-  if (catPrincipal === catSecundaria) {
-    alert("Las categorías deben ser diferentes");
-    return null;
-  }
-
-  const municipios = obtenerValoresSeleccionados('municipiosComparacion');
-  const anios = obtenerValoresSeleccionados('aniosComparacion');
-  const sexos = obtenerValoresSeleccionados('sexoComparacion');
-  const rangosEdad = obtenerValoresSeleccionados('edadComparacion');
-  const estados = obtenerValoresSeleccionados('estadoComparacion');
-  const condiciones = obtenerValoresSeleccionados('condicionComparacion');
-
-  if (municipios.length === 0 || anios.length === 0) {
-    alert("Selecciona al menos un municipio y un año");
-    return null;
-  }
-
-  let datosFiltrados = datos.filter(d =>
-    municipios.includes(d.municipio) &&
-    anios.includes(String(d.año)) &&
-    (sexos.length === 0 || sexos.includes(d.sexo)) &&
-    (rangosEdad.length === 0 || rangosEdad.includes(d.rango_edad)) &&
-    (estados.length === 0 || estados.includes(d.estatus_persona)) &&
-    (condiciones.length === 0 || condiciones.includes(d.condicion_localizacion))
-  );
-
-  if (datosFiltrados.length === 0) return null;
-
-  // Obtener valores únicos
-  let valoresPrincipal = [...new Set(datosFiltrados.map(d => d[catPrincipal]))]
-    .filter(v => v != null);
-  let valoresSecundaria = [...new Set(datosFiltrados.map(d => d[catSecundaria]))]
-    .filter(v => v != null);
-
-  // Orden especial para condiciones
-  if (catPrincipal === 'condicion_localizacion') {
-    const orden = ['CON VIDA', 'Desaparecida', 'SIN VIDA', 'Con vida', 'DESAPARECIDA', 'Sin vida'];
-    valoresPrincipal.sort((a,b) => orden.indexOf(a) - orden.indexOf(b));
-  }
-  if (catSecundaria === 'condicion_localizacion') {
-    const orden = ['CON VIDA', 'Desaparecida', 'SIN VIDA', 'Con vida', 'DESAPARECIDA', 'Sin vida'];
-    valoresSecundaria.sort((a,b) => orden.indexOf(a) - orden.indexOf(b));
-  }
-
-  // Limitar a 8 series para legibilidad
-  const valoresSecundariaLimitados = valoresSecundaria.slice(0, 8);
-  const labels = valoresPrincipal;
-  const datasets = valoresSecundariaLimitados.map((valor, index) => {
-    const data = labels.map(label => {
-      return datosFiltrados
-        .filter(d => d[catPrincipal] === label && d[catSecundaria] === valor)
-        .reduce((sum, d) => sum + (Number(d.total) || 0), 0);
-    });
-    return {
-      label: valor,
-      data,
-      backgroundColor: BASE_COLORS[index % BASE_COLORS.length],
-      borderWidth: 1
-    };
-  }).filter(ds => ds.data.some(v => v > 0));
-
-  if (datasets.length === 0) return null;
-
-  const titulo = `Comparación: ${catPrincipal} (eje X) vs ${catSecundaria} (colores)`;
-  return { labels, datasets, titulo, tipo: 'bar' };
-}
-
-function generarGraficaDispersion() {
-  const municipios = obtenerValoresSeleccionados('municipiosComparacion');
-  const anios = obtenerValoresSeleccionados('aniosComparacion');
-
-  if (municipios.length === 0 || anios.length === 0) {
-    alert("Selecciona al menos un municipio y un año para la gráfica de dispersión.");
-    return null;
-  }
-
-  const datosMunicipios = [];
-
-  municipios.forEach(municipio => {
-    const datosMun = datos.filter(d => 
-      d.municipio === municipio && 
-      anios.includes(String(d.año))
-    );
-
-    if (datosMun.length === 0) return;
-
-    const totalCasos = datosMun.reduce((sum, d) => sum + (Number(d.total) || 0), 0);
-    const conVida = datosMun
-      .filter(d => d.condicion_localizacion === "CON VIDA" || d.condicion_localizacion === "Con vida")
-      .reduce((sum, d) => sum + (Number(d.total) || 0), 0);
-    const tasaResolucion = totalCasos > 0 ? (conVida / totalCasos) * 100 : 0;
-    const añosUnicos = [...new Set(datosMun.map(d => d.año))].length;
-
-    datosMunicipios.push({
-      municipio,
-      totalCasos,
-      tasaResolucion: Math.round(tasaResolucion * 10) / 10,
-      añosDatos: añosUnicos,
-      color: BASE_COLORS[municipios.indexOf(municipio) % BASE_COLORS.length]
-    });
-  });
-
-  if (datosMunicipios.length === 0) return null;
-
-  datosMunicipios.sort((a, b) => b.totalCasos - a.totalCasos);
-
-  const datasets = [{
-    label: 'Municipios',
-    data: datosMunicipios.map(d => ({
-      x: d.totalCasos,
-      y: d.tasaResolucion,
-      municipio: d.municipio,
-      años: d.añosDatos
-    })),
-    backgroundColor: datosMunicipios.map(d => d.color),
-    borderColor: datosMunicipios.map(d => d.color),
-    borderWidth: 2,
-    pointRadius: 8,
-    pointHoverRadius: 12,
-    pointBorderColor: '#ffffff',
-    pointBorderWidth: 2
-  }];
-
-  const titulo = `Dispersión: Casos vs Tasa de localización con vida (${anios.length} años)`;
-  return { labels: [], datasets, titulo, tipo: 'scatter' };
-}
-
-const sexos = obtenerValoresSeleccionados('sexoComparacion');
-const rangosEdad = obtenerValoresSeleccionados('edadComparacion');
-const estados = obtenerValoresSeleccionados('estadoComparacion');
-const condiciones = obtenerValoresSeleccionados('condicionComparacion');
-
-
-function generarGraficaBenchmark(municipio) {
-  const anios = obtenerValoresSeleccionados('aniosComparacion');
-
-  if (anios.length === 0) {
-    alert("Selecciona al menos un año para la comparación.");
-    return null;
-  }
-
-  const añosOrdenados = anios.sort((a, b) => a - b);
-
-  // Datos del municipio
-  const datosMunicipio = añosOrdenados.map(año => {
-const datosAño = datos.filter(d =>
-  String(d.año) === String(año) &&
-  (municipio ? d.municipio === municipio : true) &&
-  (sexos.length === 0 || sexos.includes(d.sexo)) &&
-  (rangosEdad.length === 0 || rangosEdad.includes(d.rango_edad)) &&
-  (estados.length === 0 || estados.includes(d.estatus_persona)) &&
-  (condiciones.length === 0 || condiciones.includes(d.condicion_localizacion))
-);
-
-    const total = datosAño.reduce((sum, d) => sum + (Number(d.total) || 0), 0);
-    const conVida = datosAño
-      .filter(d => d.condicion_localizacion === "CON VIDA" || d.condicion_localizacion === "Con vida")
-      .reduce((sum, d) => sum + (Number(d.total) || 0), 0);
-    return { año, tasa: total > 0 ? (conVida / total) * 100 : 0 };
-  });
-
-  // Datos del promedio estatal
-  const datosEstado = añosOrdenados.map(año => {
-    const datosAño = datos.filter(d => String(d.año) === String(año));
-    const total = datosAño.reduce((sum, d) => sum + (Number(d.total) || 0), 0);
-    const conVida = datosAño
-      .filter(d => d.condicion_localizacion === "CON VIDA" || d.condicion_localizacion === "Con vida")
-      .reduce((sum, d) => sum + (Number(d.total) || 0), 0);
-    return { año, tasa: total > 0 ? (conVida / total) * 100 : 0 };
-  });
-
-  const labels = añosOrdenados;
-  const datasets = [
-    {
-      label: `${municipio} - % Localizados con vida`,
-      data: datosMunicipio.map(d => Number(d.tasa.toFixed(1))),
-      borderColor: '#e74c3c',
-      backgroundColor: 'rgba(231, 76, 60, 0.1)',
-      borderWidth: 3,
-      tension: 0.3,
-      fill: false,
-      pointRadius: 6,
-      pointHoverRadius: 10
-    },
-    {
-      label: 'Promedio estatal - % Localizados con vida',
-      data: datosEstado.map(d => Number(d.tasa.toFixed(1))),
-      borderColor: '#2ecc71',
-      backgroundColor: 'rgba(46, 204, 113, 0.1)',
-      borderWidth: 3,
-      tension: 0.3,
-      fill: false,
-      pointRadius: 6,
-      pointHoverRadius: 10,
-      borderDash: [5, 5]
-    }
-  ];
-
-  const titulo = `Benchmark: ${municipio} vs Promedio estatal (Tasa de localización con vida)`;
-  return { labels, datasets, titulo, tipo: 'line' };
-}
-
-// =========================
-// FUNCIÓN PRINCIPAL DE GRÁFICAS (MODIFICADA)
-// =========================
-
-function generarGrafica() {
-  try {
-    // Verificar modos activos
-    const dualActivo = document.getElementById('activarSelectorDual')?.checked || false;
-    const benchmarkActivo = document.getElementById('activarBenchmark')?.checked || false;
-    const dispersionActiva = document.getElementById('activarDispersion')?.checked || false;
-
-    let resultado = null;
-
-    if (dualActivo) {
-      resultado = generarGraficaDual();
-    } else if (benchmarkActivo) {
-      const municipio = document.getElementById('municipioBenchmark')?.value;
-      if (!municipio) {
-        alert("Selecciona un municipio para la comparación.");
-        return;
-      }
-      resultado = generarGraficaBenchmark(municipio);
-    } else if (dispersionActiva) {
-      resultado = generarGraficaDispersion();
-    }
-
-    if (resultado) {
-      renderChart(resultado.labels, resultado.datasets, resultado.titulo, resultado.tipo);
-      return;
-    }
-
-    // Si no hay modo avanzado activo, usar modo normal
-    generarGraficaNormal();
-
-  } catch (error) {
-    console.error("Error generando gráfica:", error);
-    alert(`Error: ${error.message}`);
-  }
-}
-
-// =========================
-// FUNCIÓN NORMAL (EXISTENTE)
-// =========================
-
-function generarGraficaNormal() {
-  const municipios = obtenerValoresSeleccionados('municipiosComparacion');
-  const anios = obtenerValoresSeleccionados('aniosComparacion');
-  const sexos = obtenerValoresSeleccionados('sexoComparacion');
-  const rangosEdad = obtenerValoresSeleccionados('edadComparacion');
-  const estados = obtenerValoresSeleccionados('estadoComparacion');
-  const condiciones = obtenerValoresSeleccionados('condicionComparacion');
-
-  if (municipios.length === 0) { alert("Selecciona al menos un municipio."); return; }
-  if (anios.length === 0) { alert("Selecciona al menos un año."); return; }
-
-  let datosFiltrados = datos.filter(d =>
-    municipios.includes(d.municipio) &&
-    anios.includes(String(d.año)) &&
-    (sexos.length === 0 || sexos.includes(d.sexo)) &&
-    (rangosEdad.length === 0 || rangosEdad.includes(d.rango_edad)) &&
-    (estados.length === 0 || estados.includes(d.estatus_persona)) &&
-    (condiciones.length === 0 || condiciones.includes(d.condicion_localizacion))
-  );
-
-  if (datosFiltrados.length === 0) {
-    alert("No hay datos disponibles para los filtros seleccionados.");
-    return;
-  }
-
-  // Detectar categoría activa
-  let categoriaActiva = null;
-  let valoresCategoria = [];
-  let campoCategoria = '';
-
-  if (condiciones.length > 0) {
-    categoriaActiva = 'Condición';
-    valoresCategoria = condiciones;
-    campoCategoria = 'condicion_localizacion';
-  } else if (estados.length > 0) {
-    categoriaActiva = 'Estado';
-    valoresCategoria = estados;
-    campoCategoria = 'estatus_persona';
-  } else if (sexos.length > 0) {
-    categoriaActiva = 'Sexo';
-    valoresCategoria = sexos;
-    campoCategoria = 'sexo';
-  } else if (rangosEdad.length > 0) {
-    categoriaActiva = 'Edad';
-    valoresCategoria = rangosEdad;
-    campoCategoria = 'rango_edad';
-  }
-
-  let labels, datasets;
-
-  // Estrategia 1: Múltiples años
-  if (anios.length > 1) {
-    labels = anios.sort((a, b) => a - b);
-    datasets = [];
-
-    if (categoriaActiva) {
-      if (campoCategoria === 'condicion_localizacion') {
-        const orden = ['CON VIDA', 'Desaparecida', 'SIN VIDA', 'Con vida', 'DESAPARECIDA', 'Sin vida'];
-        valoresCategoria = [...valoresCategoria].sort((a, b) => {
-          const ia = orden.indexOf(a);
-          const ib = orden.indexOf(b);
-          if (ia === -1 && ib === -1) return 0;
-          if (ia === -1) return 1;
-          if (ib === -1) return -1;
-          return ia - ib;
-        });
-      }
-
-      valoresCategoria.forEach(valor => {
-        const data = labels.map(anio =>
-          datosFiltrados
-            .filter(d => String(d.año) === String(anio) && d[campoCategoria] === valor)
-            .reduce((sum, d) => sum + (Number(d.total) || 0), 0)
-        );
-        if (data.some(v => v > 0)) {
-          datasets.push({ label: valor, data, borderWidth: 2, tension: 0.3, fill: chartType.includes('area') });
-        }
-      });
-    } else {
-      datasets.push({
-        label: 'Total',
-        data: labels.map(anio => datosFiltrados.filter(d => String(d.año) === String(anio)).reduce((sum, d) => sum + (Number(d.total) || 0), 0)),
-        borderWidth: 2, tension: 0.3, fill: chartType.includes('area')
-      });
-    }
-  }
-  // Estrategia 2: Múltiples municipios
-  else if (municipios.length > 1) {
-    labels = municipios;
-    datasets = [];
-
-    if (categoriaActiva) {
-      if (campoCategoria === 'condicion_localizacion') {
-        const orden = ['CON VIDA', 'Desaparecida', 'SIN VIDA', 'Con vida', 'DESAPARECIDA', 'Sin vida'];
-        valoresCategoria = [...valoresCategoria].sort((a, b) => {
-          const ia = orden.indexOf(a);
-          const ib = orden.indexOf(b);
-          if (ia === -1 && ib === -1) return 0;
-          if (ia === -1) return 1;
-          if (ib === -1) return -1;
-          return ia - ib;
-        });
-      }
-
-      valoresCategoria.forEach(valor => {
-        const data = labels.map(municipio =>
-          datosFiltrados
-            .filter(d => d.municipio === municipio && d[campoCategoria] === valor)
-            .reduce((sum, d) => sum + (Number(d.total) || 0), 0)
-        );
-        if (data.some(v => v > 0)) {
-          datasets.push({ label: valor, data });
-        }
-      });
-    } else {
-      datasets.push({
-        label: 'Total',
-        data: labels.map(municipio => datosFiltrados.filter(d => d.municipio === municipio).reduce((sum, d) => sum + (Number(d.total) || 0), 0))
-      });
-    }
-  }
-  // Estrategia 3: Caso único
-  else {
-    if (categoriaActiva) {
-      labels = valoresCategoria;
-      if (campoCategoria === 'condicion_localizacion') {
-        const orden = ['CON VIDA', 'Desaparecida', 'SIN VIDA', 'Con vida', 'DESAPARECIDA', 'Sin vida'];
-        labels = [...labels].sort((a, b) => {
-          const ia = orden.indexOf(a);
-          const ib = orden.indexOf(b);
-          if (ia === -1 && ib === -1) return 0;
-          if (ia === -1) return 1;
-          if (ib === -1) return -1;
-          return ia - ib;
-        });
-      }
-      datasets = [{
-        label: categoriaActiva,
-        data: labels.map(valor => datosFiltrados.filter(d => d[campoCategoria] === valor).reduce((sum, d) => sum + (Number(d.total) || 0), 0))
-      }];
-    } else {
-      labels = ['Total'];
-      datasets = [{
-        label: 'Casos',
-        data: [datosFiltrados.reduce((sum, d) => sum + (Number(d.total) || 0), 0)]
-      }];
-    }
-  }
-
-  if (!datasets || datasets.length === 0) {
-    alert("No hay datos para mostrar con los filtros seleccionados.");
-    return;
-  }
-
-  const titulo = generarTituloGrafica({ municipios, anios, sexos, rangosEdad, estados, condiciones });
-  renderChart(labels, datasets, titulo, chartType);
-}
-
-function generarTituloGrafica(filtros) {
-  const partes = [];
-  if (filtros.municipios.length === 1) partes.push(`Municipio: ${filtros.municipios[0]}`);
-  else if (filtros.municipios.length > 1) partes.push(`${filtros.municipios.length} municipios`);
-
-  if (filtros.anios.length === 1) partes.push(`Año: ${filtros.anios[0]}`);
-  else if (filtros.anios.length > 1) partes.push(`${filtros.anios.length} años`);
-
-  if (filtros.sexos.length === 1) partes.push(`Sexo: ${filtros.sexos[0]}`);
-  else if (filtros.sexos.length > 1) partes.push(`Ambos sexos`);
-
-  if (filtros.rangosEdad.length === 1) partes.push(`Edad: ${filtros.rangosEdad[0]}`);
-  else if (filtros.rangosEdad.length > 1) partes.push(`${filtros.rangosEdad.length} rangos`);
-
-  if (filtros.estados.length === 1) partes.push(`Estado: ${filtros.estados[0]}`);
-  else if (filtros.estados.length > 1) partes.push(`${filtros.estados.length} estados`);
-
-  if (filtros.condiciones.length === 1) partes.push(`Condición: ${filtros.condiciones[0]}`);
-  else if (filtros.condiciones.length > 1) partes.push(`${filtros.condiciones.length} condiciones`);
-
-  return partes.join(' | ') || 'Todos los filtros';
-}
-
-// =========================
-// RENDER CHART MEJORADO (SOPORTE SCATTER)
-// =========================
-
-function renderChart(labels, datasets, titulo, tipoForzado = null) {
-  const ctx = document.getElementById('grafica');
-  if (chartAnalisis) chartAnalisis.destroy();
-
-  document.getElementById('resumen').innerText = titulo;
-
-  let type = tipoForzado || chartType;
-  let stacked = false;
-  let fillArea = false;
-
-  // Configuración especial para scatter
-  if (type === 'scatter') {
-    const options = {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        x: {
-          type: 'linear',
-          position: 'bottom',
-          title: {
-            display: true,
-            text: 'Total de casos',
-            font: { weight: 'bold', size: 11 }
-          },
-          ticks: {
-            callback: v => v >= 1000 ? (v/1000).toFixed(1) + 'k' : v
-          }
-        },
-        y: {
-          beginAtZero: true,
-          max: 100,
-          title: {
-            display: true,
-            text: 'Tasa de localización con vida (%)',
-            font: { weight: 'bold', size: 11 }
-          },
-          ticks: {
-            callback: v => v + '%'
-          }
-        }
-      },
-      plugins: {
-        tooltip: {
-          callbacks: {
-            label: function(context) {
-              const d = context.raw;
-              return [
-                `${d.municipio}`,
-                `Casos: ${d.x.toLocaleString()}`,
-                `Tasa: ${d.y.toFixed(1)}%`,
-                `Años: ${d.años}`
-              ];
-            }
-          }
-        },
-        title: {
-          display: true,
-          text: titulo,
-          font: { size: 12, weight: 'bold' },
-          padding: { top: 10, bottom: 15 }
-        },
-          datalabels: {
-    display: false
-  },
-        watermark: {
-          text: 'rys2000dev',
-          fontSize: 26,
-          opacity: 0.07,
-          angle: 0
-        }
-      }
-    };
-
-    try {
-      chartAnalisis = new Chart(ctx, {
-        type: 'scatter',
-        data: { datasets },
-        options
-      });
-    } catch (error) {
-      console.error("Error creando gráfica scatter:", error);
-    }
-    return;
-  }
-
-  // Configuración para otros tipos de gráfica
-  if (type === "area") { type = "line"; fillArea = true; }
-  if (type === "stackedArea") { type = "line"; fillArea = true; stacked = true; }
-  if (type === "stackedBar") { type = "bar"; stacked = true; }
-
-  const enhancedDatasets = apply3DEffects(datasets, type, fillArea);
-  let finalLabels = labels;
-  let finalDatasets = enhancedDatasets;
-
-  if (type === 'pie' || type === 'doughnut') {
-    if (enhancedDatasets.length > 1) {
-      const dataConsolidada = new Array(labels.length).fill(0);
-      enhancedDatasets.forEach(dataset => {
-        dataset.data.forEach((value, index) => { dataConsolidada[index] += value; });
-      });
-      finalDatasets = [{
-        label: 'Total',
-        data: dataConsolidada,
-        backgroundColor: generarColores(labels.length),
-        borderColor: '#ffffff',
-        borderWidth: 2
-      }];
-    }
-  }
-
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    indexAxis: 'x',
-    radius: (type === 'pie' || type === 'doughnut') ? '80%' : '100%',
-    animation: { duration: 800, easing: 'easeOutQuart' },
-    scales: (type === 'pie' || type === 'doughnut') ? {} : {
-      x: { stacked, ticks: { font: { size: 10 }, maxRotation: 45, minRotation: 0 }, grid: { color: 'rgba(0,0,0,0.1)' } },
-      y: { stacked, beginAtZero: true, grace: '10%', ticks: { font: { size: 10 }, callback: v => v >= 1000 ? (v/1000).toFixed(1)+'k' : v }, grid: { color: 'rgba(0,0,0,0.1)' } }
-    },
-    plugins: {
-      legend: { display: datasets.length > 1, position: 'top', labels: { font: { size: 10 }, usePointStyle: true, pointStyle: 'rect', padding: 20 } },
-      title: { display: true, text: titulo, font: { size: 12, weight: 'bold' }, padding: { top: 10, bottom: 15 } },
-      subtitle: { display: false },
-      tooltip: { mode: 'index', intersect: false, backgroundColor: 'rgba(0,0,0,0.75)', titleColor: '#fff', bodyColor: '#fff', displayColors: true },
-      watermark: { text: 'rys2000dev', fontSize: 26, opacity: 0.07, angle: 0 },
-      datalabels: {
-        display: ctx => typeof ctx.dataset.data[ctx.dataIndex] === 'number' && ctx.dataset.data[ctx.dataIndex] > 0 && datasets.length <= 5,
-        formatter: v => v >= 1000 ? (v/1000).toFixed(1)+'k' : v.toLocaleString(),
-        color: ctx => ctx.chart.config.type === 'line' ? '#fff' : '#000',
-        font: ctx => ctx.chart.config.type === 'line' ? { weight: 'bold', size: 10 } : { weight: 'bold', size: 11 },
-        anchor: ctx => ctx.chart.config.type === 'line' ? 'center' : (ctx.chart.options.scales?.x?.stacked ? 'center' : 'end'),
-        align: ctx => ctx.chart.config.type === 'line' ? 'center' : (ctx.chart.options.scales?.x?.stacked ? 'center' : 'top'),
-        offset: ctx => ctx.chart.config.type === 'line' ? 0 : 4,
-        clamp: true
-      }
-    }
-  };
-
-  try {
-    chartAnalisis = new Chart(ctx, { type, data: { labels: finalLabels, datasets: finalDatasets }, options, plugins: [ChartDataLabels] });
-  } catch (error) {
-    console.error("Error creando gráfica:", error);
-    alert(`Error al crear la gráfica: ${error.message}`);
-  }
-}
-
-function generarColores(cantidad) {
-  const colores = [];
-  const hueStep = 360 / (cantidad || 1);
-  for (let i = 0; i < cantidad; i++) colores.push(`hsl(${i * hueStep}, 70%, 60%)`);
-  return colores;
-}
-
-// =========================
-// MODELO DE PREDICCIÓN (SIN CAMBIOS)
+// MODELO DE PREDICCIÓN
 // =========================
 
 class SimplePredictor {
   constructor() {
     this.estadisticas = null;
     this.isTrained = false;
+    this.debug = true; // Activar modo debug
   }
 
+  // Preparar estadísticas de los datos de entrenamiento
   prepararEstadisticas(datos) {
+    console.log("=== DEBUG: Iniciando preparación de estadísticas ===");
+    console.log("Total de registros recibidos:", datos.length);
+
     const stats = {
-      porMunicipio: {}, porSexo: {}, porEdad: {}, porMeses: {}, porSexoEdad: {},
-      general: { total: 0, conVida: 0, desaparecida: 0, sinVida: 0 }
+      porMunicipio: {},
+      porSexo: {},
+      porEdad: {},
+      porMeses: {},
+      porSexoEdad: {},
+      general: {
+        total: 0,
+        conVida: 0,
+        desaparecida: 0,
+        sinVida: 0
+      }
     };
 
-    const datosCompletos = datos.filter(d =>
-      d.sexo && d.rango_edad && d.municipio && d.estatus_persona && d.condicion_localizacion && d.meses != null
-    );
+    // Depuración: ver estructura del primer registro
+    if (datos.length > 0) {
+      console.log("=== DEBUG: Primer registro ===");
+      console.log("Keys:", Object.keys(datos[0]));
+      console.log("Valores:", datos[0]);
+    }
 
-    if (datosCompletos.length === 0) return this.crearEstadisticasBasicas();
+    const datosCompletos = datos.filter(d => {
+      const tieneDatos =
+        d.sexo &&
+        d.rango_edad &&
+        d.municipio &&
+        d.estatus_persona &&
+        d.condicion_localizacion &&
+        d.meses !== null &&
+        d.meses !== undefined;
 
-    datosCompletos.forEach(d => {
+      if (!tieneDatos && this.debug) {
+        console.log("Registro incompleto:", {
+          sexo: d.sexo,
+          rango_edad: d.rango_edad,
+          municipio: d.municipio,
+          estatus_persona: d.estatus_persona,
+          condicion_localizacion: d.condicion_localizacion,
+          meses: d.meses
+        });
+      }
+
+      return tieneDatos;
+    });
+
+    console.log("=== DEBUG: Datos completos encontrados:", datosCompletos.length);
+
+    if (datosCompletos.length === 0) {
+      console.warn("No hay datos completos para entrenamiento");
+      console.log("=== DEBUG: Usando estadísticas básicas ===");
+      return this.crearEstadisticasBasicas();
+    }
+
+    // Procesar cada registro
+    datosCompletos.forEach((d, index) => {
+      // Estadísticas generales
       stats.general.total++;
-      const condicion = this.normalizarTexto(d.condicion_localizacion);
-      if (condicion === "CON VIDA") stats.general.conVida++;
-      else if (condicion === "SIN VIDA") stats.general.sinVida++;
-      else if (condicion === "DESAPARECIDA") stats.general.desaparecida++;
 
+      const condicion = this.normalizarTexto(d.condicion_localizacion);
+
+      if (condicion === "CON VIDA") {
+        stats.general.conVida++;
+      } else if (condicion === "SIN VIDA") {
+        stats.general.sinVida++;
+      } else if (condicion === "DESAPARECIDA") {
+        stats.general.desaparecida++;
+      }
+
+      // Normalizar datos
       const municipio = this.normalizarTexto(d.municipio);
       const sexo = this.normalizarTexto(d.sexo);
       const rangoEdad = d.rango_edad;
       const claveSexoEdad = `${sexo}_${rangoEdad}`;
-      const grupoMeses = Math.min(10, Math.floor((parseInt(d.meses) || 0) / 6));
+      const meses = parseInt(d.meses) || 0;
+      const grupoMeses = Math.min(10, Math.floor(meses / 6));
 
-      // Municipio
-      if (!stats.porMunicipio[municipio]) stats.porMunicipio[municipio] = { total: 0, conVida: 0, desaparecida: 0, sinVida: 0 };
+      // Estadísticas por Municipio
+      if (!stats.porMunicipio[municipio]) {
+        stats.porMunicipio[municipio] = {
+          total: 0,
+          conVida: 0,
+          desaparecida: 0,
+          sinVida: 0
+        };
+      }
       stats.porMunicipio[municipio].total++;
       if (condicion === "CON VIDA") stats.porMunicipio[municipio].conVida++;
       else if (condicion === "DESAPARECIDA") stats.porMunicipio[municipio].desaparecida++;
       else if (condicion === "SIN VIDA") stats.porMunicipio[municipio].sinVida++;
 
-      // Sexo
-      if (!stats.porSexo[sexo]) stats.porSexo[sexo] = { total: 0, conVida: 0, desaparecida: 0, sinVida: 0 };
+      // Estadísticas por Sexo
+      if (!stats.porSexo[sexo]) {
+        stats.porSexo[sexo] = {
+          total: 0,
+          conVida: 0,
+          desaparecida: 0,
+          sinVida: 0
+        };
+      }
       stats.porSexo[sexo].total++;
       if (condicion === "CON VIDA") stats.porSexo[sexo].conVida++;
       else if (condicion === "DESAPARECIDA") stats.porSexo[sexo].desaparecida++;
       else if (condicion === "SIN VIDA") stats.porSexo[sexo].sinVida++;
 
-      // Edad
-      if (!stats.porEdad[rangoEdad]) stats.porEdad[rangoEdad] = { total: 0, conVida: 0, desaparecida: 0, sinVida: 0 };
+      // Estadísticas por Edad
+      if (!stats.porEdad[rangoEdad]) {
+        stats.porEdad[rangoEdad] = {
+          total: 0,
+          conVida: 0,
+          desaparecida: 0,
+          sinVida: 0
+        };
+      }
       stats.porEdad[rangoEdad].total++;
       if (condicion === "CON VIDA") stats.porEdad[rangoEdad].conVida++;
       else if (condicion === "DESAPARECIDA") stats.porEdad[rangoEdad].desaparecida++;
       else if (condicion === "SIN VIDA") stats.porEdad[rangoEdad].sinVida++;
 
-      // Sexo-Edad
-      if (!stats.porSexoEdad[claveSexoEdad]) stats.porSexoEdad[claveSexoEdad] = { total: 0, conVida: 0, desaparecida: 0, sinVida: 0 };
+      // Estadísticas por Sexo + Edad
+      if (!stats.porSexoEdad[claveSexoEdad]) {
+        stats.porSexoEdad[claveSexoEdad] = {
+          total: 0,
+          conVida: 0,
+          desaparecida: 0,
+          sinVida: 0
+        };
+      }
       stats.porSexoEdad[claveSexoEdad].total++;
       if (condicion === "CON VIDA") stats.porSexoEdad[claveSexoEdad].conVida++;
       else if (condicion === "DESAPARECIDA") stats.porSexoEdad[claveSexoEdad].desaparecida++;
       else if (condicion === "SIN VIDA") stats.porSexoEdad[claveSexoEdad].sinVida++;
 
-      // Meses
-      if (!stats.porMeses[grupoMeses]) stats.porMeses[grupoMeses] = { total: 0, conVida: 0, desaparecida: 0, sinVida: 0 };
+      // Estadísticas por Meses
+      if (!stats.porMeses[grupoMeses]) {
+        stats.porMeses[grupoMeses] = {
+          total: 0,
+          conVida: 0,
+          desaparecida: 0,
+          sinVida: 0
+        };
+      }
       stats.porMeses[grupoMeses].total++;
       if (condicion === "CON VIDA") stats.porMeses[grupoMeses].conVida++;
       else if (condicion === "DESAPARECIDA") stats.porMeses[grupoMeses].desaparecida++;
       else if (condicion === "SIN VIDA") stats.porMeses[grupoMeses].sinVida++;
     });
 
+    // Calcular probabilidades
     this.calcularProbabilidades(stats);
+
+    // DEBUG: Mostrar estadísticas
+    if (this.debug) {
+      console.log("=== DEBUG: Estadísticas calculadas ===");
+      console.log("General:", {
+        total: stats.general.total,
+        conVida: stats.general.conVida,
+        desaparecida: stats.general.desaparecida,
+        sinVida: stats.general.sinVida,
+        probConVida: stats.general.probConVida,
+        probDesaparecida: stats.general.probDesaparecida,
+        probSinVida: stats.general.probSinVida
+      });
+
+      console.log("Municipios con datos:", Object.keys(stats.porMunicipio).length);
+      console.log("Sexos con datos:", Object.keys(stats.porSexo));
+      console.log("Rangos de edad con datos:", Object.keys(stats.porEdad));
+      console.log("Grupos de meses con datos:", Object.keys(stats.porMeses));
+
+      // Mostrar distribución general
+      console.log("=== DEBUG: Distribución general ===");
+      console.log(`Con vida: ${stats.general.conVida} (${(stats.general.probConVida*100).toFixed(1)}%)`);
+      console.log(`Desaparecida: ${stats.general.desaparecida} (${(stats.general.probDesaparecida*100).toFixed(1)}%)`);
+      console.log(`Sin vida: ${stats.general.sinVida} (${(stats.general.probSinVida*100).toFixed(1)}%)`);
+    }
+
     this.estadisticas = stats;
     this.isTrained = true;
+
     return stats;
   }
 
   normalizarTexto(texto) {
     if (!texto) return "";
-    return texto.normalize("NFD").replace(/[̀-ͯ]/g, "").toUpperCase().trim();
+    return texto
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "")
+      .toUpperCase()
+      .trim();
   }
 
   crearEstadisticasBasicas() {
+    console.log("=== DEBUG: Creando estadísticas básicas ===");
+
     const stats = {
       porMunicipio: {},
       porSexo: {
-        'MUJER': { total: 100, conVida: 35, desaparecida: 40, sinVida: 25, probConVida: 0.35, probDesaparecida: 0.4, probSinVida: 0.25 },
-        'HOMBRE': { total: 100, conVida: 30, desaparecida: 45, sinVida: 25, probConVida: 0.3, probDesaparecida: 0.45, probSinVida: 0.25 }
+        'MUJER': {
+          total: 100,
+          conVida: 35,
+          desaparecida: 40,
+          sinVida: 25,
+          probConVida: 0.35,
+          probDesaparecida: 0.4,
+          probSinVida: 0.25
+        },
+        'HOMBRE': {
+          total: 100,
+          conVida: 30,
+          desaparecida: 45,
+          sinVida: 25,
+          probConVida: 0.3,
+          probDesaparecida: 0.45,
+          probSinVida: 0.25
+        }
       },
-      porEdad: {}, porMeses: {}, porSexoEdad: {},
-      general: { total: 200, conVida: 65, desaparecida: 85, sinVida: 50, probConVida: 0.325, probDesaparecida: 0.425, probSinVida: 0.25 }
+      porEdad: {},
+      porMeses: {},
+      porSexoEdad: {},
+      general: {
+        total: 200,
+        conVida: 65,
+        desaparecida: 85,
+        sinVida: 50,
+        probConVida: 0.325,
+        probDesaparecida: 0.425,
+        probSinVida: 0.25
+      }
     };
 
-    const rangosEdad = ['0-4','5-9','10-14','15-19','20-24','25-29','30-34','35-39','40-44','45-49','50-54','55-59','60-64','65-69','70-74'];
+    const rangosEdad = [
+      '0-4', '5-9', '10-14', '15-19', '20-24', '25-29', '30-34',
+      '35-39', '40-44', '45-49', '50-54', '55-59', '60-64', '65-69', '70-74'
+    ];
+
     rangosEdad.forEach(rango => {
-      const edadNum = parseInt(rango.split('-')[0]);
+      // Ajustar probabilidades según edad (jóvenes tienen más probabilidad de ser encontrados con vida)
       let probConVida, probDesaparecida, probSinVida;
-      if (edadNum < 20) { probConVida = 0.35; probDesaparecida = 0.45; probSinVida = 0.20; }
-      else if (edadNum > 60) { probConVida = 0.20; probDesaparecida = 0.35; probSinVida = 0.45; }
-      else { probConVida = 0.30; probDesaparecida = 0.40; probSinVida = 0.30; }
-      stats.porEdad[rango] = { total: 30, conVida: Math.round(30*probConVida), desaparecida: Math.round(30*probDesaparecida), sinVida: Math.round(30*probSinVida), probConVida, probDesaparecida, probSinVida };
+      const edadNum = parseInt(rango.split('-')[0]);
+
+      if (edadNum < 20) {
+        // Jóvenes
+        probConVida = 0.35;
+        probDesaparecida = 0.45;
+        probSinVida = 0.20;
+      } else if (edadNum > 60) {
+        // Adultos mayores
+        probConVida = 0.20;
+        probDesaparecida = 0.35;
+        probSinVida = 0.45;
+      } else {
+        // Adultos
+        probConVida = 0.30;
+        probDesaparecida = 0.40;
+        probSinVida = 0.30;
+      }
+
+      stats.porEdad[rango] = {
+        total: 30,
+        conVida: Math.round(30 * probConVida),
+        desaparecida: Math.round(30 * probDesaparecida),
+        sinVida: Math.round(30 * probSinVida),
+        probConVida: probConVida,
+        probDesaparecida: probDesaparecida,
+        probSinVida: probSinVida
+      };
     });
 
     for (let i = 0; i <= 10; i++) {
       const factor = i / 10;
-      const probConVida = Math.max(0.2, 0.4 - factor * 0.2);
+      const probConVida = Math.max(0.2, 0.4 - (factor * 0.2));
       const probDesaparecida = 0.4;
-      const probSinVida = Math.min(0.4, 0.2 + factor * 0.2);
-      stats.porMeses[i] = { total: 25, conVida: Math.round(25*probConVida), desaparecida: Math.round(25*probDesaparecida), sinVida: Math.round(25*probSinVida), probConVida, probDesaparecida, probSinVida };
+      const probSinVida = Math.min(0.4, 0.2 + (factor * 0.2));
+
+      stats.porMeses[i] = {
+        total: 25,
+        conVida: Math.round(25 * probConVida),
+        desaparecida: Math.round(25 * probDesaparecida),
+        sinVida: Math.round(25 * probSinVida),
+        probConVida: probConVida,
+        probDesaparecida: probDesaparecida,
+        probSinVida: probSinVida
+      };
     }
 
     this.estadisticas = stats;
     this.isTrained = true;
+
+    console.log("=== DEBUG: Estadísticas básicas creadas ===");
+
     return stats;
   }
 
   calcularProbabilidades(stats) {
+    // Probabilidades generales
     const total = stats.general.total;
     if (total > 0) {
       stats.general.probConVida = stats.general.conVida / total;
       stats.general.probDesaparecida = stats.general.desaparecida / total;
       stats.general.probSinVida = stats.general.sinVida / total;
+    } else {
+      stats.general.probConVida = 0.33;
+      stats.general.probDesaparecida = 0.34;
+      stats.general.probSinVida = 0.33;
     }
 
+    // Función helper para calcular probabilidades con suavizado de Laplace
     const calcularProb = (obj) => {
-      const laplaceAlpha = 1, k = 3;
+      const laplaceAlpha = 1; // Parámetro de suavizado
+      const k = 3; // Número de categorías
+
       if (obj.total > 0) {
+        // Suavizado de Laplace para evitar probabilidades de 0
         obj.probConVida = (obj.conVida + laplaceAlpha) / (obj.total + laplaceAlpha * k);
         obj.probDesaparecida = (obj.desaparecida + laplaceAlpha) / (obj.total + laplaceAlpha * k);
         obj.probSinVida = (obj.sinVida + laplaceAlpha) / (obj.total + laplaceAlpha * k);
       } else {
+        // Si no hay datos, usar probabilidades generales
         obj.probConVida = stats.general.probConVida;
         obj.probDesaparecida = stats.general.probDesaparecida;
         obj.probSinVida = stats.general.probSinVida;
       }
     };
 
-    Object.keys(stats.porMunicipio).forEach(m => calcularProb(stats.porMunicipio[m]));
-    Object.keys(stats.porSexo).forEach(s => calcularProb(stats.porSexo[s]));
-    Object.keys(stats.porEdad).forEach(e => calcularProb(stats.porEdad[e]));
-    Object.keys(stats.porSexoEdad).forEach(se => calcularProb(stats.porSexoEdad[se]));
-    Object.keys(stats.porMeses).forEach(m => calcularProb(stats.porMeses[m]));
+    // Calcular probabilidades para todas las categorías
+    Object.keys(stats.porMunicipio).forEach(mun => calcularProb(stats.porMunicipio[mun]));
+    Object.keys(stats.porSexo).forEach(sexo => calcularProb(stats.porSexo[sexo]));
+    Object.keys(stats.porEdad).forEach(edad => calcularProb(stats.porEdad[edad]));
+    Object.keys(stats.porSexoEdad).forEach(clave => calcularProb(stats.porSexoEdad[clave]));
+    Object.keys(stats.porMeses).forEach(grupo => calcularProb(stats.porMeses[grupo]));
   }
 
   predecir(sexo, edad, meses, municipio) {
-    if (!this.isTrained || !this.estadisticas) return this.predecirBase(sexo, edad, meses, municipio);
+    console.log("=== DEBUG: Iniciando predicción ===");
+    console.log("Input:", { sexo, edad, meses, municipio });
+
+    if (!this.isTrained || !this.estadisticas) {
+      console.warn("Modelo no entrenado, usando probabilidades base");
+      return this.predecirBase(sexo, edad, meses, municipio);
+    }
 
     sexo = this.normalizarTexto(sexo);
     municipio = this.normalizarTexto(municipio);
+
     const rangoEdad = this.convertirEdadARango(edad);
     const claveSexoEdad = `${sexo}_${rangoEdad}`;
     const grupoMeses = Math.min(10, Math.floor(meses / 6));
+
+    console.log("=== DEBUG: Parámetros normalizados ===");
+    console.log("Sexo:", sexo);
+    console.log("Municipio:", municipio);
+    console.log("Rango Edad:", rangoEdad);
+    console.log("Clave Sexo-Edad:", claveSexoEdad);
+    console.log("Grupo Meses:", grupoMeses);
+
     const probGeneral = this.estadisticas.general;
+
     const probMunicipio = this.estadisticas.porMunicipio[municipio];
     const probSexo = this.estadisticas.porSexo[sexo];
     const probEdad = this.estadisticas.porEdad[rangoEdad];
     const probSexoEdad = this.estadisticas.porSexoEdad[claveSexoEdad];
     const probMeses = this.estadisticas.porMeses[grupoMeses];
 
-    let pConVida = 0, pDesaparecida = 0, pSinVida = 0, totalPeso = 0;
+    console.log("=== DEBUG: Probabilidades encontradas ===");
+    console.log("Municipio:", probMunicipio ? `Sí (${probMunicipio.total} datos)` : "No");
+    console.log("Sexo:", probSexo ? `Sí (${probSexo.total} datos)` : "No");
+    console.log("Edad:", probEdad ? `Sí (${probEdad.total} datos)` : "No");
+    console.log("Sexo-Edad:", probSexoEdad ? `Sí (${probSexoEdad.total} datos)` : "No");
+    console.log("Meses:", probMeses ? `Sí (${probMeses.total} datos)` : "No");
 
-    const agregar = (prob, peso) => {
+    let pConVida = 0;
+    let pDesaparecida = 0;
+    let pSinVida = 0;
+    let totalPeso = 0;
+
+    const agregarProbabilidad = (prob, pesoBase, nombre) => {
       if (prob && prob.total > 0) {
-        const confianza = Math.min(1, prob.total / 100);
-        const pesoAjustado = peso * (0.3 + 0.7 * confianza);
+        const confianza = Math.min(1.0, prob.total / 100);
+        const pesoAjustado = pesoBase * (0.3 + 0.7 * confianza);
+
         pConVida += prob.probConVida * pesoAjustado;
         pDesaparecida += prob.probDesaparecida * pesoAjustado;
         pSinVida += prob.probSinVida * pesoAjustado;
         totalPeso += pesoAjustado;
+
+        console.log(`  ${nombre}: peso=${pesoAjustado.toFixed(3)}, datos=${prob.total}`);
       }
     };
 
-    agregar(probMunicipio, 0.30);
-    agregar(probSexoEdad, 0.25);
-    agregar(probMeses, 0.20);
-    agregar(probEdad, 0.15);
-    agregar(probSexo, 0.10);
+    console.log("=== DEBUG: Acumulando probabilidades ===");
+
+    agregarProbabilidad(probMunicipio, 0.30, "Municipio");
+    agregarProbabilidad(probSexoEdad, 0.25, "Sexo-Edad");
+    agregarProbabilidad(probMeses, 0.20, "Meses");
+    agregarProbabilidad(probEdad, 0.15, "Edad");
+    agregarProbabilidad(probSexo, 0.10, "Sexo");
 
     if (totalPeso === 0) {
+      console.log("  Usando solo probabilidades generales");
       pConVida = probGeneral.probConVida;
       pDesaparecida = probGeneral.probDesaparecida;
       pSinVida = probGeneral.probSinVida;
+      totalPeso = 1.0;
     } else {
+
       pConVida /= totalPeso;
       pDesaparecida /= totalPeso;
       pSinVida /= totalPeso;
     }
 
-    const factorMeses = Math.min(1, meses / 60);
+
+    const factorMeses = Math.min(1.0, meses / 60);
     pConVida *= (1 - factorMeses * 0.5);
     pSinVida *= (1 + factorMeses * 0.3);
     pDesaparecida = 1 - pConVida - pSinVida;
 
-    [pConVida, pDesaparecida, pSinVida] = [Math.max(0.05, pConVida), Math.max(0.05, pDesaparecida), Math.max(0.05, pSinVida)];
-    const total = pConVida + pDesaparecida + pSinVida;
-    pConVida /= total; pDesaparecida /= total; pSinVida /= total;
+    pConVida = Math.max(0.05, pConVida);
+    pDesaparecida = Math.max(0.05, pDesaparecida);
+    pSinVida = Math.max(0.05, pSinVida);
 
-    const conVida = Math.round(pConVida * 100);
-    const desaparecida = Math.round(pDesaparecida * 100);
-    const sinVida = Math.round(pSinVida * 100);
+    const totalProb = pConVida + pDesaparecida + pSinVida;
+    pConVida /= totalProb;
+    pDesaparecida /= totalProb;
+    pSinVida /= totalProb;
+
+    // Convertir a porcentajes
+    let conVida = Math.round(pConVida * 100);
+    let desaparecida = Math.round(pDesaparecida * 100);
+    let sinVida = Math.round(pSinVida * 100);
+
     const ajustado = this.ajustarSuma100(conVida, desaparecida, sinVida);
 
+    // Determinar clase más probable
     let clase = "DESAPARECIDA";
-    if (ajustado.conVida > ajustado.desaparecida && ajustado.conVida > ajustado.sinVida) clase = "CON VIDA";
-    else if (ajustado.sinVida > ajustado.desaparecida && ajustado.sinVida > ajustado.conVida) clase = "SIN VIDA";
+    if (ajustado.conVida > ajustado.desaparecida && ajustado.conVida > ajustado.sinVida) {
+      clase = "CON VIDA";
+    } else if (ajustado.sinVida > ajustado.desaparecida && ajustado.sinVida > ajustado.conVida) {
+      clase = "SIN VIDA";
+    }
+
+    // Calcular confianza basada en los datos disponibles
+    const confianza = this.calcularConfianza(probMunicipio, probSexoEdad, probMeses);
+
+    console.log("=== DEBUG: Resultado final ===");
+    console.log("Con vida:", ajustado.conVida, "%");
+    console.log("Desaparecida:", ajustado.desaparecida, "%");
+    console.log("Sin vida:", ajustado.sinVida, "%");
+    console.log("Clase:", clase);
+    console.log("Confianza:", confianza, "%");
 
     return {
       conVida: ajustado.conVida,
       desaparecida: ajustado.desaparecida,
       sinVida: ajustado.sinVida,
-      clase,
-      confianza: this.calcularConfianza(probMunicipio, probSexoEdad, probMeses)
+      clase: clase,
+      confianza: confianza
     };
   }
 
   predecirBase(sexo, edad, meses, municipio) {
-    let baseConVida = 25, baseDesaparecida = 50, baseSinVida = 25;
-    if (sexo === "MUJER") { baseConVida += 5; baseDesaparecida -= 3; }
-    else { baseConVida -= 3; baseSinVida += 3; }
-    if (edad < 18) { baseConVida += 15; baseSinVida -= 10; }
-    else if (edad > 60) { baseConVida -= 8; baseSinVida += 8; }
-    if (meses < 3) { baseConVida += 10; baseDesaparecida += 5; baseSinVida -= 15; }
-    else if (meses > 24) { baseConVida -= 15; baseDesaparecida -= 10; baseSinVida += 25; }
+    console.log("=== DEBUG: Usando predicción base ===");
 
+    // Predicción base con variabilidad realista
+    const rangoEdad = this.convertirEdadARango(edad);
+
+    let baseConVida = 25;
+    let baseDesaparecida = 50;
+    let baseSinVida = 25;
+
+    if (sexo === "MUJER") {
+      baseConVida += 5;
+      baseDesaparecida -= 3;
+    } else {
+      baseConVida -= 3;
+      baseSinVida += 3;
+    }
+
+    if (edad < 18) {
+      baseConVida += 15;
+      baseSinVida -= 10;
+    } else if (edad > 60) {
+      baseConVida -= 8;
+      baseSinVida += 8;
+    }
+
+    if (meses < 3) {
+      baseConVida += 10;
+      baseDesaparecida += 5;
+      baseSinVida -= 15;
+    } else if (meses > 24) {
+      baseConVida -= 15;
+      baseDesaparecida -= 10;
+      baseSinVida += 25;
+    }
+
+    // Asegurar valores mínimos
     baseConVida = Math.max(5, baseConVida);
     baseDesaparecida = Math.max(10, baseDesaparecida);
     baseSinVida = Math.max(5, baseSinVida);
 
+    // Normalizar
     const total = baseConVida + baseDesaparecida + baseSinVida;
+
     let conVida = Math.round((baseConVida / total) * 100);
     let desaparecida = Math.round((baseDesaparecida / total) * 100);
     let sinVida = 100 - conVida - desaparecida;
+
     const ajustado = this.ajustarSuma100(conVida, desaparecida, sinVida);
 
     let clase = "DESAPARECIDA";
-    if (ajustado.conVida > ajustado.desaparecida && ajustado.conVida > ajustado.sinVida) clase = "CON VIDA";
-    else if (ajustado.sinVida > ajustado.desaparecida && ajustado.sinVida > ajustado.conVida) clase = "SIN VIDA";
+    if (ajustado.conVida > ajustado.desaparecida && ajustado.conVida > ajustado.sinVida) {
+      clase = "CON VIDA";
+    } else if (ajustado.sinVida > ajustado.desaparecida && ajustado.sinVida > ajustado.conVida) {
+      clase = "SIN VIDA";
+    }
 
-    return { ...ajustado, clase, confianza: 60 };
+    console.log("=== DEBUG: Predicción base resultado ===");
+    console.log(ajustado, "Clase:", clase);
+
+    return {
+      conVida: ajustado.conVida,
+      desaparecida: ajustado.desaparecida,
+      sinVida: ajustado.sinVida,
+      clase: clase,
+      confianza: 60
+    };
   }
 
   convertirEdadARango(edad) {
@@ -2651,7 +1908,10 @@ class SimplePredictor {
   ajustarSuma100(a, b, c) {
     const total = a + b + c;
     if (total === 100) return { conVida: a, desaparecida: b, sinVida: c };
+
     const diff = 100 - total;
+    const ajuste = Math.abs(diff);
+
     if (a >= b && a >= c) return { conVida: a + diff, desaparecida: b, sinVida: c };
     if (b >= a && b >= c) return { conVida: a, desaparecida: b + diff, sinVida: c };
     return { conVida: a, desaparecida: b, sinVida: c + diff };
@@ -2659,35 +1919,661 @@ class SimplePredictor {
 
   calcularConfianza(probMunicipio, probSexoEdad, probMeses) {
     let confianza = 50;
-    if (probMunicipio && probMunicipio.total > 0) confianza += Math.min(25, Math.log10(probMunicipio.total + 1) * 10);
-    if (probSexoEdad && probSexoEdad.total > 0) confianza += Math.min(15, Math.log10(probSexoEdad.total + 1) * 5);
-    if (probMeses && probMeses.total > 0) confianza += Math.min(10, Math.log10(probMeses.total + 1) * 3);
+
+    if (probMunicipio && probMunicipio.total > 0) {
+      confianza += Math.min(25, Math.log10(probMunicipio.total + 1) * 10);
+    }
+
+    if (probSexoEdad && probSexoEdad.total > 0) {
+      confianza += Math.min(15, Math.log10(probSexoEdad.total + 1) * 5);
+    }
+
+    if (probMeses && probMeses.total > 0) {
+      confianza += Math.min(10, Math.log10(probMeses.total + 1) * 3);
+    }
+
     return Math.min(95, Math.max(40, confianza));
   }
 }
 
-// =========================
-// FUNCIONES DE INTERFAZ
-// =========================
 
-function abrirNota() { document.getElementById('modalNota').style.display = 'block'; }
-function cerrarNota() { document.getElementById('modalNota').style.display = 'none'; }
-function abrirPrediccion() { document.getElementById("modalPrediccion").style.display = "block"; }
-function cerrarPrediccion() { document.getElementById("modalPrediccion").style.display = "none"; }
+const predictor = new SimplePredictor();
+
+
+function abrirNota() {
+  document.getElementById('modalNota').style.display = 'block';
+}
+
+function cerrarNota() {
+  document.getElementById('modalNota').style.display = 'none';
+}
+
+function abrirPrediccion() {
+  document.getElementById("modalPrediccion").style.display = "block";
+}
+
+function cerrarPrediccion() {
+  document.getElementById("modalPrediccion").style.display = "none";
+}
 
 function toggleSection(sec) {
   const content = document.getElementById(`section-${sec}`);
-  const button = document.querySelector(`.section-toggle[onclick="toggleSection('${sec}')"]`);
+  const button = document.querySelector(
+    `.section-toggle[onclick="toggleSection('${sec}')"]`
+  );
+
+  const isCollapsed = content.classList.contains('collapsed');
+
+  // Abrir / cerrar SOLO la sección tocada
   content.classList.toggle('collapsed');
-  button.classList.toggle('active');
+
+  // Activar / desactivar SOLO su botón
+  if (isCollapsed) {
+    button.classList.add('active');
+  } else {
+    button.classList.remove('active');
+  }
+}
+
+
+function obtenerMunicipiosOrdenadosPorCasos(datos) {
+  const totales = {};
+
+  datos.forEach(d => {
+    if (!totales[d.municipio]) {
+      totales[d.municipio] = 0;
+    }
+    totales[d.municipio] += Number(d.total) || 0;
+  });
+
+  const municipiosArray = Object.entries(totales);
+  municipiosArray.sort((a, b) => b[1] - a[1]);
+
+  const top10 = municipiosArray.slice(0, 10);
+  const restantes = municipiosArray.slice(10);
+
+  restantes.sort((a, b) =>
+    a[0].localeCompare(b[0], 'es', { sensitivity: 'base' })
+  );
+
+  return [...top10, ...restantes].map(([municipio]) => municipio);
+}
+
+function llenarSelectoresMultiples(municipios) {
+  llenarMultiple(
+    "municipiosComparacion",
+    municipios,
+    "TODOS LOS MUNICIPIOS"
+  );
+
+  llenar("predMunicipio", municipios, false);
+}
+
+
+// Nueva función para llenar selects múltiples
+function llenarMultiple(id, valores, textoTodos = "TODOS") {
+  const s = document.getElementById(id);
+  if (!s) return;
+
+  s.innerHTML = '';
+  s.innerHTML += `<option value="TODOS">${textoTodos}</option>`;
+
+  valores.forEach(v => {
+    s.innerHTML += `<option value="${v}">${v}</option>`;
+  });
+}
+
+
+
+function llenar(id, valores, usarTotal = true) {
+  const s = document.getElementById(id);
+  if (!s) return;
+
+  s.innerHTML = "";
+  if (usarTotal) s.innerHTML += `<option value="TOTAL">TODOS</option>`;
+  valores.forEach(v => {
+    s.innerHTML += `<option value="${v}">${v}</option>`;
+  });
+}
+
+function poblarSelectoresGraficas() {
+  if (!datos || datos.length === 0) return;
+
+  try {
+    const municipios = obtenerMunicipiosOrdenadosPorCasos(datos);
+    llenarSelectoresMultiples(municipios);
+
+    const anios = [...new Set(datos.map(d => Number(d.año)))]
+      .sort((a, b) => b - a);
+llenarMultiple(
+  "aniosComparacion",
+  anios,
+  "TODOS LOS AÑOS"
+);
+document
+  .getElementById('aniosComparacion')
+  .addEventListener('change', actualizarContadorAnios);
+
+actualizarContadorAnios();
+
+
+    const sexos = [...new Set(datos.map(d => d.sexo))].sort();
+    llenar("sexo", sexos);
+
+        const rangosEdad = [
+      "0-14",
+      "15-24",
+      "25-39",
+      "40-59",
+      "60+"
+    ];
+
+    llenar("edad", rangosEdad, true); // true = añade opción "TOTAL"
+
+// Agregar evento para el botón "Seleccionar Todos" - VERSIÓN MEJORADA
+document.getElementById('seleccionarTodos').addEventListener('click', function() {
+  const select = document.getElementById('municipiosComparacion');
+  if (!select) return;
+
+  const todasOpciones = Array.from(select.options);
+
+  // Verificar si TODOS está seleccionado
+  const todosOption = select.querySelector('option[value="TODOS"]');
+  const tieneTodos = todosOption && todosOption.selected;
+
+  if (tieneTodos || this.dataset.state === 'todos-seleccionados') {
+    // DESELECCIONAR todo
+    todasOpciones.forEach(opt => opt.selected = false);
+    this.textContent = 'Seleccionar Todos';
+    this.dataset.state = '';
+    this.style.backgroundColor = '#6c757d'; // Color normal
+  } else {
+    // SELECCIONAR todo (pero NO la opción "TODOS")
+    todasOpciones.forEach(opt => {
+      if (opt.value !== "TODOS") {
+        opt.selected = true;
+      }
+    });
+    this.textContent = 'Deseleccionar Todos';
+    this.dataset.state = 'todos-seleccionados';
+    this.style.backgroundColor = '#dc3545'; // Color rojo para indicar "deseleccionar"
+  }
+
+  // Disparar evento change manualmente para actualizar contador
+  select.dispatchEvent(new Event('change'));
+});
+
+
+document.getElementById('seleccionarTodosAnios').addEventListener('click', function() {
+  const select = document.getElementById('aniosComparacion');
+  if (!select) return;
+
+  const opciones = Array.from(select.options);
+  const todosOption = opciones.find(o => o.value === "TODOS");
+  const tieneTodos = todosOption && todosOption.selected;
+
+  if (tieneTodos || this.dataset.state === 'todos') {
+    opciones.forEach(o => o.selected = false);
+    this.textContent = 'Seleccionar Todos';
+    this.dataset.state = '';
+    this.style.backgroundColor = '#6c757d';
+  } else {
+    opciones.forEach(o => {
+      if (o.value !== "TODOS") o.selected = true;
+    });
+    this.textContent = 'Deseleccionar Todos';
+    this.dataset.state = 'todos';
+    this.style.backgroundColor = '#dc3545';
+  }
+
+  select.dispatchEvent(new Event('change'));
+});
+
+
+
+    // Actualizar contador cuando cambia la selección
+    document.getElementById('municipiosComparacion').addEventListener('change', actualizarContadorMunicipios);
+
+    // Inicializar contador
+    actualizarContadorMunicipios();
+
+  } catch (error) {
+    console.error("Error poblando selectores:", error);
+  }
+}
+
+// Función para actualizar contador de municipios seleccionados
+function actualizarContadorMunicipios() {
+  const select = document.getElementById('municipiosComparacion');
+  const seleccionados = Array.from(select.selectedOptions);
+  const contador = document.getElementById('contadorMunicipios');
+
+  if (!contador) return;
+
+  const totalOpciones = select.options.length - 1; // Restar la opción "TODOS"
+
+  if (seleccionados.some(opt => opt.value === "TODOS")) {
+    contador.textContent = `Seleccionados: TODOS LOS MUNICIPIOS (${totalOpciones})`;
+  } else {
+    contador.textContent = `Seleccionados: ${seleccionados.length} de ${totalOpciones} municipios`;
+  }
+}
+
+function actualizarContadorAnios() {
+  const select = document.getElementById('aniosComparacion');
+  const seleccionados = Array.from(select.selectedOptions);
+  const contador = document.getElementById('contadorAnios');
+
+  const total = select.options.length - 1;
+
+  if (seleccionados.some(o => o.value === "TODOS")) {
+    contador.textContent = `Seleccionados: TODOS LOS AÑOS (${total})`;
+  } else {
+    contador.textContent = `Seleccionados: ${seleccionados.length} de ${total} años`;
+  }
+}
+
+
+function generarGrafica() {
+  try {
+    // Obtener municipios seleccionados del select múltiple
+    const selectMunicipios = document.getElementById('municipiosComparacion');
+    const opcionesSeleccionadas = Array.from(selectMunicipios.selectedOptions);
+
+    if (opcionesSeleccionadas.length === 0) {
+      alert("Por favor selecciona al menos un municipio.");
+      return;
+    }
+
+    // Verificar si se seleccionó "TODOS"
+    const tieneTodos = opcionesSeleccionadas.some(opt => opt.value === "TODOS");
+
+    let municipiosUsar = [];
+
+    if (tieneTodos) {
+      // Obtener todos los municipios (excluyendo la opción "TODOS")
+      municipiosUsar = Array.from(selectMunicipios.options)
+        .filter(opt => opt.value !== "TODOS")
+        .map(opt => opt.value);
+    } else {
+      // Usar solo los municipios seleccionados
+      municipiosUsar = opcionesSeleccionadas.map(opt => opt.value);
+    }
+
+    // Validar cantidad de municipios (opcional)
+    if (municipiosUsar.length > 15 && !confirm(`Estás seleccionando ${municipiosUsar.length} municipios. La gráfica puede ser difícil de leer. ¿Deseas continuar?`)) {
+      return;
+    }
+
+    const sexoSel = document.getElementById('sexo').value;
+    const edadSel = document.getElementById('edad').value;
+    const metricaSel = document.getElementById('metrica').value;
+
+    let filtrado = datos.filter(d =>
+      municipiosUsar.includes(d.municipio) &&
+      (sexoSel === "TOTAL" || d.sexo === sexoSel) &&
+      (edadSel === "TOTAL" || d.rango_edad === edadSel)
+    );
+
+    if (filtrado.length === 0) {
+      alert("No hay datos disponibles para los filtros seleccionados.");
+      return;
+    }
+
+    // =========================
+// AÑOS A USAR (ÚNICO LUGAR)
+// =========================
+const selectAnios = document.getElementById('aniosComparacion');
+const opcionesAnios = Array.from(selectAnios.selectedOptions);
+
+if (opcionesAnios.length === 0) {
+  alert("Selecciona al menos un año.");
+  return;
+}
+
+let aniosUsar = [];
+
+if (opcionesAnios.some(o => o.value === "TODOS")) {
+  aniosUsar = Array.from(selectAnios.options)
+    .filter(o => o.value !== "TODOS")
+    .map(o => Number(o.value));
+} else {
+  aniosUsar = opcionesAnios.map(o => Number(o.value));
+}
+
+// Aplicar filtro de años
+filtrado = filtrado.filter(d => aniosUsar.includes(Number(d.año)));
+
+if (filtrado.length === 0) {
+  alert("No hay datos para los años seleccionados.");
+  return;
+}
+
+const esTemporal = aniosUsar.length > 1;
+const anioSimple = aniosUsar[0];
+
+
+
+    if (chartAnalisis) {
+      chartAnalisis.destroy();
+    }
+
+    const titulo = `Municipios: ${municipiosUsar.length > 3 ?
+      `${municipiosUsar.slice(0, 3).join(", ")}... (${municipiosUsar.length} total)` :
+      municipiosUsar.join(", ")}`;
+
+    let subtitulo = "";
+
+if (!esTemporal) {
+  subtitulo = `Año: ${anioSimple}`;
+} else {
+  const aniosTexto = aniosUsar
+    .slice()
+    .sort((a, b) => a - b)
+    .join(", ");
+
+  subtitulo = `Evolución temporal (${aniosTexto})`;
+}
+
+    let labels = [];
+    let datasets = [];
+
+      if (!esTemporal) {
+      filtrado = filtrado.filter(d => d.año === anioSimple);
+
+      if (filtrado.length === 0) {
+        alert(`No hay datos disponibles para el año ${anioSimple} con los filtros seleccionados.`);
+        return;
+      }
+
+      labels = municipiosUsar;
+      const categorias = [...new Set(filtrado.map(d => d[metricaSel]))].sort();
+
+      datasets = categorias.map(cat => ({
+        label: cat,
+        data: municipiosUsar.map(mun => {
+          const items = filtrado.filter(d =>
+            d.municipio === mun &&
+            d[metricaSel] === cat
+          );
+          return items.reduce((sum, d) => sum + d.total, 0);
+        })
+      }));
+
+    } else {
+      labels = [...new Set(filtrado.map(d => d.año))].sort((a, b) => a - b);
+
+      // Para muchos municipios, agrupar por municipio en lugar de por categoría
+      if (municipiosUsar.length > 8) {
+        datasets = municipiosUsar.map(mun => {
+          const data = labels.map(anio => {
+            const items = filtrado.filter(d =>
+              d.municipio === mun &&
+              d.año === anio
+            );
+            return items.reduce((sum, d) => sum + d.total, 0);
+          });
+
+          return {
+            label: mun,
+            data: data,
+            tension: 0.25,
+            borderWidth: 2,
+            fill: false
+          };
+        });
+      } else {
+        // Método original para pocos municipios
+        const categorias = [...new Set(filtrado.map(d => d[metricaSel]))].sort();
+        datasets = [];
+
+        municipiosUsar.forEach(mun => {
+          categorias.forEach(cat => {
+            const data = labels.map(anio => {
+              const items = filtrado.filter(d =>
+                d.municipio === mun &&
+                d[metricaSel] === cat &&
+                d.año === anio
+              );
+              return items.reduce((sum, d) => sum + d.total, 0);
+            });
+
+            if (data.some(val => val > 0)) {
+              datasets.push({
+                label: `${mun} – ${cat}`,
+                data: data,
+                tension: 0.25,
+                borderWidth: 2
+              });
+            }
+          });
+        });
+      }
+
+      if (datasets.length === 0) {
+        alert("No hay datos para mostrar con los filtros seleccionados.");
+        return;
+      }
+    }
+
+  renderChart(labels, datasets, esTemporal, titulo, subtitulo);
+    document.getElementById('resumen').innerText = subtitulo;
+
+  } catch (error) {
+    console.error("Error generando gráfica:", error);
+    alert(`Error al generar la gráfica: ${error.message}`);
+  }
+}
+
+function renderChart(labels, datasets, temporal, titulo, subtitulo) {
+// Obtener el rango de edad seleccionado del selector
+const selectorEdad = document.getElementById('edad');
+const rangoEdadSeleccionado = selectorEdad ? selectorEdad.value : 'TODOS';
+
+// Obtener el sexo seleccionado del selector
+const selectorSexo = document.getElementById('sexo');
+const sexoSeleccionado = selectorSexo ? selectorSexo.value : 'TODOS';
+
+// Modificar el subtítulo para incluir el rango de edad Y el sexo
+let subtituloCompleto = subtitulo;
+
+// Agregar información de edad
+if (rangoEdadSeleccionado && rangoEdadSeleccionado !== 'TOTAL') {
+  subtituloCompleto += ` | Rango de edad: ${rangoEdadSeleccionado}`;
+} else if (rangoEdadSeleccionado === 'TOTAL') {
+  subtituloCompleto += ` | Rango de edad: TODOS`;
+}
+
+// Agregar información de sexo
+if (sexoSeleccionado && sexoSeleccionado !== 'TOTAL') {
+  subtituloCompleto += ` | Sexo: ${sexoSeleccionado}`;
+} else if (sexoSeleccionado === 'TOTAL') {
+  subtituloCompleto += ` | Sexo: TODOS`;
+}
+
+  let type = chartType;
+  let stacked = false;
+  let fillArea = false;
+
+  if (chartType === "area") { type = "line"; fillArea = true; }
+  if (chartType === "stackedArea") { type = "line"; fillArea = true; stacked = true; }
+  if (chartType === "stackedBar") { type = "bar"; stacked = true; }
+
+  const enhancedDatasets = apply3DEffects(datasets, type, fillArea);
+
+  let finalLabels = labels;
+  let finalDatasets = enhancedDatasets;
+
+  if (type === 'pie') {
+    finalLabels = enhancedDatasets.map(d => d.label);
+
+    const values = enhancedDatasets.map(d =>
+      d.data.reduce((a, b) => a + b, 0)
+    );
+
+    finalDatasets = [{
+      label: 'Distribución',
+      data: values,
+      backgroundColor: enhancedDatasets.map(
+        d => Array.isArray(d.backgroundColor)
+          ? d.backgroundColor[0]
+          : d.backgroundColor || d.borderColor
+      ),
+      borderColor: '#ffffff',
+      borderWidth: 2
+    }];
+  }
+
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    indexAxis: 'x',
+    radius: (type === 'pie' || type === 'doughnut') ? '90%' : '100%',
+
+    animation: {
+      duration: 800,
+      easing: 'easeOutQuart'
+    },
+
+    scales: type === 'pie' ? {} : {
+      x: {
+        stacked: stacked,
+        ticks: { font: { size: 10 } },
+        grid: { color: 'rgba(0,0,0,0.1)' }
+      },
+      y: {
+        stacked: stacked,
+        beginAtZero: true,
+        grace: '10%',
+
+        ticks: {
+          font: { size: 10 },
+          callback: v => v >= 1000 ? (v / 1000).toFixed(1) + 'k' : v
+        },
+        grid: { color: 'rgba(0,0,0,0.1)' }
+      }
+    },
+
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+        labels: {
+          font: { size: 8 },
+          usePointStyle: true,
+          pointStyle: 'rect'
+        }
+      },
+
+      title: {
+        display: true,
+        text: titulo,
+        font: { size: 8, weight: 'bold' },
+        padding: { top: 8, bottom: 8 }
+      },
+
+      subtitle: {
+        display: true,
+        text: subtituloCompleto,
+        font: { size: 8 },
+        padding: { bottom: 5 }
+      },
+
+      tooltip: {
+        display: true,
+        backgroundColor: 'rgba(0,0,0,0.75)',
+        titleColor: '#fff',
+        bodyColor: '#fff',
+        displayColors: true
+      },
+
+      watermark: {
+        text: 'rys2000dev',
+        fontSize: 26,
+        opacity: 0.07,
+        angle: 0
+      },
+
+      datalabels: {
+        display: ctx => {
+          const v = ctx.dataset.data[ctx.dataIndex];
+          return typeof v === 'number' && v > 0;
+        },
+
+        formatter: v => v >= 1000 ? (v / 1000).toFixed(1) + 'k' : v,
+
+        color: ctx => {
+          const t = ctx.chart.config.type;
+          const stacked =
+            ctx.chart.options.scales?.x?.stacked ||
+            ctx.chart.options.scales?.y?.stacked;
+
+          if (t === 'line') return '#ffffff';
+          if (stacked) return '#000000';
+          return '#000000';
+        },
+
+        font: ctx =>
+          ctx.chart.config.type === 'line'
+            ? { weight: 'bold', size: 10 }
+            : { weight: 'bold', size: 11 },
+
+        anchor: ctx =>
+          ctx.chart.config.type === 'line'
+            ? 'center'
+            : (ctx.chart.options.scales?.x?.stacked ? 'center' : 'end'),
+
+        align: ctx =>
+          ctx.chart.config.type === 'line'
+            ? 'center'
+            : (ctx.chart.options.scales?.x?.stacked ? 'center' : 'top'),
+
+        offset: ctx => ctx.chart.config.type === 'line' ? 0 : 4,
+        clamp: true
+      }
+    }
+  };
+
+  const ctx = document.getElementById('grafica');
+  try {
+    if (chartAnalisis) {
+      chartAnalisis.destroy();
+    }
+
+    chartAnalisis = new Chart(ctx, {
+      type: type,
+      data: {
+        labels: finalLabels,
+        datasets: finalDatasets
+      },
+      options: options,
+      plugins: [ChartDataLabels]
+    });
+  } catch (error) {
+    console.error("Error creando gráfica de Chart.js:", error);
+    alert(`Error al crear la gráfica: ${error.message}`);
+  }
 }
 
 function descargarGrafica() {
-  if (!chartAnalisis) { alert("No hay gráfica para descargar."); return; }
+  if (!chartAnalisis) return;
   try {
     const a = document.createElement("a");
     a.href = chartAnalisis.toBase64Image();
-    a.download = `grafica_desapariciones_${new Date().getTime()}.png`;
+    a.download = "grafica_desapariciones.png";
+    a.click();
+  } catch (error) {
+    console.error("Error descargando gráfica:", error);
+    alert("Error al descargar la gráfica.");
+  }
+}
+
+function descargarGrafica() {
+  if (!chartAnalisis) return;
+  try {
+    const a = document.createElement("a");
+    a.href = chartAnalisis.toBase64Image();
+    a.download = "grafica_desapariciones.png";
     a.click();
   } catch (error) {
     console.error("Error descargando gráfica:", error);
@@ -2696,17 +2582,30 @@ function descargarGrafica() {
 }
 
 function mostrarResultadosPrediccion(prediccion) {
+  // Actualizar porcentajes
   document.getElementById('probConVida').textContent = `${prediccion.conVida}%`;
   document.getElementById('probDesaparecida').textContent = `${prediccion.desaparecida}%`;
   document.getElementById('probSinVida').textContent = `${prediccion.sinVida}%`;
 
+
+  document.getElementById('aniosComparacion')
+  .addEventListener('change', actualizarContadorAnios);
+
+actualizarContadorAnios();
+
+
+  // Animar barras
   setTimeout(() => {
     document.getElementById('barConVida').style.width = `${prediccion.conVida}%`;
     document.getElementById('barDesaparecida').style.width = `${prediccion.desaparecida}%`;
     document.getElementById('barSinVida').style.width = `${prediccion.sinVida}%`;
   }, 100);
 
-  document.getElementById('predictionResults').style.display = 'block';
+  // Mostrar sección de resultados
+  const resultsDiv = document.getElementById('predictionResults');
+  resultsDiv.style.display = 'block';
+
+  // Actualizar información
   document.getElementById('modelInfo').innerHTML = `
     Resultado más probable: <strong>${prediccion.clase}</strong><br>
     <em>Confianza estimada: ${prediccion.confianza}%</em>
@@ -2717,32 +2616,37 @@ function mostrarResultadosPrediccion(prediccion) {
 // CARGA DE DATOS
 // =========================
 window.addEventListener('DOMContentLoaded', () => {
+  // 1. Cargar datos para gráficas
   fetch("stats_municipios_simple.json")
     .then(r => r.json())
     .then(json => {
       datos = json;
       poblarSelectoresGraficas();
-      console.log("✅ Datos para gráficas cargados:", datos.length);
+      console.log("=== DEBUG: Datos para gráficas cargados:", datos.length);
     })
     .catch(error => {
       console.error("Error cargando datos para gráficas:", error);
-      alert("Error al cargar los datos para gráficas.");
+      alert("Error al cargar los datos para gráficas. Verifica que el archivo stats_municipios_simple.json exista.");
     });
 
+  // 2. Cargar datos para entrenamiento del modelo
   fetch("stats_ml_training.json")
     .then(r => r.json())
     .then(json => {
       datosEntrenamiento = json;
+      console.log("=== DEBUG: Datos de entrenamiento crudos:", datosEntrenamiento.length);
+
       const statusEl = document.getElementById('modelStatus');
       statusEl.textContent = "⏳ Analizando datos de entrenamiento...";
       statusEl.className = "model-status training";
 
       try {
-        predictor = new SimplePredictor();
         const stats = predictor.prepararEstadisticas(datosEntrenamiento);
-        statusEl.textContent = `✅ Modelo listo! (${stats.general.total.toLocaleString()} casos analizados)`;
+
+        statusEl.textContent = `✅ Modelo listo! (${stats.general.total} casos analizados)`;
         statusEl.className = "model-status ready";
 
+        // Actualizar información del modelo
         const modelInfo = document.getElementById('modelInfo');
         if (modelInfo) {
           modelInfo.innerHTML = `
@@ -2751,11 +2655,15 @@ window.addEventListener('DOMContentLoaded', () => {
           `;
         }
 
+        console.log("=== DEBUG: Modelo entrenado exitosamente");
+
+        // Habilitar botón de predicción
         document.getElementById('btnPrediccion').disabled = false;
         document.getElementById('btnPrediccion').textContent = "Calcular Probabilidad";
+
       } catch (error) {
         console.error("Error entrenando modelo:", error);
-        statusEl.textContent = "⚠️ Usando datos básicos";
+        statusEl.textContent = "⚠️ Modelo usando datos básicos";
         statusEl.className = "model-status error";
         document.getElementById('btnPrediccion').disabled = false;
         document.getElementById('btnPrediccion').textContent = "Calcular (datos básicos)";
@@ -2764,56 +2672,70 @@ window.addEventListener('DOMContentLoaded', () => {
     .catch(error => {
       console.error("Error cargando datos de entrenamiento:", error);
       const statusEl = document.getElementById('modelStatus');
-      statusEl.textContent = "⚠️ Usando datos básicos";
+      statusEl.textContent = "⚠️ No se pudieron cargar datos de entrenamiento";
       statusEl.className = "model-status error";
       document.getElementById('btnPrediccion').disabled = false;
-      document.getElementById('btnPrediccion').textContent = "Calcular (datos básicos)";
+      document.getElementById('btnPrediccion').textContent = "⚠️ Calcular (datos básicos)";
     });
+
 
   document.getElementById('predMeses').addEventListener('input', function() {
     document.getElementById('mesesValue').textContent = `${this.value} meses`;
   });
 
+  // Tipo de gráfica
   document.querySelectorAll("#chartTypes button").forEach(btn => {
     btn.addEventListener('click', () => {
       chartType = btn.dataset.type;
-      document.querySelectorAll("#chartTypes button").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll("#chartTypes button")
+        .forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
     });
   });
 
+  // Inicializar primer botón de gráfica como activo
   const firstBtn = document.querySelector('#chartTypes button');
   if (firstBtn) {
     firstBtn.classList.add('active');
     chartType = firstBtn.dataset.type;
   }
 
-document.querySelectorAll(".btn-generar").forEach(btn => {
-  btn.addEventListener("click", generarGrafica);
-});
+  // Generar gráfica
+  document.getElementById('btnGenerar').addEventListener('click', generarGrafica);
+
+  // Predicción
   document.getElementById('btnPrediccion').addEventListener('click', function() {
-    if (this.disabled) { alert("El modelo aún no está listo."); return; }
+    if (this.disabled) {
+      alert("El modelo aún no está listo. Por favor espera.");
+      return;
+    }
 
     const sexo = document.querySelector('input[name="predSexo"]:checked').value;
     const edad = parseInt(document.getElementById('predEdad').value);
     const meses = parseInt(document.getElementById('predMeses').value);
     const municipio = document.getElementById('predMunicipio').value;
 
-    if (!municipio) { alert("Selecciona un municipio."); return; }
+    if (!municipio) {
+      alert("Por favor selecciona un municipio.");
+      return;
+    }
 
+    // Mostrar loading
     const btn = this;
     const originalText = btn.textContent;
     btn.textContent = "Calculando...";
     btn.disabled = true;
 
+    // Hacer predicción
     setTimeout(() => {
       try {
         const prediccion = predictor.predecir(sexo, edad, meses, municipio);
         mostrarResultadosPrediccion(prediccion);
+        btn.textContent = originalText;
+        btn.disabled = false;
       } catch (error) {
         console.error("Error en predicción:", error);
-        alert("Error al calcular la predicción");
-      } finally {
+        alert("Error al calcular la predicción: " + error.message);
         btn.textContent = originalText;
         btn.disabled = false;
       }
@@ -2821,10 +2743,21 @@ document.querySelectorAll(".btn-generar").forEach(btn => {
   });
 });
 
-window.addEventListener('click', function(e) {
-  if (e.target === document.getElementById('modalNota')) cerrarNota();
-  if (e.target === document.getElementById('modalPrediccion')) cerrarPrediccion();
+// Cerrar modales al hacer click fuera del contenido
+window.addEventListener('click', function (e) {
+  const modalNota = document.getElementById('modalNota');
+  const modalPred = document.getElementById('modalPrediccion');
+
+  if (e.target === modalNota) {
+    cerrarNota();
+  }
+
+  if (e.target === modalPred) {
+    cerrarPrediccion();
+  }
 });
+
+
 </script>
 
 </body>
