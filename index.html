@@ -1075,7 +1075,7 @@ canvas {
   <span style="color: #2196f3;">⚡ Modo análisis: Dispersión municipios</span>
 </div>
 <div id="scatterControls" class="scatter-controls" style="display: none; padding: 10px; background: #f5f9ff; border-radius: 4px; margin-top: 5px;">
-  
+
   <!-- SELECTOR DE MÉTRICA PARA DISPERSIÓN -->
   <div style="margin-bottom: 12px; padding: 8px; background: white; border-radius: 4px; border: 1px solid #bbdefb;">
     <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #0d47a1; font-size: 12px;">
@@ -1542,6 +1542,49 @@ function limpiarTodosLosFiltros() {
   document.getElementById('scatterControls') && (document.getElementById('scatterControls').style.display = 'none');
 }
 
+
+function habilitarSeleccionFluida(selectId, contadorId, textoUnidad) {
+  const select = document.getElementById(selectId);
+  const contador = document
+    .getElementById(contadorId)
+    .querySelector("span:last-child");
+
+  let arrastrando = false;
+
+  select.addEventListener("mousedown", e => {
+    arrastrando = true;
+    e.preventDefault();
+  });
+
+  document.addEventListener("mouseup", () => {
+    if (arrastrando) {
+      arrastrando = false;
+      actualizar();
+    }
+  });
+
+  select.addEventListener("mousemove", e => {
+    if (!arrastrando) return;
+    if (e.target.tagName === "OPTION") {
+      e.target.selected = true;
+      actualizar();
+    }
+  });
+
+  select.addEventListener("click", e => {
+    if (e.target.tagName === "OPTION") {
+      e.preventDefault();
+      e.target.selected = !e.target.selected;
+      actualizar();
+    }
+  });
+
+  function actualizar() {
+    const total = [...select.options].filter(o => o.selected).length;
+    contador.textContent = `${total} ${textoUnidad}`;
+  }
+}
+
 // =========================
 // POBLAR SELECTORES
 // =========================
@@ -1559,10 +1602,15 @@ function poblarSelectoresGraficas() {
       .sort((a, b) => b[1] - a[1])
       .map(([municipio]) => municipio);
 
-    llenarSelectorMultiple('municipiosComparacion', municipiosArray);
-    configurarBotonSeleccionarTodos('seleccionarTodosMunicipios', 'municipiosComparacion');
-    habilitarToggleClick('municipiosComparacion');
-    document.getElementById('municipiosComparacion').addEventListener('change', () => actualizarContador('municipiosComparacion'));
+// Municipios
+llenarSelectorMultiple('municipiosComparacion', municipiosArray);
+configurarBotonSeleccionarTodos('seleccionarTodosMunicipios', 'municipiosComparacion');
+
+habilitarSeleccionFluida(
+  'municipiosComparacion',
+  'contadorMunicipiosComparacion',
+  'municipios'
+);
 
     // Años
     let anios = [];
@@ -1571,10 +1619,15 @@ function poblarSelectoresGraficas() {
     } else {
       anios = ['2024', '2025', '2026'];
     }
-    llenarSelectorMultiple('aniosComparacion', anios);
-    configurarBotonSeleccionarTodos('seleccionarTodosAnios', 'aniosComparacion');
-    habilitarToggleClick('aniosComparacion');
-    document.getElementById('aniosComparacion').addEventListener('change', () => actualizarContador('aniosComparacion'));
+// Años
+llenarSelectorMultiple('aniosComparacion', anios);
+configurarBotonSeleccionarTodos('seleccionarTodosAnios', 'aniosComparacion');
+
+habilitarSeleccionFluida(
+  'aniosComparacion',
+  'contadorAniosComparacion',
+  'años'
+);
 
     // Sexo
     const sexos = [...new Set(datos.map(d => d.sexo))].filter(v => v != null).sort();
@@ -1797,16 +1850,16 @@ function actualizarDescripcionDispersion() {
   const select = document.getElementById('metricaDispersion');
   const descripcion = document.getElementById('ejeyDescripcion');
   if (!select || !descripcion) return;
-  
+
   const valor = select.value;
   const opcionSeleccionada = select.options[select.selectedIndex].text;
-  
+
   // Limpiar el emoji para mostrar solo el texto
   let textoLimpio = opcionSeleccionada.replace(/🟢|🔴|🟡|🔵/g, '').trim();
   descripcion.textContent = textoLimpio;
-  
+
   // También actualizar el color del texto según la métrica
-  descripcion.style.color = 
+  descripcion.style.color =
     valor.includes('con_vida') ? '#27ae60' :
     valor.includes('sin_vida') ? '#e74c3c' :
     valor.includes('desaparecidos') ? '#f39c12' : '#2196f3';
@@ -2596,7 +2649,7 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
     // Determinar el nombre de la métrica actual desde los datos
     let nombreMetricaY = 'Métrica';
     let esPorcentaje = false;
-    
+
     // Intentar obtener la métrica del primer punto de datos
     if (datasets && datasets[0] && datasets[0].data && datasets[0].data.length > 0) {
       const primerPunto = datasets[0].data[0];
@@ -2604,8 +2657,8 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
         nombreMetricaY = primerPunto.metrica;
       }
       // Detectar si es porcentaje por el valor o por el nombre
-      esPorcentaje = nombreMetricaY.includes('%') || 
-                    (primerPunto && primerPunto.y <= 100 && primerPunto.y >= 0 && 
+      esPorcentaje = nombreMetricaY.includes('%') ||
+                    (primerPunto && primerPunto.y <= 100 && primerPunto.y >= 0 &&
                      (nombreMetricaY.includes('tasa') || nombreMetricaY.includes('%')));
     }
 
@@ -2650,12 +2703,12 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
             label: function(context) {
               const d = context.raw;
               if (!d) return [];
-              
+
               // Detectar si debemos mostrar como porcentaje
-              const mostrarComoPorcentaje = esPorcentaje || 
-                                           (d.y <= 100 && d.y >= 0 && 
+              const mostrarComoPorcentaje = esPorcentaje ||
+                                           (d.y <= 100 && d.y >= 0 &&
                                             (d.metrica?.includes('%') || d.metrica?.includes('tasa')));
-              
+
               const lines = [
                 `📍 ${d.municipio || 'Desconocido'}`,
                 `📊 Casos totales: ${(d.totalCasos || d.x || 0).toLocaleString()}`,
@@ -2770,11 +2823,11 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
   };
 
   try {
-    chartAnalisis = new Chart(ctx, { 
-      type, 
-      data: { labels: finalLabels, datasets: finalDatasets }, 
-      options, 
-      plugins: [ChartDataLabels] 
+    chartAnalisis = new Chart(ctx, {
+      type,
+      data: { labels: finalLabels, datasets: finalDatasets },
+      options,
+      plugins: [ChartDataLabels]
     });
   } catch (error) {
     console.error("Error creando gráfica:", error);
