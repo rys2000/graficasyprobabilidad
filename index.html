@@ -178,7 +178,7 @@ select[multiple] option:checked {
   color: #666;
   margin-top: 3px;
   margin-bottom: 4px;
-  padding: 3px 6px;
+  padding: 6px 12px;
   background: var(--light-bg);
   border-radius: 4px;
   display: flex;
@@ -862,7 +862,7 @@ canvas {
   background: var(--accent-color);
   color: white;
   font-size: 9px;
-  padding: 2px 6px;
+  padding: 6px 12px;
   border-radius: 10px;
   margin-left: 5px;
 }
@@ -900,7 +900,7 @@ canvas {
         <div class="contador-wrapper">
           <label>Municipios <span class="indicador-requerido">requerido</span></label>
         </div>
-        <select id="municipiosComparacion" multiple size="3"></select>
+        <select id="municipiosComparacion" multiple size="5"></select>
         <button id="seleccionarTodosMunicipios" class="btn-secundario">Seleccionar Todos</button>
         <div id="contadorMunicipiosComparacion" class="seleccion-contador">
           <span>Seleccionados:</span>
@@ -913,7 +913,7 @@ canvas {
         <div class="contador-wrapper">
           <label>Años <span class="indicador-requerido">requerido</span></label>
         </div>
-        <select id="aniosComparacion" multiple size="3"></select>
+        <select id="aniosComparacion" multiple size="5"></select>
         <button id="seleccionarTodosAnios" class="btn-secundario">Seleccionar Todos</button>
         <div id="contadorAniosComparacion" class="seleccion-contador">
           <span>Seleccionados:</span>
@@ -2553,6 +2553,100 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
   const ctx = document.getElementById('grafica');
   if (chartAnalisis) chartAnalisis.destroy();
 
+  // ============================================
+  // GENERAR SUBTÍTULO CON NOMBRES ESPECÍFICOS
+  // ============================================
+  let subtitulo = '';
+  
+  try {
+    // Obtener valores seleccionados
+    const municipios = obtenerValoresSeleccionados('municipiosComparacion');
+    const anios = obtenerValoresSeleccionados('aniosComparacion');
+    const sexos = obtenerValoresSeleccionados('sexoComparacion');
+    const rangosEdad = obtenerValoresSeleccionados('edadComparacion');
+    const estados = obtenerValoresSeleccionados('estadoComparacion');
+    const condiciones = obtenerValoresSeleccionados('condicionComparacion');
+
+    // ===== MUNICIPIOS =====
+    if (municipios.length === 1) {
+      subtitulo += `${municipios[0]}`;
+    } else if (municipios.length === 2) {
+      subtitulo += `${municipios[0]} y ${municipios[1]}`;
+    } else if (municipios.length === 3) {
+      subtitulo += `${municipios[0]}, ${municipios[1]} y ${municipios[2]}`;
+    } else if (municipios.length > 3) {
+      subtitulo += `${municipios[0]}, ${municipios[1]}, ${municipios[2]} y ${municipios.length - 3} más`;
+    }
+
+    // ===== AÑOS =====
+    if (anios.length === 1) {
+      subtitulo += ` · ${anios[0]}`;
+    } else if (anios.length === 2) {
+      const aniosOrd = [...anios].sort();
+      subtitulo += ` · ${aniosOrd[0]} y ${aniosOrd[1]}`;
+    } else if (anios.length === 3) {
+      const aniosOrd = [...anios].sort();
+      subtitulo += ` · ${aniosOrd[0]}, ${aniosOrd[1]} y ${aniosOrd[2]}`;
+    } else if (anios.length > 3) {
+      const aniosOrd = [...anios].sort();
+      subtitulo += ` · ${aniosOrd[0]}, ${aniosOrd[1]}, ${aniosOrd[2]} y ${anios.length - 3} más`;
+    }
+
+    // ===== SEXOS =====
+    if (sexos.length === 1) {
+      subtitulo += ` · ${sexos[0]}`;
+    } else if (sexos.length === 2) {
+      subtitulo += ` · Ambos sexos (${sexos.join(' y ')})`;
+    }
+
+    // ===== EDADES =====
+    if (rangosEdad.length === 1) {
+      subtitulo += ` · ${rangosEdad[0]}`;
+    } else if (rangosEdad.length === 2) {
+      subtitulo += ` · ${rangosEdad.join(' y ')}`;
+    } else if (rangosEdad.length === 3) {
+      subtitulo += ` · ${rangosEdad[0]}, ${rangosEdad[1]} y ${rangosEdad[2]}`;
+    } else if (rangosEdad.length > 3) {
+      subtitulo += ` · ${rangosEdad[0]}, ${rangosEdad[1]}, ${rangosEdad[2]} y ${rangosEdad.length - 3} más`;
+    }
+
+    // ===== CONDICIONES =====
+    if (condiciones.length === 1) {
+      subtitulo += ` · ${condiciones[0]}`;
+    } else if (condiciones.length === 2) {
+      subtitulo += ` · ${condiciones.join(' y ')}`;
+    } else if (condiciones.length === 3) {
+      // Verificar si son las 3 condiciones principales
+      const tieneConVida = condiciones.some(c => c === "CON VIDA" || c === "Con vida");
+      const tieneSinVida = condiciones.some(c => c === "SIN VIDA" || c === "Sin vida");
+      const tieneDesaparecida = condiciones.some(c => c === "DESAPARECIDA" || c === "Desaparecida");
+      
+      if (tieneConVida && tieneSinVida && tieneDesaparecida) {
+        subtitulo += ` · Todas las condiciones`;
+      } else {
+        subtitulo += ` · ${condiciones.join(', ')}`;
+      }
+    }
+
+    // ===== ESTADOS =====
+    if (estados.length === 1) {
+      subtitulo += ` · ${estados[0]}`;
+    } else if (estados.length === 2) {
+      subtitulo += ` · ${estados.join(' y ')}`;
+    } else if (estados.length > 2) {
+      subtitulo += ` · ${estados[0]}, ${estados[1]} y ${estados.length - 2} más`;
+    }
+
+    // Si no hay subtítulo, poner uno genérico
+    if (subtitulo === '') {
+      subtitulo = '📊 Selecciona filtros para ver detalles';
+    }
+
+  } catch (error) {
+    console.error("Error generando subtítulo:", error);
+    subtitulo = '📊 Genera una gráfica para ver detalles';
+  }
+
   document.getElementById('resumen').innerText = titulo;
 
   let type = tipoForzado || chartType;
@@ -2620,13 +2714,13 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
                                             (d.metrica?.includes('%') || d.metrica?.includes('tasa')));
 
               const lines = [
-                `📍 ${d.municipio || 'Desconocido'}`,
-                `📊 Casos totales: ${(d.totalCasos || d.x || 0).toLocaleString()}`,
-                `📈 ${d.metrica || 'Métrica'}: ${mostrarComoPorcentaje ? d.y.toFixed(1) + '%' : (d.y || 0).toLocaleString()}`,
+                `${d.municipio || 'Desconocido'}`,
+                `Casos totales: ${(d.totalCasos || d.x || 0).toLocaleString()}`,
+                `${d.metrica || 'Métrica'}: ${mostrarComoPorcentaje ? d.y.toFixed(1) + '%' : (d.y || 0).toLocaleString()}`,
                 `🟢 Con vida: ${(d.conVida || 0).toLocaleString()}`,
                 `🔴 Sin vida: ${(d.sinVida || 0).toLocaleString()}`,
                 `🟡 Desaparecidos: ${(d.desaparecidos || 0).toLocaleString()}`,
-                `📅 Años con datos: ${d.años || 1}`
+                `Años con datos: ${d.años || 1}`
               ];
               return lines;
             }
@@ -2641,12 +2735,17 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
         },
         title: {
           display: true,
-          text: titulo,
-          font: { size: 12, weight: 'bold' },
-          padding: { top: 10, bottom: 15 }
+          text: [titulo, subtitulo], // <-- TÍTULO + SUBTÍTULO
+          font: { 
+            size: 12, 
+            weight: 'bold',
+            lineHeight: 1.5
+          },
+          padding: { top: 10, bottom: 15 },
+          color: ['#2c3e50', '#666666'] // Título oscuro, subtítulo gris
         },
         legend: {
-          display: false
+          display: true
         },
         datalabels: {
           display: false
@@ -2713,8 +2812,17 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
     },
     plugins: {
       legend: { display: datasets.length > 1, position: 'top', labels: { font: { size: 10 }, usePointStyle: true, pointStyle: 'rect', padding: 20 } },
-      title: { display: true, text: titulo, font: { size: 12, weight: 'bold' }, padding: { top: 10, bottom: 15 } },
-      subtitle: { display: false },
+      title: { 
+        display: true, 
+        text: [titulo, subtitulo], // <-- TÍTULO + SUBTÍTULO
+        font: { 
+          size: 12, 
+          weight: 'bold',
+          lineHeight: 1.5
+        },
+        padding: { top: 10, bottom: 15 },
+        color: ['#2c3e50', '#666666'] // Título oscuro, subtítulo gris
+      },
       tooltip: { mode: 'index', intersect: false, backgroundColor: 'rgba(0,0,0,0.75)', titleColor: '#fff', bodyColor: '#fff', displayColors: true },
       watermark: { text: 'rys2000dev', fontSize: 26, opacity: 0.07, angle: 0 },
       datalabels: {
