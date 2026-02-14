@@ -857,7 +857,6 @@ canvas {
   background: var(--primary-color);
 }
 
-/* ===== INDICADORES ===== */
 .indicador-requerido {
   display: inline-block;
   background: var(--accent-color);
@@ -881,7 +880,7 @@ canvas {
 
 <header id="top-header">
   <span class="title">
-    📊 Análisis de Desapariciones - Jalisco
+    📊  Gráficas y Probabilidad por Municipio - Jalisco
   </span>
   <button id="btnNota" onclick="abrirNota()">ℹ️ Nota metodológica</button>
 </header>
@@ -987,12 +986,14 @@ canvas {
     </div>
 
 
-    <button class="section-toggle" onclick="toggleSection('analisis')">
-  📈 Análisis avanzado
+<button class="section-toggle" onclick="toggleSection('analisis')">
+  📊 Evaluación de Resultados
 </button>
+<small class="section-subtitle">
+  Comparación de resultados por municipio, año y casos
+</small>
 
 <div id="section-analisis" class="section-content collapsed">
-      <!-- ===== NUEVOS CONTROLES DE MODO AVANZADO ===== -->
        <label>Municipio y Año <span class="indicador-requerido">requerido</span></label>
 
       <div class="modo-avanzado-container">
@@ -1031,7 +1032,6 @@ canvas {
           </div>
         </div>
 
-        <!-- BENCHMARK -->
         <div class="modo-avanzado-checkbox" style="background: #e8f5e9; margin-top: 10px;">
           <input type="checkbox" id="activarBenchmark">
           <span style="color: #27ae60;">📊 Comparar con promedio estatal</span>
@@ -1050,7 +1050,7 @@ canvas {
                 <span class="benchmark-valor">Cargando...</span>
               </div>
             </div>
-            <!-- Agregar dentro del panel de Benchmark -->
+
 <div class="benchmark-metrica-selector">
   <label>📊 Métrica de comparación:</label>
   <select id="metricaBenchmark" onchange="actualizarInfoBenchmark()">
@@ -1069,14 +1069,13 @@ canvas {
             </div>
           </div>
         </div>
-<!-- DISPERSIÓN -->
+
 <div class="modo-avanzado-checkbox" style="background: #e3f2fd; margin-top: 10px;">
   <input type="checkbox" id="activarDispersion">
   <span style="color: #2196f3;">⚡ Modo análisis: Dispersión municipios</span>
 </div>
 <div id="scatterControls" class="scatter-controls" style="display: none; padding: 10px; background: #f5f9ff; border-radius: 4px; margin-top: 5px;">
 
-  <!-- SELECTOR DE MÉTRICA PARA DISPERSIÓN -->
   <div style="margin-bottom: 12px; padding: 8px; background: white; border-radius: 4px; border: 1px solid #bbdefb;">
     <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #0d47a1; font-size: 12px;">
       📊 ¿Qué quieres analizar en el eje Y?
@@ -1090,7 +1089,6 @@ canvas {
     </select>
   </div>
 
-  <!-- EXPLICACIÓN DINÁMICA -->
   <div style="font-size: 12px; color: #0d47a1; background: white; padding: 10px; border-radius: 4px; border-left: 4px solid #2196f3;">
     <strong>📈 Análisis de efectividad por municipio</strong>
     <p style="margin-top: 8px; margin-bottom: 5px; line-height: 1.5;">
@@ -1103,7 +1101,6 @@ canvas {
     </p>
   </div>
 
-  <!-- MINI TABLA DE REFERENCIA (OPCIONAL) -->
   <div style="margin-top: 10px; font-size: 11px; display: flex; gap: 10px; justify-content: center;">
     <span style="color: #27ae60;">🟢 Con vida</span>
     <span style="color: #e74c3c;">🔴 Sin vida</span>
@@ -1241,9 +1238,9 @@ canvas {
     </p>
 
     <p><strong>📊 Fuente de datos</strong></p>
-    <p>El conjunto de datos original incluye 36,927 registros correspondientes a
+    <p>El conjunto de datos original incluye 37,173 registros correspondientes a
       personas reportadas como desaparecidas en el estado de Jalisco,
-      con fechas que abarcan desde el año 1942 hasta diciembre de 2025.
+      con fechas que abarcan desde el año 1942 hasta Enero de 2026.
     </p>
 
     <p><strong>🧹 Proceso de depuración</strong></p>
@@ -1252,7 +1249,7 @@ canvas {
       • Homologación de nombres de municipios y variables<br>
       • Agrupación temporal por año<br>
       • Clasificación por género, rango de edad y estatus del caso<br>
-      • Se excluyeron 928 registros por falta de información mínima necesaria
+      • Se excluyeron 954 registros por falta de información mínima necesaria
     </p>
 
     <p><strong>📈 Alcance del análisis</strong></p>
@@ -1318,25 +1315,20 @@ canvas {
 </div>
 
 <script>
-// =========================
-// VARIABLES GLOBALES
-// =========================
+
 let datos = [];
 let datosEntrenamiento = [];
 let chartAnalisis;
 let chartType = "bar";
 let predictor;
 
-// Variables para modo avanzado
 let modoAvanzado = {
   dual: false,
   benchmark: false,
   dispersion: false
 };
 
-// =========================
-// PLUGINS DE CHART.JS
-// =========================
+
 const watermarkPlugin = {
   id: 'watermark',
   afterDraw(chart, args, options) {
@@ -1423,9 +1415,7 @@ function apply3DEffects(datasets, type, fillArea) {
   });
 }
 
-// =========================
-// FUNCIONES DE UTILIDAD - VERSIÓN SIMPLIFICADA (SIN "TODOS")
-// =========================
+
 
 function llenarSelectorMultiple(id, valores) {
   const select = document.getElementById(id);
@@ -1528,7 +1518,6 @@ function limpiarTodosLosFiltros() {
     }
   });
 
-  // Desactivar modos avanzados
   document.getElementById('activarSelectorDual') && (document.getElementById('activarSelectorDual').checked = false);
   document.getElementById('activarBenchmark') && (document.getElementById('activarBenchmark').checked = false);
   document.getElementById('activarDispersion') && (document.getElementById('activarDispersion').checked = false);
@@ -1585,15 +1574,12 @@ function habilitarSeleccionFluida(selectId, contadorId, textoUnidad) {
   }
 }
 
-// =========================
-// POBLAR SELECTORES
-// =========================
+
 
 function poblarSelectoresGraficas() {
   if (!datos || datos.length === 0) return;
 
   try {
-    // Municipios
     const municipiosTotales = {};
     datos.forEach(d => {
       municipiosTotales[d.municipio] = (municipiosTotales[d.municipio] || 0) + (Number(d.total) || 0);
@@ -1602,7 +1588,6 @@ function poblarSelectoresGraficas() {
       .sort((a, b) => b[1] - a[1])
       .map(([municipio]) => municipio);
 
-// Municipios
 llenarSelectorMultiple('municipiosComparacion', municipiosArray);
 configurarBotonSeleccionarTodos('seleccionarTodosMunicipios', 'municipiosComparacion');
 
@@ -1612,14 +1597,12 @@ habilitarSeleccionFluida(
   'municipios'
 );
 
-    // Años
     let anios = [];
     if (datos[0].hasOwnProperty('año')) {
       anios = [...new Set(datos.map(d => d.año))].filter(v => v != null).map(String).sort((a, b) => b - a);
     } else {
       anios = ['2024', '2025', '2026'];
     }
-// Años
 llenarSelectorMultiple('aniosComparacion', anios);
 configurarBotonSeleccionarTodos('seleccionarTodosAnios', 'aniosComparacion');
 
@@ -1629,21 +1612,18 @@ habilitarSeleccionFluida(
   'años'
 );
 
-    // Sexo
     const sexos = [...new Set(datos.map(d => d.sexo))].filter(v => v != null).sort();
     llenarSelectorMultiple('sexoComparacion', sexos);
     configurarBotonSeleccionarTodos('seleccionarTodosSexos', 'sexoComparacion');
     habilitarToggleClick('sexoComparacion');
     document.getElementById('sexoComparacion').addEventListener('change', () => actualizarContador('sexoComparacion'));
 
-    // Rango de edad
     const rangosEdad = [...new Set(datos.map(d => d.rango_edad))].filter(v => v != null).sort();
     llenarSelectorMultiple('edadComparacion', rangosEdad);
     configurarBotonSeleccionarTodos('seleccionarTodosEdades', 'edadComparacion');
     habilitarToggleClick('edadComparacion');
     document.getElementById('edadComparacion').addEventListener('change', () => actualizarContador('edadComparacion'));
 
-    // Estado de persona
     let estados = [];
     if (datos[0].hasOwnProperty('estatus_persona')) {
       estados = [...new Set(datos.map(d => d.estatus_persona))].filter(v => v != null).sort();
@@ -1653,7 +1633,6 @@ habilitarSeleccionFluida(
     habilitarToggleClick('estadoComparacion');
     document.getElementById('estadoComparacion').addEventListener('change', () => actualizarContador('estadoComparacion'));
 
-    // Condición de localización
     let condiciones = [];
     if (datos[0].hasOwnProperty('condicion_localizacion')) {
       condiciones = [...new Set(datos.map(d => d.condicion_localizacion))].filter(v => v != null);
@@ -1672,7 +1651,6 @@ habilitarSeleccionFluida(
     habilitarToggleClick('condicionComparacion');
     document.getElementById('condicionComparacion').addEventListener('change', () => actualizarContador('condicionComparacion'));
 
-    // Municipios para predicción
     const selectPredMunicipio = document.getElementById('predMunicipio');
     if (selectPredMunicipio) {
       selectPredMunicipio.innerHTML = '<option value="">Selecciona un municipio</option>';
@@ -1681,7 +1659,6 @@ habilitarSeleccionFluida(
       });
     }
 
-    // Botón Limpiar Todo
     if (!document.getElementById('btnLimpiarTodo')) {
       const btnLimpiar = document.createElement('button');
       btnLimpiar.id = 'btnLimpiarTodo';
@@ -1691,11 +1668,9 @@ habilitarSeleccionFluida(
       document.getElementById('panel').insertBefore(btnLimpiar, document.getElementById('creditos'));
     }
 
-    // Inicializar contadores
     ['municipiosComparacion', 'aniosComparacion', 'sexoComparacion', 'edadComparacion', 'estadoComparacion', 'condicionComparacion']
       .forEach(id => actualizarContador(id));
 
-    // Inicializar controles avanzados
     inicializarModoAvanzado();
 
   } catch (error) {
@@ -1706,9 +1681,7 @@ habilitarSeleccionFluida(
 
 let modoAvanzadoInicializado = false;
 
-// =========================
-// FUNCIONES DE MODO AVANZADO
-// =========================
+
 
 function inicializarModoAvanzado() {
   if (modoAvanzadoInicializado) return;
@@ -1722,7 +1695,6 @@ function inicializarModoAvanzado() {
   console.log("🔄 Inicializando modo avanzado...");
 
 
-  // Selector Dual
   const dualCheck = document.getElementById('activarSelectorDual');
   const dualControls = document.getElementById('dualControls');
   const catPrincipal = document.getElementById('categoriaPrincipal');
@@ -1753,7 +1725,6 @@ function inicializarModoAvanzado() {
     actualizarEjemplo();
   }
 
-  // Benchmark
   const benchmarkCheck = document.getElementById('activarBenchmark');
   const benchmarkControls = document.getElementById('benchmarkControls');
   const municipioBenchmark = document.getElementById('municipioBenchmark');
@@ -1778,7 +1749,6 @@ function inicializarModoAvanzado() {
     municipioBenchmark.addEventListener('change', actualizarInfoBenchmark);
   }
 
-  // Dispersión
   const scatterCheck = document.getElementById('activarDispersion');
   const scatterControls = document.getElementById('scatterControls');
 
@@ -1798,13 +1768,7 @@ function inicializarModoAvanzado() {
   }
 }
 
-// =========================
-// FUNCIONES DE BENCHMARK
-// =========================
 
-// =========================
-// CONFIGURACIÓN DE MÉTRICAS PARA BENCHMARK
-// =========================
 const METRICAS_DISPONIBLES = {
   'tasa_con_vida': {
     nombre: '% Localizados con vida',
@@ -1843,9 +1807,8 @@ const METRICAS_DISPONIBLES = {
   }
 };
 
-let metricaBenchmarkActiva = 'tasa_con_vida'; // Por defecto
+let metricaBenchmarkActiva = 'tasa_con_vida';
 
-// Al final de tu archivo JavaScript, después de definir METRICAS_DISPONIBLES
 function actualizarDescripcionDispersion() {
   const select = document.getElementById('metricaDispersion');
   const descripcion = document.getElementById('ejeyDescripcion');
@@ -1854,24 +1817,20 @@ function actualizarDescripcionDispersion() {
   const valor = select.value;
   const opcionSeleccionada = select.options[select.selectedIndex].text;
 
-  // Limpiar el emoji para mostrar solo el texto
   let textoLimpio = opcionSeleccionada.replace(/🟢|🔴|🟡|🔵/g, '').trim();
   descripcion.textContent = textoLimpio;
 
-  // También actualizar el color del texto según la métrica
   descripcion.style.color =
     valor.includes('con_vida') ? '#27ae60' :
     valor.includes('sin_vida') ? '#e74c3c' :
     valor.includes('desaparecidos') ? '#f39c12' : '#2196f3';
 }
 
-// Agregar evento al select de dispersión
 document.addEventListener('DOMContentLoaded', function() {
   const selectDispersion = document.getElementById('metricaDispersion');
   if (selectDispersion) {
     selectDispersion.addEventListener('change', function() {
       actualizarDescripcionDispersion();
-      // Si la gráfica de dispersión está activa, regenerarla automáticamente
       if (document.getElementById('activarDispersion')?.checked) {
         generarGrafica();
       }
@@ -1904,25 +1863,19 @@ function actualizarInfoBenchmark() {
 
   if (aniosRecientes.length === 0) return;
 
-  // Obtener métrica seleccionada
   const metricaSelector = document.getElementById('metricaBenchmark');
   const metricaKey = metricaSelector?.value || 'tasa_con_vida';
   const metrica = METRICAS_DISPONIBLES[metricaKey];
 
-  // FILTRO BASE - AHORA INCLUYE CONDICIONES CORRECTAMENTE
   const filtroBase = d =>
     aniosRecientes.includes(String(d.año)) &&
     (sexos.length === 0 || sexos.includes(d.sexo)) &&
     (rangosEdad.length === 0 || rangosEdad.includes(d.rango_edad)) &&
     (estados.length === 0 || estados.includes(d.estatus_persona));
-  // NOTA: NO filtramos por condiciones aquí porque necesitamos TODOS los casos
-  // para calcular las diferentes métricas correctamente
 
-  // Promedio estatal - TODOS los datos que cumplen filtro base
   const datosEstado = datos.filter(filtroBase);
   const totalEstado = datosEstado.reduce((sum, d) => sum + (Number(d.total) || 0), 0);
 
-  // Ahora calculamos cada condición por separado sobre el mismo conjunto de datos
   const conVidaEstado = datosEstado
     .filter(d => d.condicion_localizacion === "CON VIDA" || d.condicion_localizacion === "Con vida")
     .reduce((sum, d) => sum + (Number(d.total) || 0), 0);
@@ -1935,7 +1888,6 @@ function actualizarInfoBenchmark() {
     .filter(d => d.condicion_localizacion === "Desaparecida" || d.condicion_localizacion === "DESAPARECIDA")
     .reduce((sum, d) => sum + (Number(d.total) || 0), 0);
 
-  // Calcular valor estatal según métrica
   let valorEstado;
   if (metricaKey === 'tasa_con_vida') {
     valorEstado = totalEstado > 0 ? (conVidaEstado / totalEstado) * 100 : 0;
@@ -1949,7 +1901,6 @@ function actualizarInfoBenchmark() {
     valorEstado = conVidaEstado;
   }
 
-  // Datos del municipio - MISMA LÓGICA
   const datosMunicipio = datos.filter(d =>
     d.municipio === municipio && filtroBase(d)
   );
@@ -1967,7 +1918,6 @@ function actualizarInfoBenchmark() {
     .filter(d => d.condicion_localizacion === "Desaparecida" || d.condicion_localizacion === "DESAPARECIDA")
     .reduce((sum, d) => sum + (Number(d.total) || 0), 0);
 
-  // Calcular valor del municipio según métrica
   let valorMunicipio;
   if (metricaKey === 'tasa_con_vida') {
     valorMunicipio = totalMunicipio > 0 ? (conVidaMunicipio / totalMunicipio) * 100 : 0;
@@ -1981,7 +1931,6 @@ function actualizarInfoBenchmark() {
     valorMunicipio = conVidaMunicipio;
   }
 
-  // Actualizar UI
   const promedioInfo = document.getElementById('promedioEstatalInfo');
   if (promedioInfo) {
     promedioInfo.innerHTML = `
@@ -1999,19 +1948,16 @@ function actualizarInfoBenchmark() {
   if (municipioInfo) {
     const diff = valorMunicipio - valorEstado;
 
-    // Determinar si la diferencia es significativa
     let esSuperior, esSimilar;
     if (metricaKey.includes('tasa')) {
       esSuperior = Math.abs(diff) > 1;
       esSimilar = Math.abs(diff) <= 1;
     } else {
-      // Para totales, usar diferencia porcentual
       const diffPorcentual = totalEstado > 0 ? (diff / totalEstado) * 100 : 0;
       esSuperior = Math.abs(diffPorcentual) > 5;
       esSimilar = Math.abs(diffPorcentual) <= 5;
     }
 
-    // Determinar si es bueno o malo según la métrica
     let simbolo, color, texto;
     const invertir = (metricaKey === 'tasa_sin_vida' || metricaKey === 'tasa_desaparecidos');
 
@@ -2022,19 +1968,16 @@ function actualizarInfoBenchmark() {
     } else {
       const esPositivo = diff > 0;
       if (invertir) {
-        // Para métricas donde menor es mejor
         simbolo = esPositivo ? '▼' : '▲';
         color = esPositivo ? '#e74c3c' : '#27ae60';
         texto = esPositivo ? 'Superior (negativo)' : 'Inferior (positivo)';
       } else {
-        // Para métricas donde mayor es mejor
         simbolo = esPositivo ? '▲' : '▼';
         color = esPositivo ? '#27ae60' : '#e74c3c';
         texto = esPositivo ? 'Superior' : 'Inferior';
       }
     }
 
-    // Mostrar detalles según la métrica
     let detalles = '';
     if (metricaKey === 'tasa_con_vida') {
       detalles = `${conVidaMunicipio.toLocaleString()} con vida de ${totalMunicipio.toLocaleString()}`;
@@ -2060,7 +2003,6 @@ function actualizarInfoBenchmark() {
   }
 }
 
-// Función auxiliar para formatear valores según la métrica
 function formatearValorMetrica(valor, metricaKey) {
   if (metricaKey.includes('tasa')) {
     return `${valor.toFixed(1)}%`;
@@ -2069,9 +2011,7 @@ function formatearValorMetrica(valor, metricaKey) {
   }
 }
 
-// =========================
-// FUNCIONES DE GRÁFICAS AVANZADAS
-// =========================
+
 
 function generarGraficaDual() {
   const catPrincipal = document.getElementById('categoriaPrincipal')?.value;
@@ -2105,13 +2045,11 @@ function generarGraficaDual() {
 
   if (datosFiltrados.length === 0) return null;
 
-  // Obtener valores únicos
   let valoresPrincipal = [...new Set(datosFiltrados.map(d => d[catPrincipal]))]
     .filter(v => v != null);
   let valoresSecundaria = [...new Set(datosFiltrados.map(d => d[catSecundaria]))]
     .filter(v => v != null);
 
-  // Orden especial para condiciones
   if (catPrincipal === 'condicion_localizacion') {
     const orden = ['CON VIDA', 'Desaparecida', 'SIN VIDA', 'Con vida', 'DESAPARECIDA', 'Sin vida'];
     valoresPrincipal.sort((a,b) => orden.indexOf(a) - orden.indexOf(b));
@@ -2121,7 +2059,6 @@ function generarGraficaDual() {
     valoresSecundaria.sort((a,b) => orden.indexOf(a) - orden.indexOf(b));
   }
 
-  // Limitar a 8 series para legibilidad
   const valoresSecundariaLimitados = valoresSecundaria.slice(0, 8);
   const labels = valoresPrincipal;
   const datasets = valoresSecundariaLimitados.map((valor, index) => {
@@ -2152,7 +2089,6 @@ function generarGraficaDispersion() {
   const estados = obtenerValoresSeleccionados('estadoComparacion');
   const condiciones = obtenerValoresSeleccionados('condicionComparacion');
 
-  // ObtenerAmétrica seleccionada
 const metricaSelector = document.getElementById('metricaDispersion') || document.getElementById('metricaBenchmark');  const metricaKey = metricaSelector?.value || 'tasa_con_vida';
 
   if (municipios.length === 0 || anios.length === 0) {
@@ -2160,7 +2096,6 @@ const metricaSelector = document.getElementById('metricaDispersion') || document
     return null;
   }
 
-  // Filtro base - SIN filtrar por condición
   const filtroBase = d =>
     municipios.includes(d.municipio) &&
     anios.includes(String(d.año)) &&
@@ -2219,7 +2154,6 @@ const metricaSelector = document.getElementById('metricaDispersion') || document
 
   datosMunicipios.sort((a, b) => b.totalCasos - a.totalCasos);
 
-  // Determinar nombre de la métrica
   let nombreMetrica = '';
   if (metricaKey === 'tasa_con_vida') nombreMetrica = '% con vida';
   else if (metricaKey === 'tasa_sin_vida') nombreMetrica = '% sin vida';
@@ -2274,20 +2208,16 @@ function generarGraficaBenchmark(municipio) {
     return null;
   }
 
-  // Obtener Bmétrica seleccionada
   const metricaSelector = document.getElementById('metricaBenchmark');
   const metricaKey = metricaSelector?.value || 'tasa_con_vida';
 
   const añosOrdenados = anios.sort((a, b) => a - b);
 
-  // Filtro base - SIN filtrar por condición porque necesitamos todas
   const filtroBase = d =>
     (sexos.length === 0 || sexos.includes(d.sexo)) &&
     (rangosEdad.length === 0 || rangosEdad.includes(d.rango_edad)) &&
     (estados.length === 0 || estados.includes(d.estatus_persona));
-  // NOTA: Condiciones NO se filtra aquí
 
-  // Datos del municipio por año
   const datosMunicipio = añosOrdenados.map(año => {
     const datosAño = datos.filter(d =>
       String(d.año) === String(año) &&
@@ -2322,7 +2252,6 @@ function generarGraficaBenchmark(municipio) {
     return { año, valor, total, conVida, sinVida, desaparecidos };
   });
 
-  // Datos del estado por año
   const datosEstado = añosOrdenados.map(año => {
     const datosAño = datos.filter(d =>
       String(d.año) === String(año) &&
@@ -2358,7 +2287,6 @@ function generarGraficaBenchmark(municipio) {
 
   const labels = añosOrdenados;
 
-  // Determinar nombre de la métrica
   let nombreMetrica = '';
   if (metricaKey === 'tasa_con_vida') nombreMetrica = '% Localizados con vida';
   else if (metricaKey === 'tasa_sin_vida') nombreMetrica = '% Localizados sin vida';
@@ -2366,7 +2294,6 @@ function generarGraficaBenchmark(municipio) {
   else if (metricaKey === 'total_casos') nombreMetrica = 'Total de casos';
   else if (metricaKey === 'casos_con_vida') nombreMetrica = 'Casos con vida';
 
-  // Determinar color según métrica
   let colorMunicipio;
   if (metricaKey === 'tasa_con_vida') colorMunicipio = '#27ae60';
   else if (metricaKey === 'tasa_sin_vida') colorMunicipio = '#e74c3c';
@@ -2405,13 +2332,10 @@ function generarGraficaBenchmark(municipio) {
   return { labels, datasets, titulo, tipo: 'line' };
 }
 
-// =========================
-// FUNCIÓN PRINCIPAL DE GRÁFICAS (MODIFICADA)
-// =========================
+
 
 function generarGrafica() {
   try {
-    // Verificar modos activos
     const dualActivo = document.getElementById('activarSelectorDual')?.checked || false;
     const benchmarkActivo = document.getElementById('activarBenchmark')?.checked || false;
     const dispersionActiva = document.getElementById('activarDispersion')?.checked || false;
@@ -2436,7 +2360,6 @@ function generarGrafica() {
       return;
     }
 
-    // Si no hay modo avanzado activo, usar modo normal
     generarGraficaNormal();
 
   } catch (error) {
@@ -2445,9 +2368,7 @@ function generarGrafica() {
   }
 }
 
-// =========================
-// FUNCIÓN NORMAL (EXISTENTE)
-// =========================
+
 
 function generarGraficaNormal() {
   const municipios = obtenerValoresSeleccionados('municipiosComparacion');
@@ -2474,7 +2395,6 @@ function generarGraficaNormal() {
     return;
   }
 
-  // Detectar categoría activa
   let categoriaActiva = null;
   let valoresCategoria = [];
   let campoCategoria = '';
@@ -2499,7 +2419,6 @@ function generarGraficaNormal() {
 
   let labels, datasets;
 
-  // Estrategia 1: Múltiples años
   if (anios.length > 1) {
     labels = anios.sort((a, b) => a - b);
     datasets = [];
@@ -2535,7 +2454,6 @@ function generarGraficaNormal() {
       });
     }
   }
-  // Estrategia 2: Múltiples municipios
   else if (municipios.length > 1) {
     labels = municipios;
     datasets = [];
@@ -2570,7 +2488,6 @@ function generarGraficaNormal() {
       });
     }
   }
-  // Estrategia 3: Caso único
   else {
     if (categoriaActiva) {
       labels = valoresCategoria;
@@ -2630,9 +2547,7 @@ function generarTituloGrafica(filtros) {
   return partes.join(' | ') || 'Todos los filtros';
 }
 
-// =========================
-// RENDER CHART MEJORADO (SOPORTE SCATTER)
-// =========================
+
 
 function renderChart(labels, datasets, titulo, tipoForzado = null) {
   const ctx = document.getElementById('grafica');
@@ -2644,19 +2559,15 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
   let stacked = false;
   let fillArea = false;
 
-  // Configuración especial para scatter
   if (type === 'scatter') {
-    // Determinar el nombre de la métrica actual desde los datos
     let nombreMetricaY = 'Métrica';
     let esPorcentaje = false;
 
-    // Intentar obtener la métrica del primer punto de datos
     if (datasets && datasets[0] && datasets[0].data && datasets[0].data.length > 0) {
       const primerPunto = datasets[0].data[0];
       if (primerPunto && primerPunto.metrica) {
         nombreMetricaY = primerPunto.metrica;
       }
-      // Detectar si es porcentaje por el valor o por el nombre
       esPorcentaje = nombreMetricaY.includes('%') ||
                     (primerPunto && primerPunto.y <= 100 && primerPunto.y >= 0 &&
                      (nombreMetricaY.includes('tasa') || nombreMetricaY.includes('%')));
@@ -2704,7 +2615,6 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
               const d = context.raw;
               if (!d) return [];
 
-              // Detectar si debemos mostrar como porcentaje
               const mostrarComoPorcentaje = esPorcentaje ||
                                            (d.y <= 100 && d.y >= 0 &&
                                             (d.metrica?.includes('%') || d.metrica?.includes('tasa')));
@@ -2750,7 +2660,6 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
       }
     };
 
-    // Si es porcentaje, establecer max en 100
     if (esPorcentaje) {
       options.scales.y.max = 100;
     }
@@ -2768,7 +2677,6 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
     return;
   }
 
-  // Configuración para otros tipos de gráfica
   if (type === "area") { type = "line"; fillArea = true; }
   if (type === "stackedArea") { type = "line"; fillArea = true; stacked = true; }
   if (type === "stackedBar") { type = "bar"; stacked = true; }
@@ -2842,9 +2750,7 @@ function generarColores(cantidad) {
   return colores;
 }
 
-// =========================
-// MODELO DE PREDICCIÓN (SIN CAMBIOS)
-// =========================
+
 
 class SimplePredictor {
   constructor() {
@@ -2877,35 +2783,35 @@ class SimplePredictor {
       const claveSexoEdad = `${sexo}_${rangoEdad}`;
       const grupoMeses = Math.min(10, Math.floor((parseInt(d.meses) || 0) / 6));
 
-      // Municipio
+      
       if (!stats.porMunicipio[municipio]) stats.porMunicipio[municipio] = { total: 0, conVida: 0, desaparecida: 0, sinVida: 0 };
       stats.porMunicipio[municipio].total++;
       if (condicion === "CON VIDA") stats.porMunicipio[municipio].conVida++;
       else if (condicion === "DESAPARECIDA") stats.porMunicipio[municipio].desaparecida++;
       else if (condicion === "SIN VIDA") stats.porMunicipio[municipio].sinVida++;
 
-      // Sexo
+    
       if (!stats.porSexo[sexo]) stats.porSexo[sexo] = { total: 0, conVida: 0, desaparecida: 0, sinVida: 0 };
       stats.porSexo[sexo].total++;
       if (condicion === "CON VIDA") stats.porSexo[sexo].conVida++;
       else if (condicion === "DESAPARECIDA") stats.porSexo[sexo].desaparecida++;
       else if (condicion === "SIN VIDA") stats.porSexo[sexo].sinVida++;
 
-      // Edad
+      
       if (!stats.porEdad[rangoEdad]) stats.porEdad[rangoEdad] = { total: 0, conVida: 0, desaparecida: 0, sinVida: 0 };
       stats.porEdad[rangoEdad].total++;
       if (condicion === "CON VIDA") stats.porEdad[rangoEdad].conVida++;
       else if (condicion === "DESAPARECIDA") stats.porEdad[rangoEdad].desaparecida++;
       else if (condicion === "SIN VIDA") stats.porEdad[rangoEdad].sinVida++;
 
-      // Sexo-Edad
+     
       if (!stats.porSexoEdad[claveSexoEdad]) stats.porSexoEdad[claveSexoEdad] = { total: 0, conVida: 0, desaparecida: 0, sinVida: 0 };
       stats.porSexoEdad[claveSexoEdad].total++;
       if (condicion === "CON VIDA") stats.porSexoEdad[claveSexoEdad].conVida++;
       else if (condicion === "DESAPARECIDA") stats.porSexoEdad[claveSexoEdad].desaparecida++;
       else if (condicion === "SIN VIDA") stats.porSexoEdad[claveSexoEdad].sinVida++;
 
-      // Meses
+    
       if (!stats.porMeses[grupoMeses]) stats.porMeses[grupoMeses] = { total: 0, conVida: 0, desaparecida: 0, sinVida: 0 };
       stats.porMeses[grupoMeses].total++;
       if (condicion === "CON VIDA") stats.porMeses[grupoMeses].conVida++;
@@ -3119,9 +3025,7 @@ class SimplePredictor {
   }
 }
 
-// =========================
-// FUNCIONES DE INTERFAZ
-// =========================
+
 
 function abrirNota() { document.getElementById('modalNota').style.display = 'block'; }
 function cerrarNota() { document.getElementById('modalNota').style.display = 'none'; }
@@ -3166,9 +3070,7 @@ function mostrarResultadosPrediccion(prediccion) {
   `;
 }
 
-// =========================
-// CARGA DE DATOS
-// =========================
+
 window.addEventListener('DOMContentLoaded', () => {
   fetch("stats_municipios_simple.json")
     .then(r => r.json())
