@@ -14,7 +14,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 
 <style>
-/* ===== DISEÑO MEJORADO ===== */
+/* ===== DISEÑO MEJORADO FEBRERO 2026===== */
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
@@ -273,7 +273,6 @@ select[multiple] option:checked {
   display: none;
 }
 
-/* Modificar la tabla-container para agregar scroll */
 .tabla-container {
   overflow-x: auto;
   overflow-y: auto; /* Cambiar a auto para permitir scroll vertical */
@@ -305,15 +304,13 @@ select[multiple] option:checked {
   background: var(--primary-color);
 }
 
-/* Ajustar la tabla para que ocupe todo el ancho */
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: 12px;
-  min-width: 500px; /* Mantener min-width para scroll horizontal si es necesario */
+  min-width: 500px; 
 }
 
-/* Fijar encabezados para que se vean al hacer scroll */
 thead tr {
   background: #3498db;
   color: white;
@@ -322,7 +319,6 @@ thead tr {
   z-index: 10;
 }
 
-/* Fijar pie de tabla */
 tfoot tr {
   background: #2c3e50;
   color: white;
@@ -392,7 +388,6 @@ tfoot td {
   text-align: center;
 }
 
-/* ===== MODO AVANZADO ===== */
 .modo-avanzado-container {
   border-top: 1px solid var(--border-color);
   padding-top: 15px;
@@ -531,7 +526,6 @@ tfoot td {
   gap: 6px;
 }
 
-/* ===== BOTONES ===== */
 .radio-group {
   display: flex;
   gap: 15px;
@@ -961,7 +955,6 @@ canvas {
   display: none;
 }
 
-/* ===== MEDIA QUERIES MÓVIL ===== */
 @media (max-width: 768px) {
   #panel {
     position: fixed;
@@ -1422,7 +1415,6 @@ canvas {
     <span id="filtrosAdicionales">-</span>
   </div>
   
-  <!-- TABLA DE RESULTADOS CON SCROLL -->
   <div class="tabla-container" style="max-height: 300px;">
     <table>
       <thead>
@@ -1707,9 +1699,7 @@ function obtenerValoresSeleccionados(id) {
   return Array.from(select.selectedOptions).map(opt => opt.value);
 }
 
-// ============================================
-// SELECCIÓN CON ARRASTRE Y TÁCTIL MEJORADA
-// ============================================
+
 function habilitarSeleccionFluida(selectId, contadorId, textoUnidad) {
   const select = document.getElementById(selectId);
   const contador = document.getElementById(contadorId);
@@ -1789,9 +1779,7 @@ function habilitarSeleccionFluida(selectId, contadorId, textoUnidad) {
   });
 }
 
-// ============================================
-// ORDENAR MUNICIPIOS: PRIMERO 10 CON MÁS CASOS, LUEGO ALFABÉTICO
-// ============================================
+
 function ordenarMunicipiosPorCasos() {
   if (!datos || datos.length === 0) return [];
 
@@ -2809,9 +2797,7 @@ function renderChart(labels, datasets, titulo, tipoForzado = null) {
   const ctx = document.getElementById('grafica');
   if (chartAnalisis) chartAnalisis.destroy();
 
-  // ============================================
-  // GENERAR SUBTÍTULO CON NOMBRES ESPECÍFICOS
-  // ============================================
+
   let subtitulo = '';
 
   try {
@@ -3543,9 +3529,7 @@ window.addEventListener('click', function(e) {
   if (e.target === document.getElementById('modalPrediccion')) cerrarPrediccion();
 });
 
-// ============================================
-// FUNCIONES PARA EL RESUMEN DE SELECCIÓN
-// ============================================
+
 
 function actualizarResumenSeleccion() {
   try {
